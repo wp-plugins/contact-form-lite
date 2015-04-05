@@ -1,0 +1,66 @@
+#tabs_container {
+	overflow: hidden;
+	position: relative;
+}
+
+.ecftabcon li{
+	list-style: none;
+	display: inline-block;
+}
+
+.ecftabcon {
+	padding: 7px 7px 0 7px;
+	width: auto;
+	background-color: #F8F7EE;
+	box-shadow: 0px -2px 3px rgba(203, 196, 130, 0.06) inset;
+	border-radius: 5px;
+	border:solid 1px #B5B6C4;
+}
+
+#tabs_container {
+	top: -10px;
+	background-color: #F8F7EE;
+	padding: 10px;	
+	border-radius: 5px;
+	border:solid 1px #B5B6C4;
+}
+
+#ecftabs .ecftabcon li a {
+	margin-right:5px;
+	padding: 9px 15px;
+	display: inline-block;
+	border-radius: 5px 5px 0px 0px;
+	background-color: rgba(233, 230, 202, 0.3);
+	font-size: 14px;
+	font-weight: 600;
+	color: #4C4C4C;
+	transition: all 0.15s linear 0s;
+	text-decoration:none;
+	border:solid 1px #B5B6C4;
+}
+
+#ecftabs li a:hover {
+	color: #000;
+	border:solid 1px #B5B6C4;
+	background: none repeat scroll 0% 0% #F8F7EE;
+}
+
+.tabulous_active {
+	color: #fff !important;
+	background-color: #368CF5 !important;
+	border-color: #1884EF !important;
+	box-shadow: 0px 1px 0px rgba(120, 200, 230, 0.5) inset, 0px 1px 0px rgba(0, 0, 0, 0.15);
+	background-image: url('../images/checked.png');
+	background-repeat: no-repeat;
+	background-position: 3% center; 
+	padding-left: 30px !important;
+}
+
+.tabulous_active:hover {
+	color: #fff !important;
+	background-color: #4AA5FF !important;
+	border-color: #1884EF !important;
+	background-image: url('../images/checked.png') !important;
+	background-repeat: no-repeat !important;
+	background-position: 3% center !important; 
+}

@@ -1,0 +1,115 @@
+=== Contact Form Lite ===
+Contributors: GhozyLab
+Donate link: http://ghozylab.com/
+Tags: form, contact, contact form, form builder, form, contact us, image, images, plugin, admin, ajax, widget
+Requires at least: 3.3
+Tested up to: 4.1.1
+Stable tag: 1.0.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+The easy way to create awesome contact form for your site.
+
+== Description ==
+
+This plugin allows you to create contact form in minutes. Easy drag and drop interface to create your forms in seconds, you won't have to code anything and your forms will work right out of the box.
+
+> #### **Live Demos**
+> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-standart-form/" target="_blank">DEMO - STANDART FORM ( LITE VERSION )</a>
+> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/contact-form-recaptcha/" target="_blank">DEMO - FORM with RECAPTCHA ( PRO VERSION )</a>
+> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-file-upload/" target="_blank">DEMO - FORM with UPLOAD/ATTACHMENT FIELD ( PRO VERSION )</a>
+> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-fields/" target="_blank">DEMO - FORM with All FIELDS ( PRO VERSION )</a>
+
+= Upgrade to Pro Version = 
+Take your media to the next level with [Easy Contact Form Pro](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/pricing-compare-tables/), which gives you additional features such as:
+
+* Super Easy to use for Beginners
+* Create unlimited number of form
+* Create forms that will match your website identity instantly
+* Custom colors : a color picker is available for every elements in your contact form
+* No coding, the plugin takes care of everything
+* Custom field labels
+* Custom input fields : color, border color and much more
+* Custom submit button : background color. text / label
+* Custom CSS and JS field
+* +350 icons for each fields
+* Custom loading icon
+* The email address of your visitor will automatically appear in the From field of the admin notification message
+* You can customize the name that will appear in the From field of the user notification message
+* Your visitors can upload files on your server, singe or multiple upload
+* You can receive uploads as email attchments
+* Secure file size control and Secure file type control
+* A file download link is available in the notification message
+* You can set your own error messages when an error is found in the form
+* You can set your own validation message that will be displayed when the form is successfully submitted
+* Effortless mobile and tablet devices adaptation
+* Increase mobile conversions on your website
+* Prevent spam with 2 CAPTCHA options: image, New reCAPTCHA or reCAPTCHA v1 and more than 5 reCAPTCHA skin
+* 24/7 Technical Support
+
+### Recommended Plugins
+The following are other recommended plugins by the author:
+
+* [Easy Media Gallery](http://wordpress.org/plugins/easy-media-gallery/) - Easy Media Gallery is a wordpress plugin designed to display various media support including grid gallery, galleries, photo album, multiple photo albums, portfolio, photo gallery or image gallery.
+* [Best Image Slider Plugin](https://wordpress.org/plugins/image-slider-widget/) - Easy Image Slider Widget - Displaying your image as slider in widget/sidebar area with very easy. Allows you to customize it to looking exactly what you want.
+* [Easy Lightbox Popup](http://wordpress.org/plugins/easy-notify-lite/) -  The Best Notify and Subscription Form Plugin to display notify popup, announcement and subscribe form with very ease, fancy and elegant.
+
+> #### **NOTE**
+> If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://ghozylab.com" target="_blank">GhozyLab</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+
+= Technical Support =
+
+If any problem occurs or if you think, that you found a bug please contact us at [info@ghozylab.com](mailto:info@ghozylab.com).
+
+== Installation ==
+
+= For automatic installation: =
+
+The simplest way to install is to click on 'Plugins' then 'Add' and type 'Contact Form Lite' in the search field.
+
+= For manual installation 1: =
+
+1. Login to your website and go to the Plugins section of your admin panel.
+1. Click the Add New button.
+1. Under Install Plugins, click the Upload link.
+1. Select the plugin zip file (contact-form-lite.x.x.x.zip) from your computer then click the Install Now button.
+1. You should see a message stating that the plugin was installed successfully.
+1. Click the Activate Plugin link.
+
+= For manual installation 2: =
+
+1. You should have access to the server where WordPress is installed. If you don't, see your system administrator.
+1. Copy the plugin zip file (contact-form-lite.zip) up to your server and unzip it somewhere on the file system.
+1. Copy the "contact-form-lite" folder into the /wp-content/plugins directory of your WordPress installation.
+1. Login to your website and go to the Plugins section of your admin panel.
+1. Look for "Easy Contact" and click Activate.
+
+== Frequently Asked Questions ==
+
+= How can I get support? =
+
+* We are not able to provide anything other than community based support for Contact Form Lite. Please consider upgrading to [Contact Form Lite Professional](http://ghozylab.com/plugins/) for support.
+
+
+= How can I say thanks? =
+
+* Just recommend our plugin to your friends! or
+* If you really love Contact Form Lite any donation would be appreciated! It helps to continue the development and support of the plugin.
+But seriously, I just want to drink coffee for free, so help a developer out. You can use this link [Donate to Contact Form Lite][cp donate].
+
+[cp donate]: http://ghozylab.com/plugins/donate
+            "Donate to Contact Form Lite"
+
+== Screenshots ==
+
+1. Standart Form
+
+== Changelog ==
+
+= 1.0.0 =
+* This is the launch version. No changes yet.
+
+== Upgrade Notice ==
+
+= 1.0.0 =
+This is the launch version. No changes yet.
