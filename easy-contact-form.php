@@ -331,7 +331,7 @@ function plugin_ecf_auto_update() {
 		wp_update_plugins();
 		ob_start();
 		$plugin_upg = new Plugin_Upgrader();
-		$plugin_upg->upgrade( "easy-contact-form/easy-contact-form.php" );
+		$plugin_upg->upgrade( "contact-form-lite/easy-contact-form.php" );
 		$output = @ob_get_contents();
 		@ob_end_clean();
 	}
