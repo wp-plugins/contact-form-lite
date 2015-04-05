@@ -1,18 +1,22 @@
 === Contact Form Lite ===
 Contributors: GhozyLab
 Donate link: http://ghozylab.com/
-Tags: form, contact, contact form, form builder, form, contact us, image, images, plugin, admin, ajax, widget
+Tags: form, contact, contact form, form builder, form, form plugin, image, images, plugin, admin, ajax, widget
 Requires at least: 3.3
 Tested up to: 4.1.1
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The easy way to create awesome contact form for your site.
+The easy way to create responsive contact form for your site.
 
 == Description ==
 
-This plugin allows you to create contact form in minutes. Easy drag and drop interface to create your forms in seconds, you won't have to code anything and your forms will work right out of the box.
+This plugin allows you to create best contact form with quickly and easily drag and drop interface, you won't have to code anything and your forms will work right out of the box.
+
+Not only does the Contact Form Lite take care of the functionality, it can very easily make your form look great too. For the more advanced user, you will not be disappointed with the flexibility of the styling features of Contact Form Lite.
+
+You can have total control of your form design and there are plenty layout options so you can take it as far as you like.
 
 > #### **Live Demos**
 > * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-standart-form/" target="_blank">DEMO - STANDART FORM ( LITE VERSION )</a>
@@ -20,8 +24,11 @@ This plugin allows you to create contact form in minutes. Easy drag and drop int
 > * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-file-upload/" target="_blank">DEMO - FORM with UPLOAD/ATTACHMENT FIELD ( PRO VERSION )</a>
 > * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-fields/" target="_blank">DEMO - FORM with All FIELDS ( PRO VERSION )</a>
 
+= LITE VERSION VIDEO =
+[youtube https://www.youtube.com/watch?v=_3lsRi9C77k]
+
 = Upgrade to Pro Version = 
-Take your media to the next level with [Easy Contact Form Pro](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/pricing-compare-tables/), which gives you additional features such as:
+Take your form to the next level with [Easy Contact Form Pro](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/pricing-compare-tables/), which gives you additional features such as:
 
 * Super Easy to use for Beginners
 * Create unlimited number of form
@@ -102,7 +109,9 @@ But seriously, I just want to drink coffee for free, so help a developer out. Yo
 
 == Screenshots ==
 
-1. Standart Form
+1. Form on Frontend
+2. Form Builder
+3. Form Options
 
 == Changelog ==
 
