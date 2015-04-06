@@ -4,7 +4,7 @@ Donate link: http://ghozylab.com/
 Tags: form, contact, contact form, form builder, form, form plugin, image, images, plugin, admin, ajax, widget
 Requires at least: 3.3
 Tested up to: 4.1.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -115,10 +115,14 @@ But seriously, I just want to drink coffee for free, so help a developer out. Yo
 
 == Changelog ==
 
+= 1.0.1 =
+* Bugs Fixed on Pricing Page
+* Bugs Fixed on Free Plugin List ( Link DEMO )
+
 = 1.0.0 =
 * This is the launch version. No changes yet.
 
 == Upgrade Notice ==
 
-= 1.0.0 =
-This is the launch version. No changes yet.
+= 1.0.1 =
+Bugs Fixed, please update now!
