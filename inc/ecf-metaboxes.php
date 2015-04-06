@@ -677,7 +677,7 @@ function ecf_metabox_work(){
 										'text'=> ' Display text',
 										'redirect'=> 'Redirect to the Page'),	
 					'std' => 'text',
-					'txt' => 'Your message has been sent',
+					'txt' => 'Your Message Submitted Successfully',
 					'url' => 'http://',
 					'trgt' => 'off',
 					'needmargin' => '<br><br><br><br><br>',

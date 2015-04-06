@@ -169,6 +169,10 @@ color: #FFF !important;
 								echo '<li><a class="button" aria-label="PRO VERSION DEMO" href="http://ghozylab.com/plugins/easy-notify-pro/demo/" target="_blank">PRO VERSION DEMO</a></li>';
 								break;
 								
+								case "contact-form-lite" :
+								echo '<li><a class="button" aria-label="PRO VERSION DEMO" href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/contact-form-recaptcha/" target="_blank">PRO VERSION DEMO</a></li>';
+								break;
+								
 								default:
 								break;
 							}
