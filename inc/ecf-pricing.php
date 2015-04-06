@@ -49,7 +49,7 @@ function easycform_pricing_table() {
         <li class="row_style_4"><span>Support Fields Validation</span></li>
         <li class="row_style_2"><span>WP Multisite</span></li>
         <li class="row_style_4"><span>Support</span></li>
-        <li class="row_style_2"><span>Update ( 1 year )</span></li>
+        <li class="row_style_2"><span>Update</span></li>
         <li class="footer_row"></li>
       </ul>
     </div>
@@ -66,7 +66,7 @@ function easycform_pricing_table() {
         <li class="row_style_3 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_1 align_center"><span class="pricing_no"></span></li>  
         <li class="row_style_3 align_center"><span class="pricing_no"></span></li>  
-        <li class="row_style_1 align_center"><span class="pricing_no"></span></li>      
+        <li class="row_style_1 align_center"><span class="pricing_yes"></span></li>      
         <li class="row_style_3 align_center"><span class="pricing_no"></span></li>
         <li class="row_style_1 align_center"><span class="pricing_no"></span></li>
         <li class="row_style_3 align_center"><span class="pricing_no"></span></li>        
@@ -76,10 +76,10 @@ function easycform_pricing_table() {
         <li class="row_style_3 align_center"><span class="pricing_no"></span></li>            
         <li class="row_style_1 align_center"><span class="pricing_no"></span></li>
         <li class="row_style_3 align_center"><span class="pricing_no"></span></li>    
-        <li class="row_style_1 align_center"><span class="pricing_no"></span></li>
+        <li class="row_style_1 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_3 align_center"><span class="pricing_no"></span></li>      
         <li class="row_style_1 align_center"><span>none</span></li>
-        <li class="row_style_3 align_center"><span>none</span></li>
+        <li class="row_style_3 align_center"><span class="pricing_yes"></span></li>
          
         <li class="footer_row"></li>
       </ul>
