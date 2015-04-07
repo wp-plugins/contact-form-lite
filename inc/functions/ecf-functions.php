@@ -337,6 +337,24 @@ echo $enobuy;
 
 
 /*-------------------------------------------------------------------------------*/
+/*  RENAME POST BUTTON @since 1.0.1
+/*-------------------------------------------------------------------------------*/
+function easycform_change_publish_button( $translation, $text ) {
+	if ( 'easycontactform' == get_post_type())
+		if ( $text == 'Publish' ) {
+    		return 'Save Form';
+			}
+			else if ( $text == 'Update' ) {
+				return 'Update Form';
+				}	
+
+	return $translation;
+}
+
+add_filter( 'gettext', 'easycform_change_publish_button', 10, 2 );
+
+
+/*-------------------------------------------------------------------------------*/
 /*   GENERATE SHARE BUTTONS
 /*-------------------------------------------------------------------------------*/
 function easycform_share() {
