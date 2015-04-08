@@ -4,7 +4,7 @@ Plugin Name: Easy Contact Form Lite
 Plugin URI: http://www.ghozylab.com/plugins/
 Description: Easy Contact Form (Lite) - Displaying your contact form in anywhere you like with very easy. Allows you to customize it to looking exactly what you want.
 Author: GhozyLab, Inc.
-Version: 1.0.1
+Version: 1.0.3
 Author URI: http://www.ghozylab.com/plugins/
 */
 
@@ -46,7 +46,7 @@ define( 'ECF_ITEM_NAME', 'Easy Contact Form Lite' );
 
 // Plugin Version
 if ( !defined( 'ECF_VERSION' ) ) {
-	define( 'ECF_VERSION', '1.0.1' );
+	define( 'ECF_VERSION', '1.0.3' );
 }
 
 // Pro Price
@@ -173,7 +173,7 @@ function easycontactform_edit_columns( $ecf_columns ){
 		'cb' => '<input type="checkbox" />',  
 		'title' => _x( 'Title', 'column name', 'easycform' ),
 		'ecf_sc' => __( 'Shortcode', 'easycform'),
-		'ecf_id' => __( 'ID', 'easycform')	
+		'ecf_id' => __( 'Form ID', 'easycform')	
 			
 	);  
 	unset( $columns['Date'] );
@@ -288,7 +288,7 @@ function ecf_load_plugin() {
 
     if ( is_admin() && get_option( 'activatedecf' ) == 'ecf-activate' && !is_network_admin() ) {
 		delete_option( 'activatedecf' );
-		wp_redirect("edit.php?post_type=easycontactform&page=easycform_comparison");
+		wp_redirect("edit.php?post_type=easycontactform&page=easycform_free_plugins");
 		
     	}
 }

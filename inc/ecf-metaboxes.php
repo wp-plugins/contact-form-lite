@@ -11,8 +11,8 @@
 /*  Right Upgrade Metabox
 /*-----------------------------------------------------------------------------------*/
 function ecf_custom_metabox() {
-	add_meta_box( 'ecfdemodiv', __( 'AMAZING Pro Version DEMO' ), 'ecf_prodemo_metabox', 'easycontactform', 'side', 'default' );
 	add_meta_box( 'ecfbuydiv', __( 'Upgrade to Pro Version' ), 'ecf_upgrade_metabox', 'easycontactform', 'side', 'default' );
+	add_meta_box( 'ecfdemodiv', __( 'AMAZING Pro Version DEMO' ), 'ecf_prodemo_metabox', 'easycontactform', 'side', 'default' );
 }
 
 add_action( 'do_meta_boxes', 'ecf_custom_metabox' );
@@ -43,6 +43,8 @@ function ecf_load_script() {
 			wp_enqueue_style( 'ecf-tabulous' );
 			wp_enqueue_style( 'ecf-colorpicker' );
 			wp_enqueue_style( 'ecf-bootstrap-css' );
+			wp_enqueue_style( 'ecf-introcss' );
+			wp_enqueue_script( 'ecf-introjs' );
 			wp_enqueue_script( 'ecf-bootstrap-js' );
 			wp_enqueue_script( 'ecf-colorpickerjs' );
 			wp_enqueue_script( 'jquery-ui-slider' );
@@ -50,7 +52,7 @@ function ecf_load_script() {
 
 			//add_action('admin_footer', 'ecf_scroll' );	
 			add_action('admin_footer', 'ecf_upgrade_popup' );
-
+			easycform_pointer_header();
 			}
 		}
 }
@@ -562,7 +564,7 @@ function ecf_metabox_work(){
 
 	    $meta_box = array(
 		'id' => 'ecf_meta_formbuilder',
-		'title' =>  __( 'Form Builder', 'easycform' ),
+		'title' =>  __( 'Form Builder<span class="ecf-introjs"><a href="javascript:void(0);" onclick="startIntro();"><span class="ecf-intro-help"></span>Click Here to learn How to create your first Form</a></span>', 'easycform' ),
 		'description' => __( 'You can add / remove, edit or order any elements with this form builder to fit to your needs.', 'easycform' ),
 		'page' => 'easycontactform',
 		'context' => 'normal',	

@@ -450,7 +450,7 @@ input[type="button"].btn-block {
   opacity: 1;
 }
 
-.close {
+.modal-header .close {
   float: right;
   font-size: 21px;
   font-weight: bold;
@@ -460,8 +460,8 @@ input[type="button"].btn-block {
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
-.close:hover,
-.close:focus {
+.modal-header .close:hover,
+.modal-header .close:focus {
   color: #000000;
   text-decoration: none;
   cursor: pointer;

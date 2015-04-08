@@ -1,10 +1,10 @@
 === Contact Form Lite ===
 Contributors: GhozyLab
 Donate link: http://ghozylab.com/
-Tags: form, contact, contact form, form builder, form, form plugin, image, images, plugin, admin, ajax, widget
+Tags: form, form generator, contact form, form builder, form, form plugin, image, images, plugin, admin, ajax, widget
 Requires at least: 3.3
 Tested up to: 4.1.1
-Stable tag: 1.0.1
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,11 +12,11 @@ The easy way to create responsive contact form for your site.
 
 == Description ==
 
-This plugin allows you to create best contact form with quickly and easily drag and drop interface, you won't have to code anything and your forms will work right out of the box.
+**Contact Form Lite** allows you to create best contact form with quickly and easily drag and drop interface, you won't have to code anything and your forms will work right out of the box.
 
-Not only does the Contact Form Lite take care of the functionality, it can very easily make your form look great too. For the more advanced user, you will not be disappointed with the flexibility of the styling features of Contact Form Lite.
+Not only does the **Contact Form Lite** take care of the functionality, it can very easily make your form look great too. For the more advanced user, you will not be disappointed with the flexibility of the styling features of Contact Form Lite.
 
-You can have total control of your form design and there are plenty layout options so you can take it as far as you like.
+You can have total control of your **form** design and there are plenty layout options so you can take it as far as you like.
 
 > #### **Live Demos**
 > * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-standart-form/" target="_blank">DEMO - STANDART FORM ( LITE VERSION )</a>
@@ -57,9 +57,9 @@ Take your form to the next level with [Easy Contact Form Pro](http://demo.ghozyl
 ### Recommended Plugins
 The following are other recommended plugins by the author:
 
-* [Easy Media Gallery](http://wordpress.org/plugins/easy-media-gallery/) - Easy Media Gallery is a wordpress plugin designed to display various media support including grid gallery, galleries, photo album, multiple photo albums, portfolio, photo gallery or image gallery.
+* [Best Gallery Plugin](http://wordpress.org/plugins/easy-media-gallery/) - Easy Media Gallery is a wordpress plugin designed to display various media support including grid gallery, galleries, photo album, multiple photo albums, portfolio, photo gallery or image gallery.
 * [Best Image Slider Plugin](https://wordpress.org/plugins/image-slider-widget/) - Easy Image Slider Widget - Displaying your image as slider in widget/sidebar area with very easy. Allows you to customize it to looking exactly what you want.
-* [Easy Lightbox Popup](http://wordpress.org/plugins/easy-notify-lite/) -  The Best Notify and Subscription Form Plugin to display notify popup, announcement and subscribe form with very ease, fancy and elegant.
+* [Best Popup Plugin](http://wordpress.org/plugins/easy-notify-lite/) -  The Best Notify and Subscription Form Plugin to display notify popup, announcement and subscribe form with very ease, fancy and elegant.
 
 > #### **NOTE**
 > If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://ghozylab.com" target="_blank">GhozyLab</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
@@ -115,6 +115,11 @@ But seriously, I just want to drink coffee for free, so help a developer out. Yo
 
 == Changelog ==
 
+= 1.0.3 =
+* Added interactive help
+* Bug Fixed on Form Template
+* Many other PHP and CSS clean and optimization
+
 = 1.0.1 =
 * Bugs Fixed on Pricing Page
 * Bugs Fixed on Free Plugin List ( Link DEMO )
@@ -124,5 +129,5 @@ But seriously, I just want to drink coffee for free, so help a developer out. Yo
 
 == Upgrade Notice ==
 
-= 1.0.1 =
+= 1.0.3 =
 Bugs Fixed, please update now!

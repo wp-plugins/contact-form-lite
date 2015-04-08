@@ -16,6 +16,8 @@ function ecf_reg_script() {
 	wp_register_script( 'ecf-utils', plugins_url( 'js/colorpicker/utils.js' , dirname(__FILE__) ), false, ECF_VERSION );
 	wp_register_style( 'ecf-formbuilder-css', plugins_url( 'css/formbuilder/formbuilder.css' , dirname(__FILE__) ), false, ECF_VERSION );
 	wp_register_style( 'ecf-formbuilder-vendor-css', plugins_url( 'css/formbuilder/vendor/css/vendor.css' , dirname(__FILE__) ), false, ECF_VERSION );
+	wp_register_style( 'ecf-introcss', plugins_url( 'css/introjs.min.css' , dirname(__FILE__) ), false, ECF_VERSION );
+	wp_register_script( 'ecf-introjs', plugins_url( 'js/jquery/intro.min.js' , dirname(__FILE__) ), false, ECF_VERSION );
 	wp_register_script( 'ecf-formbuilder-core', plugins_url( 'js/formbuilder/formbuilder-core.js' , dirname(__FILE__) ), false, ECF_VERSION );
 	wp_register_script( 'ecf-formbuilder-js', plugins_url( 'js/formbuilder/formbuilder.js' , dirname(__FILE__) ), false, ECF_VERSION );
 	wp_register_style( 'ecf-bootstrap-css', plugins_url( 'css/bootstrap/css/bootstrap.min.css' , dirname(__FILE__) ), false, ECF_VERSION );
@@ -352,6 +354,57 @@ function easycform_change_publish_button( $translation, $text ) {
 }
 
 add_filter( 'gettext', 'easycform_change_publish_button', 10, 2 );
+
+
+/*-------------------------------------------------------------------------------*/
+/*  WordPress Pointers 
+/*-------------------------------------------------------------------------------*/
+function easycform_pointer_header() {
+    $enqueue = false;
+
+    $dismissed = explode( ',', (string) get_user_meta( get_current_user_id(), 'dismissed_wp_pointers', true ) );
+
+    if ( ! in_array( 'easycform_pointer', $dismissed ) ) {
+        $enqueue = true;
+        add_action( 'admin_print_footer_scripts', 'easycform_pointer_footer' );
+    }
+
+    if ( $enqueue ) {
+        // Enqueue pointers
+        wp_enqueue_script( 'wp-pointer' );
+        wp_enqueue_style( 'wp-pointer' );
+    }
+}
+
+function easycform_pointer_footer() {
+    $pointer_content = '<h3>Thank You!</h3>';
+	  $pointer_content .= '<p>You&#39;ve just installed '.ECF_ITEM_NAME.'. Click here to get short tutorial and user guide plugin.</p><p>To close this notify permanently just click dismiss button below.</p>';
+?>
+
+<script type="text/javascript">// <![CDATA[
+jQuery(document).ready(function($) {
+	
+if (typeof(jQuery().pointer) != 'undefined') {	
+    $('.ecf-intro-help').pointer({
+        content: '<?php echo $pointer_content; ?>',
+        position: {
+            edge: 'left',
+            align: 'center'
+        },
+        close: function() {
+            $.post( ajaxurl, {
+                pointer: 'easycform_pointer',
+               action: 'dismiss-wp-pointer'
+            });
+        }
+    }).pointer('open');
+	
+}
+
+});
+// ]]></script>
+<?php
+}
 
 
 /*-------------------------------------------------------------------------------*/

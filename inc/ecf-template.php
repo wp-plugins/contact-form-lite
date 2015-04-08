@@ -60,12 +60,13 @@ function ecf_markup_generator( $fid, $rnd ) {
 					// Do not change code below
 					errorPlacement: function(error, element) {
 						error.insertAfter(element.parent());
-					},
-					 submitHandler: function (form) {
-						 		ecf_onsubmit(jQuery('.form-<?php echo $rnd; ?>'));
+						},
+						
+					submitHandler: function (form) {
+						 ecf_onsubmit(jQuery('.form-<?php echo $rnd; ?>'));
 						 },
 						 
-					 invalidHandler: function (form) {	
+					invalidHandler: function (form) {	
 					  	$.ladda( 'stopAll' );
 					 	},
 						 
@@ -88,7 +89,7 @@ function ecf_markup_generator( $fid, $rnd ) {
 					data['formid'] = '<?php echo $fid; ?>';
 					data['security'] = '<?php echo wp_create_nonce( trim($fid) ); ?>';
 		
-					jQuery('input, textarea, select, radio, checkbox', form).each(function(key){
+					jQuery('input, textarea', form).each(function(key){
 						
 						items = {};
 						
@@ -101,12 +102,11 @@ function ecf_markup_generator( $fid, $rnd ) {
 
 						eldat.push(items);
 							
-							
 						}); // END  form).each(function(key){
 
 						data['allelmnt'] = JSON.stringify(eldat);
 
-						submitForm('');
+						submitForm();
 				
 					return false;
 					
@@ -115,11 +115,7 @@ function ecf_markup_generator( $fid, $rnd ) {
 			} // End ecf_onsubmit 
 			
 			// Start submitForm		
-			  function submitForm(tdat) {
-				  
-				if ( tdat ) {
-					data['attachments'] = JSON.stringify(filedat);
-					} 
+			  function submitForm() {
 				  
 				jQuery.ajax({
 					url: '<?php echo admin_url('admin-ajax.php'); ?>', 
@@ -148,8 +144,6 @@ function ecf_markup_generator( $fid, $rnd ) {
 									
 							}
 						});
-						
-						filedat = null;
 						
 					} // End submitForm
 	

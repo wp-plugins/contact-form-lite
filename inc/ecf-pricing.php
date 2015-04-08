@@ -43,7 +43,7 @@ function easycform_pricing_table() {
         <li class="row_style_4"><span>Email Auto Respond</span></li>
         <li class="row_style_4"><span>Support Department Field</span></li>
         <li class="row_style_4"><span>Support Email Attachment</span></li>
-        <li class="row_style_2"><span>File type Control</span></li>
+        <li class="row_style_2"><span>File Type Control</span></li>
         <li class="row_style_4"><span>File Size Control</span></li>
         <li class="row_style_2"><span>Support CaptCHA</span></li>
         <li class="row_style_4"><span>Support Fields Validation</span></li>
@@ -77,7 +77,7 @@ function easycform_pricing_table() {
         <li class="row_style_1 align_center"><span class="pricing_no"></span></li>
         <li class="row_style_3 align_center"><span class="pricing_no"></span></li>    
         <li class="row_style_1 align_center"><span class="pricing_yes"></span></li>
-        <li class="row_style_3 align_center"><span class="pricing_no"></span></li>      
+        <li class="row_style_3 align_center"><span class="pricing_yes"></span></li>      
         <li class="row_style_1 align_center"><span>none</span></li>
         <li class="row_style_3 align_center"><span class="pricing_yes"></span></li>
          
