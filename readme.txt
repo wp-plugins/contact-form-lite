@@ -1,14 +1,14 @@
 === Contact Form Lite ===
 Contributors: GhozyLab
 Donate link: http://ghozylab.com/
-Tags: form, form generator, contact form, form builder, form, form plugin, image, images, plugin, admin, ajax, widget
+Tags: form, form generator, contact form, form builder, best form, wp, web form, contactform, contact form plugin, seo, ajax form, widget
 Requires at least: 3.3
 Tested up to: 4.1.1
 Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The easy way to create responsive contact form for your site.
+Built awesome & responsive contact form in just minutes. Yeah, it's really that easy.
 
 == Description ==
 
@@ -17,6 +17,8 @@ The easy way to create responsive contact form for your site.
 Not only does the **Contact Form Lite** take care of the functionality, it can very easily make your form look great too. For the more advanced user, you will not be disappointed with the flexibility of the styling features of Contact Form Lite.
 
 You can have total control of your **form** design and there are plenty layout options so you can take it as far as you like.
+
+The best thing about **Contact Form** plugin is that you can use multiple forms, which can be inserted into your posts, pages, and widgets.
 
 > #### **Live Demos**
 > * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-standart-form/" target="_blank">DEMO - STANDART FORM ( LITE VERSION )</a>
@@ -51,6 +53,7 @@ Take your form to the next level with [Easy Contact Form Pro](http://demo.ghozyl
 * You can set your own validation message that will be displayed when the form is successfully submitted
 * Effortless mobile and tablet devices adaptation
 * Increase mobile conversions on your website
+* Submissions and Analytics pages
 * Prevent spam with 2 CAPTCHA options: image, New reCAPTCHA or reCAPTCHA v1 and more than 5 reCAPTCHA skin
 * 24/7 Technical Support
 
