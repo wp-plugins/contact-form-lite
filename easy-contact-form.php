@@ -150,8 +150,41 @@ function ecf_post_type() {
 		'menu_icon' =>  plugins_url( 'inc/images/ecf-cp-icon.png' , __FILE__ ),		
 		'taxonomies'		=> $taxonomies
 	);
+	
+	
+// For Report - @since 1.0.3 > 5 ( BETA )
+	$label = array(
+		'name' 				=> _x( 'Submissions', 'post type general name' ),
+		'singular_name'		=> _x( 'Submissions', 'post type singular name' ),
+		'edit_item' 		=> __( 'Edit Submissions', 'easycform' ),
+		'view_item' 		=> __( 'View Submissions', 'easycform' ),
+		'search_items' 		=> __( 'Search Submissions', 'easycform' ),
+		'not_found' 		=> __( 'No Submissions Found', 'easycform' ),
+		'not_found_in_trash'=> __( 'No Submissions Found In Trash', 'easycform' )
+	);
+
+	$tax = array();
+	$support = array( 'title' );
+	
+	$post_type_arg = array(
+		'labels' 			=> $label,
+		'public' 			=> false,
+		'show_ui' 			=> true,
+		'publicly_queryable'=> true,
+		'query_var'			=> true,
+		'capability_type' 	=> 'post',
+		'has_archive' 		=> false,
+		'hierarchical' 		=> false,
+		'rewrite' 			=> array( 'slug' => 'ecfentrie', 'with_front' => false ),
+		'supports' 			=> $support,
+		'show_in_menu' 		=> false,
+		'taxonomies'		=> $tax
+	);
+	
 
 	 register_post_type( 'easycontactform', $post_type_args );
+	 register_post_type( 'ecfentries', $post_type_arg );
+	 
 }
 add_action( 'init', 'ecf_post_type' );
 
@@ -261,7 +294,7 @@ include_once( 'inc/ecf-metaboxes.php' );
 include_once( 'inc/ecf-shortcode.php' );
 include_once( 'inc/ecf-opt-loader.php' );
 include_once( 'inc/functions/ecf-mail.php' );
-
+include_once( 'inc/ecf-entries.php' ); // @since 1.0.3 > 5 ( BETA )
 
 /*-------------------------------------------------------------------------------*/
 /*   Featured Plugins Page
