@@ -1,5 +1,8 @@
 <?php
 
+if ( ! defined('ABSPATH') ) {
+	die('Please do not load this file directly!');
+}
 
 /*-------------------------------------------------------------------------------*/
 /*  POST/PAGE SHORTCODE
