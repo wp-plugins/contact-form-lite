@@ -2,9 +2,9 @@
 /*
 Plugin Name: Easy Contact Form Lite
 Plugin URI: http://www.ghozylab.com/plugins/
-Description: Easy Contact Form (Lite) - Displaying your contact form in anywhere you like with very easy. Allows you to customize it to looking exactly what you want.
+Description: Easy Contact Form (Lite) - Displaying your contact form in anywhere you like with very easy. Allows you to customize it to looking exactly what you want. <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/pricing-compare-tables/" target="_blank"><strong> Upgrade to Pro Version Now</strong></a> and get a tons of awesome features.
 Author: GhozyLab, Inc.
-Version: 1.0.3
+Version: 1.0.5
 Author URI: http://www.ghozylab.com/plugins/
 */
 
@@ -46,7 +46,7 @@ define( 'ECF_ITEM_NAME', 'Easy Contact Form Lite' );
 
 // Plugin Version
 if ( !defined( 'ECF_VERSION' ) ) {
-	define( 'ECF_VERSION', '1.0.3' );
+	define( 'ECF_VERSION', '1.0.5' );
 }
 
 // Pro Price
@@ -335,20 +335,20 @@ $ecf_auto_updt = get_option( "ecf-settings-automatic_update" );
 
 switch ( $ecf_auto_updt ) {
 	
-	case '1':
+	case 'active':
 		if ( !wp_next_scheduled( "ecf_auto_update" ) ) {
 			wp_schedule_event( time(), "daily", "ecf_auto_update" );
 			}
 		add_action( "ecf_auto_update", "plugin_ecf_auto_update" );
 	break;
 	
-	case '0':
+	case 'inactive':
 		wp_clear_scheduled_hook( "ecf_auto_update" );
 	break;	
 	
 	case '':
 		wp_clear_scheduled_hook( "ecf_auto_update" );
-		update_option( "ecf-settings-automatic_update", '1' );
+		update_option( "ecf-settings-automatic_update", 'active' );
 	break;
 					
 }

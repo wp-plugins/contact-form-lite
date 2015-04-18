@@ -4,7 +4,7 @@ Donate link: http://ghozylab.com/
 Tags: form, form generator, contact form, form builder, best form, wp, web form, contactform, contact form plugin, seo, ajax form, widget
 Requires at least: 3.3
 Tested up to: 4.1.1
-Stable tag: 1.0.3
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,9 +12,9 @@ Built awesome & responsive contact form in just minutes. Yeah, it's really that 
 
 == Description ==
 
-**Contact Form Lite** allows you to create best contact form with quickly and easily drag and drop interface, you won't have to code anything and your forms will work right out of the box.
+**Contact Form** allows you to create best contact form with quickly and easily drag and drop interface, you won't have to code anything and your forms will work right out of the box.
 
-Not only does the **Contact Form Lite** take care of the functionality, it can very easily make your form look great too. For the more advanced user, you will not be disappointed with the flexibility of the styling features of Contact Form Lite.
+Not only does the **Contact Form** take care of the functionality, it can very easily make your form look great too. For the more advanced user, you will not be disappointed with the flexibility of the styling features of Contact Form Lite.
 
 You can have total control of your **form** design and there are plenty layout options so you can take it as far as you like.
 
@@ -29,7 +29,7 @@ The best thing about **Contact Form** plugin is that you can use multiple forms,
 = LITE VERSION VIDEO =
 [youtube https://www.youtube.com/watch?v=_3lsRi9C77k]
 
-= Upgrade to Pro Version = 
+= Upgrade to Contact Form Pro Version = 
 Take your form to the next level with [Easy Contact Form Pro](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/pricing-compare-tables/), which gives you additional features such as:
 
 * Super Easy to use for Beginners
@@ -118,6 +118,9 @@ But seriously, I just want to drink coffee for free, so help a developer out. Yo
 
 == Changelog ==
 
+= 1.0.5 =
+* Bugs Fixed on Settings Page ( change select box value )
+
 = 1.0.3 =
 * Added interactive help
 * Bug Fixed on Form Template
@@ -132,5 +135,5 @@ But seriously, I just want to drink coffee for free, so help a developer out. Yo
 
 == Upgrade Notice ==
 
-= 1.0.3 =
-Bugs Fixed, please update now!
+= 1.0.5 =
+Bugs Fixed on Settings Page, please update now!

@@ -21,8 +21,8 @@ function ecf_stt_page() {
             <h4><?php _e( "Auto Update Plugin", "easycform" ); ?> :</h4>
             <div style="margin-top: 10px;">
 			<?php $ecf_opt_updt = get_option("ecf-settings-automatic_update"); ?>
-            <input type="radio" name="ecf_sett_autoupd" onclick="ecf_ajax_autoupdt(this);" <?php echo $ecf_opt_updt == "1" ? "checked=\"checked\"" : "";?> value="1"><label style="vertical-align: baseline;"><?php _e( "Enable", "easycform" ); ?></label>
-            <input type="radio" name="ecf_sett_autoupd" onclick="ecf_ajax_autoupdt(this);" <?php echo $ecf_opt_updt == "0" ? "checked=\"checked\"" : "";?> style="margin-left: 10px;" value="0"><label style="vertical-align: baseline;"><?php _e( "Disable", "easycform" ); ?></label>
+            <input type="radio" name="ecf_sett_autoupd" onclick="ecf_ajax_autoupdt(this);" <?php echo $ecf_opt_updt == "active" ? "checked=\"checked\"" : "";?> value="active"><label style="vertical-align: baseline;"><?php _e( "Enable", "easycform" ); ?></label>
+            <input type="radio" name="ecf_sett_autoupd" onclick="ecf_ajax_autoupdt(this);" <?php echo $ecf_opt_updt == "inactive" ? "checked=\"checked\"" : "";?> style="margin-left: 10px;" value="inactive"><label style="vertical-align: baseline;"><?php _e( "Disable", "easycform" ); ?></label>
             </div>
             </div>
             </form>
