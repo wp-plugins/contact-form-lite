@@ -47,6 +47,8 @@ function easycform_pricing_table() {
         <li class="row_style_4"><span>File Size Control</span></li>
         <li class="row_style_2"><span>Support CaptCHA</span></li>
         <li class="row_style_4"><span>Support Fields Validation</span></li>
+        <li class="row_style_2"><span>Submissions Report</span></li>
+        <li class="row_style_4"><span>Form Analytics</span></li>
         <li class="row_style_2"><span>WP Multisite</span></li>
         <li class="row_style_4"><span>Support</span></li>
         <li class="row_style_2"><span>Update</span></li>
@@ -75,8 +77,10 @@ function easycform_pricing_table() {
         <li class="row_style_1 align_center"><span class="pricing_no"></span></li>
         <li class="row_style_3 align_center"><span class="pricing_no"></span></li>            
         <li class="row_style_1 align_center"><span class="pricing_no"></span></li>
-        <li class="row_style_3 align_center"><span class="pricing_no"></span></li>    
-        <li class="row_style_1 align_center"><span class="pricing_yes"></span></li>
+        <li class="row_style_3 align_center"><span class="pricing_no"></span></li>
+        <li class="row_style_1 align_center"><span class="pricing_no"></span></li>
+        <li class="row_style_3 align_center"><span class="pricing_no"></span></li>   
+        <li class="row_style_1 align_center"><span class="pricing_no"></span></li>
         <li class="row_style_3 align_center"><span class="pricing_yes"></span></li>      
         <li class="row_style_1 align_center"><span>none</span></li>
         <li class="row_style_3 align_center"><span class="pricing_yes"></span></li>
@@ -107,6 +111,8 @@ function easycform_pricing_table() {
         <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>  
+        <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
+        <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
@@ -141,6 +147,8 @@ function easycform_pricing_table() {
         <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
+        <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
+        <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_2 align_center"><span>1 Month</span></li>
         <li class="row_style_4 align_center"><span>1 Year</span></li>
         <li class="footer_row"><a target="_blank" href="http://ghozylab.com/plugins/ordernow.php?order=ecfproplus&utm_source=contactform&utm_medium=pricingpage&utm_campaign=pricingpage" class="tsc_buttons2 red">Upgrade Now</a></li>
@@ -171,6 +179,8 @@ function easycform_pricing_table() {
         <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
+        <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
+        <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_2 align_center"><span>6 Month</span></li>
         <li class="row_style_4 align_center"><span>1 Year</span></li>
         <li class="footer_row"><a target="_blank" href="http://ghozylab.com/plugins/ordernow.php?order=ecfproplusplus&utm_source=contactform&utm_medium=pricingpage&utm_campaign=pricingpage" class="tsc_buttons2 red">Upgrade Now</a></li>
@@ -198,6 +208,8 @@ function easycform_pricing_table() {
         <li class="row_style_1 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_3 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_1 align_center"><span class="pricing_yes"></span></li>  
+        <li class="row_style_3 align_center"><span class="pricing_yes"></span></li>
+        <li class="row_style_1 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_3 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_1 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_3 align_center"><span class="pricing_yes"></span></li>
