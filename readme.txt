@@ -3,8 +3,8 @@ Contributors: GhozyLab
 Donate link: http://ghozylab.com/
 Tags: form, form generator, contact form, form builder, best form, wp, web form, contactform, contact form plugin, seo, ajax form, widget
 Requires at least: 3.3
-Tested up to: 4.1.1
-Stable tag: 1.0.5
+Tested up to: 4.1.2
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -118,6 +118,10 @@ But seriously, I just want to drink coffee for free, so help a developer out. Yo
 
 == Changelog ==
 
+= 1.0.7 =
+* Updated : WordPress 4.1.2 compatibility
+* Many other PHP and CSS clean and optimization
+
 = 1.0.5 =
 * Bugs Fixed on Settings Page ( change select box value )
 
@@ -135,5 +139,5 @@ But seriously, I just want to drink coffee for free, so help a developer out. Yo
 
 == Upgrade Notice ==
 
-= 1.0.5 =
-Bugs Fixed on Settings Page, please update now!
+= 1.0.7 =
+Bugs Fixed on Update Notice, please update now!

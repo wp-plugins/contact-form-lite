@@ -433,3 +433,73 @@ function easycform_share() {
 
     <?php
 	}
+	
+	
+/*-------------------------------------------------------------------------------*/
+/*  Update Notify
+/*-------------------------------------------------------------------------------*/
+function ecf_update_notify() {
+	
+    global $post;
+		if ( 'easycontactform' === $post->post_type && is_admin() ) {
+	
+    ?>
+    <div class="error ecf-setupdate">
+        <p><?php _e( 'We recommend you to enable plugin Auto Update so you\'ll get the latest features and other important updates from <strong>'.ECF_ITEM_NAME.'</strong>.<br />Click <a href="#"><strong><span id="ecfdoautoupdate">here</span></strong></a> to enable Auto Update.', 'easycform' ); ?></p>
+    </div>
+    
+<script type="text/javascript">
+	/*<![CDATA[*/
+	/* Contact Form Lite */
+jQuery(document).ready(function(){
+	jQuery('#ecfdoautoupdate').click(function(){
+		var cmd = 'active';
+		ecf_enable_auto_update(cmd);
+	});
+
+function ecf_enable_auto_update(act) {
+	var data = {
+		action: 'ecf_enable_auto_update',
+		security: '<?php echo wp_create_nonce( "ecf-update-nonce"); ?>',
+		cmd: act,
+		};
+		
+		jQuery.post(ajaxurl, data, function(response) {
+			if (response == 1) {
+				alert('Great! Auto Update successfully activated.');
+				jQuery('.ecf-setupdate').fadeOut('3000');
+				}
+				else {
+				alert('Ajax request failed, please refresh your browser window.');
+				}
+				
+			});
+	}
+	
+});
+	
+/*]]>*/</script>
+    
+    <?php
+	
+	}
+}
+
+function ecf_enable_auto_update() {
+	
+	check_ajax_referer( 'ecf-update-nonce', 'security' );
+	
+	if ( !isset( $_POST['cmd'] ) ) {
+		echo '0';
+		wp_die();
+		}
+		
+		else {
+			if ( $_POST['cmd'] == 'active' ){
+				update_option( "ecf-settings-automatic_update", $_POST['cmd'] );
+				echo '1';				
+				wp_die();
+				}
+	}
+}
+add_action( 'wp_ajax_ecf_enable_auto_update', 'ecf_enable_auto_update' );
