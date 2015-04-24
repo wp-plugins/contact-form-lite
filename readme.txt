@@ -3,7 +3,7 @@ Contributors: GhozyLab
 Donate link: http://ghozylab.com/
 Tags: form, form generator, contact form, form builder, best form, wp, web form, contactform, contact form plugin, seo, ajax form, widget
 Requires at least: 3.3
-Tested up to: 4.1.2
+Tested up to: 4.2
 Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
