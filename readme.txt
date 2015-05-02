@@ -11,8 +11,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Built awesome & responsive contact form in just minutes. Yeah, it's really that easy.
 
 == Description ==
-
-**Contact Form** allows you to create best contact form with quickly and easily drag and drop interface, you won't have to code anything and your forms will work right out of the box.
+= Contact Form Plugin =
+**[Contact Form](https://wordpress.org/plugins/contact-form-lite/ "contact form plugin")** allows you to create best _**contact form**_ with quickly and easily drag and drop interface, you won't have to code anything and your forms will work right out of the box.
 
 Not only does the **Contact Form** take care of the functionality, it can very easily make your form look great too. For the more advanced user, you will not be disappointed with the flexibility of the styling features of Contact Form Lite.
 
@@ -21,16 +21,16 @@ You can have total control of your **form** design and there are plenty layout o
 The best thing about **Contact Form** plugin is that you can use multiple forms, which can be inserted into your posts, pages, and widgets.
 
 > #### **Live Demos**
-> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-standart-form/" target="_blank">DEMO - STANDART FORM ( LITE VERSION )</a>
-> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/contact-form-recaptcha/" target="_blank">DEMO - FORM with RECAPTCHA ( PRO VERSION )</a>
-> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-file-upload/" target="_blank">DEMO - FORM with UPLOAD/ATTACHMENT FIELD ( PRO VERSION )</a>
-> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-fields/" target="_blank">DEMO - FORM with All FIELDS ( PRO VERSION )</a>
+> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-standart-form/" title="contact form" target="_blank">DEMO - STANDART FORM ( LITE VERSION )</a>
+> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/contact-form-recaptcha/" title="recaptcha form" target="_blank">DEMO - FORM with RECAPTCHA ( PRO VERSION )</a>
+> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-file-upload/" title="attachment contact form" target="_blank">DEMO - FORM with UPLOAD/ATTACHMENT FIELD ( PRO VERSION )</a>
+> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-fields/" title="form builder" target="_blank">DEMO - FORM with All FIELDS ( PRO VERSION )</a>
 
 = LITE VERSION VIDEO =
 [youtube https://www.youtube.com/watch?v=_3lsRi9C77k]
 
 = Upgrade to Contact Form Pro Version = 
-Take your form to the next level with [Easy Contact Form Pro](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/pricing-compare-tables/), which gives you additional features such as:
+Take your form to the next level with [Contact Form Pro](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/pricing-compare-tables/ "best contact form plugin"), which gives you additional features such as:
 
 * Super Easy to use for Beginners
 * Create unlimited number of form
@@ -60,12 +60,12 @@ Take your form to the next level with [Easy Contact Form Pro](http://demo.ghozyl
 ### Recommended Plugins
 The following are other recommended plugins by the author:
 
-* [Best Gallery Plugin](http://wordpress.org/plugins/easy-media-gallery/) - Easy Media Gallery is a wordpress plugin designed to display various media support including grid gallery, galleries, photo album, multiple photo albums, portfolio, photo gallery or image gallery.
-* [Best Image Slider Plugin](https://wordpress.org/plugins/image-slider-widget/) - Easy Image Slider Widget - Displaying your image as slider in widget/sidebar area with very easy. Allows you to customize it to looking exactly what you want.
-* [Best Popup Plugin](http://wordpress.org/plugins/easy-notify-lite/) -  The Best Notify and Subscription Form Plugin to display notify popup, announcement and subscribe form with very ease, fancy and elegant.
+* [Best Gallery Plugin](http://wordpress.org/plugins/easy-media-gallery/ "gallery plugin") - Easy Media Gallery is a wordpress plugin designed to display various media support including grid gallery, galleries, photo album, multiple photo albums, portfolio, photo gallery or image gallery.
+* [Best Image Slider Plugin](https://wordpress.org/plugins/image-slider-widget/ "slider plugin") - Easy Image Slider Widget - Displaying your image as slider in widget/sidebar area with very easy. Allows you to customize it to looking exactly what you want.
+* [Best Popup Plugin](http://wordpress.org/plugins/easy-notify-lite/ "optin form plugin") -  The Best Notify and Subscription Form Plugin to display notify popup, announcement and subscribe form with very ease, fancy and elegant.
 
 > #### **NOTE**
-> If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://ghozylab.com" target="_blank">GhozyLab</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+> If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" title="Translating WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://ghozylab.com" title="GhozyLab" target="_blank">GhozyLab</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" title="Download Poedit" target="_blank">Poedit</a>.
 
 = Technical Support =
 
