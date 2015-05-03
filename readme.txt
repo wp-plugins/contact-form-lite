@@ -1,4 +1,4 @@
-=== Contact Form Lite ===
+=== Contact Form Plugin ===
 Contributors: GhozyLab
 Donate link: http://ghozylab.com/
 Tags: form, form generator, contact form, form builder, best form, wp, web form, contactform, contact form plugin, seo, ajax form, widget
@@ -14,7 +14,7 @@ Built awesome & responsive contact form in just minutes. Yeah, it's really that 
 = Contact Form Plugin =
 **[Contact Form](https://wordpress.org/plugins/contact-form-lite/ "contact form plugin")** allows you to create best _**contact form**_ with quickly and easily drag and drop interface, you won't have to code anything and your forms will work right out of the box.
 
-Not only does the **Contact Form** take care of the functionality, it can very easily make your form look great too. For the more advanced user, you will not be disappointed with the flexibility of the styling features of Contact Form Lite.
+Not only does the **Contact Form** take care of the functionality, it can very easily make your form look great too. For the more advanced user, you will not be disappointed with the flexibility of the styling features of Contact Form Plugin.
 
 You can have total control of your **form** design and there are plenty layout options so you can take it as far as you like.
 
@@ -75,7 +75,7 @@ If any problem occurs or if you think, that you found a bug please contact us at
 
 = For automatic installation: =
 
-The simplest way to install is to click on 'Plugins' then 'Add' and type 'Contact Form Lite' in the search field.
+The simplest way to install is to click on 'Plugins' then 'Add' and type 'Contact Form Plugin' in the search field.
 
 = For manual installation 1: =
 
@@ -98,17 +98,17 @@ The simplest way to install is to click on 'Plugins' then 'Add' and type 'Contac
 
 = How can I get support? =
 
-* We are not able to provide anything other than community based support for Contact Form Lite. Please consider upgrading to [Contact Form Lite Professional](http://ghozylab.com/plugins/) for support.
+* We are not able to provide anything other than community based support for Contact Form Plugin. Please consider upgrading to [Contact Form Plugin Professional](http://ghozylab.com/plugins/) for support.
 
 
 = How can I say thanks? =
 
 * Just recommend our plugin to your friends! or
-* If you really love Contact Form Lite any donation would be appreciated! It helps to continue the development and support of the plugin.
+* If you really love Contact Form Plugin any donation would be appreciated! It helps to continue the development and support of the plugin.
 But seriously, I just want to drink coffee for free, so help a developer out. You can use this link [Donate to Contact Form Lite][cp donate].
 
 [cp donate]: http://ghozylab.com/plugins/donate
-            "Donate to Contact Form Lite"
+            "Donate to Contact Form Plugin"
 
 == Screenshots ==
 
