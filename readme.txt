@@ -1,7 +1,7 @@
 === Contact Form Plugin ===
 Contributors: GhozyLab
 Donate link: http://ghozylab.com/
-Tags: form, form generator, contact form, form builder, best form, wp, web form, contactform, contact form plugin, seo, ajax form, widget
+Tags: admin, advanced form, attachment, captcha, best contact form plugin, buddypress, category, cnotact, conact, contact, contact button, contact form, contact form builder, contact Form Builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, copy, custom form, email, email form, feedback, feedback form, feedback forms, form, forms, forms plugin, insert the shortcode, multiple contact forms, post feedback, request, send, send copy, send messages, shortcode, text, web form, web-page feedback, wordpress contact form
 Requires at least: 3.3
 Tested up to: 4.2
 Stable tag: 1.0.7
