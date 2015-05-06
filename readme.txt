@@ -8,11 +8,11 @@ Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Built awesome & responsive contact form in just minutes. Yeah, it's really that easy.
+Create best contact form in minutes. Yeah, it's really that easy.
 
 == Description ==
 = Contact Form Plugin =
-**[Contact Form](https://wordpress.org/plugins/contact-form-lite/ "contact form plugin")** allows you to create best _**contact form**_ with quickly and easily drag and drop interface, you won't have to code anything and your forms will work right out of the box.
+**[Contact Form](https://wordpress.org/plugins/contact-form-lite/ "contact form plugin")** allows you to create best **contact form** with quickly and easily drag and drop interface, you won't have to code anything and your forms will work right out of the box.
 
 Not only does the **Contact Form** take care of the functionality, it can very easily make your form look great too. For the more advanced user, you will not be disappointed with the flexibility of the styling features of Contact Form Plugin.
 
@@ -21,10 +21,10 @@ You can have total control of your **form** design and there are plenty layout o
 The best thing about **Ajax Contact Form** plugin is that you can use multiple forms, which can be inserted into your posts, pages, and widgets.
 
 > #### **Live Demos**
-> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-standart-form/" title="contact form" target="_blank">DEMO - STANDART FORM ( LITE VERSION )</a>
-> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/contact-form-recaptcha/" title="recaptcha form" target="_blank">DEMO - FORM with RECAPTCHA ( PRO VERSION )</a>
-> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-file-upload/" title="attachment contact form" target="_blank">DEMO - FORM with UPLOAD/ATTACHMENT FIELD ( PRO VERSION )</a>
-> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-fields/" title="form builder" target="_blank">DEMO - FORM with All FIELDS ( PRO VERSION )</a>
+> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-standart-form/" title="contact form" target="_blank">DEMO - CONTACT FORM BASIC ( LITE VERSION )</a>
+> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/contact-form-recaptcha/" title="recaptcha form" target="_blank">DEMO - CONTACT FORM with RECAPTCHA ( PRO VERSION )</a>
+> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-file-upload/" title="attachment contact form" target="_blank">DEMO - CONTACT FORM with UPLOAD/ATTACHMENT FIELD ( PRO VERSION )</a>
+> * <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-fields/" title="form builder" target="_blank">DEMO - CONTACT FORM with All FIELDS ( PRO VERSION )</a>
 
 = LITE VERSION VIDEO =
 [youtube https://www.youtube.com/watch?v=_3lsRi9C77k]
