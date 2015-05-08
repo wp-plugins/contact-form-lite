@@ -1,7 +1,7 @@
 === Contact Form Plugin ===
 Contributors: GhozyLab
 Donate link: http://ghozylab.com/
-Tags: admin, advanced form, attachment, captcha, best contact form plugin, buddypress, category, ajax, ajax contact form, cnotact, conact, contact, contact button, contact form, contact form builder, contact Form Builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, copy, custom form, email, email form, feedback, feedback form, feedback forms, form, forms, forms plugin, insert the shortcode, multiple contact forms, post feedback, request, send, send copy, send messages, shortcode, text, web form, web-page feedback, wordpress contact form
+Tags: admin, advanced form, attachment, captcha, best contact form plugin, buddypress, category, ajax, ajax contact form, cnotact, conact, contact, contact button, contact form, contact form builder, contact Form Builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, copy, contactform, custom form, email, email form, feedback, feedback form, feedback forms, form, forms, forms plugin, insert the shortcode, multiple contact forms, post feedback, request, send, send copy, send messages, shortcode, text, web form, web-page feedback, wordpress contact form
 Requires at least: 3.3
 Tested up to: 4.2.2
 Stable tag: 1.0.7
@@ -16,7 +16,7 @@ Create best contact form in minutes. Yeah, it's really that easy.
 
 Not only does the **Contact Form** take care of the functionality, it can very easily make your form look great too. For the more advanced user, you will not be disappointed with the flexibility of the styling features of Contact Form Plugin.
 
-You can have total control of your **form** design and there are plenty layout options so you can take it as far as you like.
+You can have total control of your **[form](https://wordpress.org/plugins/contact-form-lite/ "form plugin")** design and there are plenty layout options so you can take it as far as you like.
 
 The best thing about **Ajax Contact Form** plugin is that you can use multiple forms, which can be inserted into your posts, pages, and widgets.
 
@@ -114,7 +114,10 @@ But seriously, I just want to drink coffee for free, so help a developer out. Yo
 
 1. Form on Frontend
 2. Form Builder
-3. Form Options
+3. Form Options ( Email )
+4. Form Options ( Layout & Styles )
+5. Form Options ( Miscellaneous )
+6. Form Options ( Advanced )
 
 == Changelog ==
 
