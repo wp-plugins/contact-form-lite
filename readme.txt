@@ -1,14 +1,14 @@
 === Contact Form Plugin ===
 Contributors: GhozyLab
 Donate link: http://ghozylab.com/
-Tags: admin, advanced form, attachment, captcha, best contact form plugin, buddypress, category, ajax, ajax contact form, cnotact, conact, contact, contact button, contact form, contact form builder, contact Form Builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, copy, contactform, custom form, email, email form, feedback, feedback form, feedback forms, form, forms, forms plugin, insert the shortcode, multiple contact forms, post feedback, request, send, send copy, send messages, shortcode, text, web form, web-page feedback, wordpress contact form
+Tags: images, image, advanced form, attachment, captcha, best contact form plugin, buddypress, category, ajax, ajax contact form, cnotact, conact, contact, contact button, contact form, contact form builder, contact Form Builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, copy, contactform, custom form, email, email form, feedback, feedback form, feedback forms, form, forms, forms plugin, insert the shortcode, multiple contact forms, admin, request, send, send copy, send messages, shortcode, text, web form, widget, wordpress contact form
 Requires at least: 3.3
 Tested up to: 4.2.2
 Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Create best contact form in minutes. Yeah, it's really that easy.
+Contact Form Plugin - create best contact form in minutes. Yeah, it's really that easy.
 
 == Description ==
 = Contact Form Plugin =
@@ -34,6 +34,8 @@ Take your form to the next level with [Contact Form Pro](http://demo.ghozylab.co
 
 * Super Easy to use for Beginners
 * Create unlimited number of form
+* AJAX-powered form interface. Send forms without re-loading the page
+* Form analytics in WordPress
 * Create forms that will match your website identity instantly
 * Custom colors : a color picker is available for every elements in your contact form
 * No coding, the plugin takes care of everything
@@ -45,6 +47,7 @@ Take your form to the next level with [Contact Form Pro](http://demo.ghozylab.co
 * Custom loading icon
 * The email address of your visitor will automatically appear in the From field of the admin notification message
 * You can customize the name that will appear in the From field of the user notification message
+* Customize email body for notification
 * Your visitors can upload files on your server, singe or multiple upload
 * You can receive uploads as email attchments
 * Secure file size control and Secure file type control
@@ -53,7 +56,6 @@ Take your form to the next level with [Contact Form Pro](http://demo.ghozylab.co
 * You can set your own validation message that will be displayed when the form is successfully submitted
 * Effortless mobile and tablet devices adaptation
 * Increase mobile conversions on your website
-* Submissions and Analytics pages
 * Prevent spam with 2 CAPTCHA options: image, New reCAPTCHA or reCAPTCHA v1 and more than 5 reCAPTCHA skin
 * 24/7 Technical Support
 
