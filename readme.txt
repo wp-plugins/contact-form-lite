@@ -142,6 +142,12 @@ But seriously, I just want to drink coffee for free, so help a developer out. Yo
 = 1.0.0 =
 * This is the launch version. No changes yet.
 
+==Contact Form Plugin step by step guide==
+
+There are no complicated instructions for using Contact Form plugin because this form plugin designed to make all easy. Please watch the following video and we believe that you will easily to understand it just in minutes :
+
+[How to Create Contact Form](https://www.youtube.com/watch?v=_3lsRi9C77k "Create Contact Form")
+
 == Upgrade Notice ==
 
 = 1.0.7 =
