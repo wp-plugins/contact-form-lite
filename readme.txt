@@ -1,7 +1,7 @@
 === Contact Form Plugin ===
 Contributors: GhozyLab
 Donate link: http://ghozylab.com/
-Tags: images, image, captcha, best contact form, seo, ajax, ajax contact form, contact, contact form, contact form builder, kontaktformular, contact us, contatc, contactform, custom form, email form, form, admin, kontak form, formulaire de contact, send messages, shortcode, web form, widget, wordpress contact form
+Tags: contact form, images, image, advanced form, attachment, captcha, best contact form plugin, buddypress, category, ajax, ajax contact form, cnotact, conact, contact, contact button, contact form builder, contact form builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, contactform, custom form, email, email form, form, forms, forms plugin, insert the shortcode, multiple contact forms, admin, send messages, shortcode, web form, widget, wordpress contact form, kontak form, kontaktformular, formulaire de contact
 Requires at least: 3.3
 Tested up to: 4.2.2
 Stable tag: 1.0.7
@@ -12,7 +12,7 @@ Contact Form Plugin - create best contact form in minutes. Yeah, it's really tha
 
 == Description ==
 = Contact Form Plugin =
-**[Contact Form](https://wordpress.org/plugins/contact-form-lite/ "contact form plugin")** allows you to create best **contact form** with quickly and easily drag and drop interface, you won't have to code anything and your forms will work right out of the box.
+**[contact form](https://wordpress.org/plugins/contact-form-lite/ "contact form plugin")** allows you to create best **contact form** with quickly and easily drag and drop interface, you won't have to code anything and your forms will work right out of the box.
 
 Not only does the **Contact Form** take care of the functionality, it can very easily make your form look great too. For the more advanced user, you will not be disappointed with the flexibility of the styling features of Contact Form Plugin.
 
