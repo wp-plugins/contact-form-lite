@@ -11,10 +11,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Contact Form Plugin - create best contact form in minutes. Yeah, it's really that easy.
 
 == Description ==
-= Contact Form Plugin =
-**[contact form](https://wordpress.org/plugins/contact-form-lite/ "contact form plugin")** allows you to create best **contact form** with quickly and easily drag and drop interface, you won't have to code anything and your forms will work right out of the box.
+= Contact Form Plugin for Wordpress =
+**[contact form](https://wordpress.org/plugins/contact-form-lite/ "contact form plugin")** allows you to create best **form** with quickly and easily drag and drop interface, you won't have to code anything and your forms will work right out of the box.
 
-Not only does the **Contact Form** take care of the functionality, it can very easily make your form look great too. For the more advanced user, you will not be disappointed with the flexibility of the styling features of Contact Form Plugin.
+Not only does the **contact form** take care of the functionality, it can very easily make your [form](https://wordpress.org/plugins/contact-form-lite/ "contact form") look great too. For the more advanced user, you will not be disappointed with the flexibility of the styling features of [contact form plugin](https://wordpress.org/plugins/contact-form-lite/ "contact form plugin").
 
 You can have total control of your **[form](https://wordpress.org/plugins/contact-form-lite/ "form plugin")** design and there are plenty layout options so you can take it as far as you like.
 
