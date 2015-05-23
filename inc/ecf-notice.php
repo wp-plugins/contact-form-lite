@@ -2,10 +2,16 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+/*-------------------------------------------------------------------------------*/
+/*   Auto Update Notice @since 1.0.7
+/*-------------------------------------------------------------------------------*/
 if( get_option("ecf-settings-automatic_update") != 'active' ) {
 	add_action( 'admin_notices', 'ecf_update_notify' );
 	}
 
+/*-------------------------------------------------------------------------------*/
+/*   Affiliate Notice @since 1.0.7
+/*-------------------------------------------------------------------------------*/
 add_action('admin_notices', 'ecf_aff_admin_notice');
 
 function ecf_aff_admin_notice() {
@@ -34,6 +40,23 @@ function ecf_nag_ignore() {
     }
 }
 
+
+/*-------------------------------------------------------------------------------*/
+/*   Rating Notice @since 1.0.9
+/*-------------------------------------------------------------------------------*/
+add_action('admin_notices', 'ecf_rating_admin_notice');
+
+function ecf_rating_admin_notice() {
+		
+    global $post;
+		if ( 'easycontactform' === $post->post_type && is_admin() ) {
+	
+       	 		echo '<div class="updated"><p>'; 
+        		echo'<span style="color:#0073AA;">If you use</span> <strong>'.ECF_ITEM_NAME.'</strong><span style="color:#0073AA;"> and found it useful then please consider rating it and leaving your positive feedback</span> <a href="https://wordpress.org/support/view/plugin-reviews/contact-form-lite?filter=5#postform" target="_blank" style="color: red !important;">here</a>';
+        		echo "</p></div>";
+				
+		}
+}
 
 
 ?>
