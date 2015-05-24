@@ -16,7 +16,7 @@ add_action('admin_notices', 'ecf_aff_admin_notice');
 
 function ecf_aff_admin_notice() {
     global $current_user, $post;
-		if ( 'easycontactform' === $post->post_type && is_admin() ) {
+		if ( !empty( $post ) && 'easycontactform' === $post->post_type && is_admin() ) {
         	$user_id = $current_user->ID;
         	/* Check that the user hasn't already clicked to ignore the message */
    	 		if ( ! get_user_meta($user_id, 'ecf_ignore_notice') ) {
@@ -49,7 +49,7 @@ add_action('admin_notices', 'ecf_rating_admin_notice');
 function ecf_rating_admin_notice() {
 		
     global $post;
-		if ( 'easycontactform' === $post->post_type && is_admin() ) {
+		if ( !empty( $post ) && 'easycontactform' === $post->post_type && is_admin() ) {
 	
        	 		echo '<div class="updated"><p>'; 
         		echo'<span style="color:#0073AA;">If you use</span> <strong>'.ECF_ITEM_NAME.'</strong><span style="color:#0073AA;"> and found it useful then please consider rating it and leaving your positive feedback</span> <a href="https://wordpress.org/support/view/plugin-reviews/contact-form-lite?filter=5#postform" target="_blank" style="color: red !important;">here</a>';
