@@ -27,6 +27,16 @@ function easycform_free_plugin_page() {
 	$args = apply_filters( "install_plugins_table_api_args_$tab", $args );
 	$api = plugins_api( "query_plugins", $args );
 	$item = $api->plugins;
+	
+	$plugins_allowedtags = array(
+		'a' => array( 'href' => array(), 'title' => array(), 'target' => array() ),
+		'abbr' => array( 'title' => array() ), 'acronym' => array( 'title' => array() ),
+		'code' => array(), 'pre' => array(), 'em' => array(), 'strong' => array(),
+		'div' => array( 'class' => array() ), 'span' => array( 'class' => array() ),
+		'p' => array(), 'ul' => array(), 'ol' => array(), 'li' => array(),
+		'h1' => array(), 'h2' => array(), 'h3' => array(), 'h4' => array(), 'h5' => array(), 'h6' => array(),
+		'img' => array( 'src' => array(), 'class' => array(), 'alt' => array() )
+		);
 
 	?>
 	<form id="plugin-filter">
