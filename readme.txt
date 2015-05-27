@@ -12,7 +12,7 @@ Contact Form Plugin - create best contact form in minutes. Yeah, it's really tha
 
 == Description ==
 = Contact Form Plugin for Wordpress =
-**[contact form](https://wordpress.org/plugins/contact-form-lite/ "contact form plugin")** allows you to create best **form** with quickly and easily drag and drop interface, you won't have to code anything and your forms will work right out of the box.
+**[contact form](https://wordpress.org/plugins/contact-form-lite/ "contact form plugin")** allows you to create best **form** with quickly and easily drag and drop interface, you won't have to code anything and your **[contact form](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/contact-form-recaptcha/ "contact form")** will work right out of the box.
 
 Not only does the **contact form** take care of the functionality, it can very easily make your [form](https://wordpress.org/plugins/contact-form-lite/ "contact form") look great too. For the more advanced user, you will not be disappointed with the flexibility of the styling features of [contact form plugin](https://wordpress.org/plugins/contact-form-lite/ "contact form plugin").
 
