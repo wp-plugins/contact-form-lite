@@ -36,11 +36,12 @@ function easycform_pricing_table() {
         <li class="row_style_2"><span>100% Responsive</span></li>       
         <li class="row_style_4"><span>Unlimited colors and layout</span></li>
         <li class="row_style_2"><span>HTML/Plain Email Format</span></li>
+        <li class="row_style_2"><span>SMTP email Authentication</span></li>
         <li class="row_style_4"><span>Redirect after Email Sent</span></li>
         <li class="row_style_2"><span>350+ Icons</span></li>
         <li class="row_style_4"><span>Custom CSS</span></li>
         <li class="row_style_2"><span>Custom JS</span></li>
-        <li class="row_style_4"><span>Email Auto Respond</span></li>
+        <li class="row_style_4"><span>Email Auto Responder</span></li>
         <li class="row_style_4"><span>Support Department Field</span></li>
         <li class="row_style_4"><span>Support Email Attachment</span></li>
         <li class="row_style_2"><span>File Type Control</span></li>
@@ -63,11 +64,12 @@ function easycform_pricing_table() {
         <li class="header_row_2 align_center">
           <h1 class="col1">Free</h1>
         </li>
-        <li class="row_style_3 align_center">None</li>
+        <li class="row_style_1 align_center">None</li>
+        <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_1 align_center"><span class="pricing_yes"></span></li>
-        <li class="row_style_3 align_center"><span class="pricing_yes"></span></li>
+        <li class="row_style_2 align_center"><span class="pricing_no"></span></li>  
         <li class="row_style_1 align_center"><span class="pricing_no"></span></li>  
-        <li class="row_style_3 align_center"><span class="pricing_no"></span></li>  
+        <li class="row_style_3 align_center"><span class="pricing_no"></span></li> 
         <li class="row_style_1 align_center"><span class="pricing_yes"></span></li>      
         <li class="row_style_3 align_center"><span class="pricing_no"></span></li>
         <li class="row_style_1 align_center"><span class="pricing_no"></span></li>
@@ -97,11 +99,12 @@ function easycform_pricing_table() {
         <li class="header_row_2 align_center">
           <h1 class="col2">$<span><?php echo ECF_PRO; ?></span></h1>
         </li>
-        <li class="row_style_4 align_center"><span style="font-weight: bold; color:#F77448; font-size:14px;">1 Site</span></li>
+        <li class="row_style_2 align_center"><span style="font-weight: bold; color:#F77448; font-size:14px;">1 Site</span></li>
+        <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
-        <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
-        <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>        
-        <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
+        <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>        
+        <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
+        <li class="row_style_4 align_center"><span class="pricing_yes"></span></li> 
         <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_4 align_center"><span class="pricing_yes"></span></li> 
         <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
@@ -130,11 +133,12 @@ function easycform_pricing_table() {
         <li class="header_row_2 align_center">
           <h1 class="col2">$<span><?php echo ECF_PROPLUS; ?></span></h1>
         </li>
-        <li class="row_style_4 align_center"><span style="font-weight: bold; color:#F77448; font-size:14px;">3 Sites</span></li>
+        <li class="row_style_2 align_center"><span style="font-weight: bold; color:#F77448; font-size:14px;">3 Sites</span></li>
+        <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
-        <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
-        <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>        
-        <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
+        <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>        
+        <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
+        <li class="row_style_4 align_center"><span class="pricing_yes"></span></li> 
         <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_4 align_center"><span class="pricing_yes"></span></li> 
         <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
@@ -162,11 +166,12 @@ function easycform_pricing_table() {
         <li class="header_row_2 align_center">
           <h1 class="col2">$<span><?php echo ECF_PROPLUSPLUS; ?></span></h1>
         </li>
-        <li class="row_style_4 align_center"><span style="font-weight: bold; color:#F77448; font-size:14px;">5 Sites</span></li>
+        <li class="row_style_2 align_center"><span style="font-weight: bold; color:#F77448; font-size:14px;">5 Sites</span></li>
+        <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
-        <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
-        <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>        
-        <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>
+        <li class="row_style_4 align_center"><span class="pricing_yes"></span></li>        
+        <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
+        <li class="row_style_4 align_center"><span class="pricing_yes"></span></li> 
         <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_4 align_center"><span class="pricing_yes"></span></li> 
         <li class="row_style_2 align_center"><span class="pricing_yes"></span></li>
@@ -194,11 +199,12 @@ function easycform_pricing_table() {
         <li class="header_row_2 align_center">
           <h1 class="col2">$<span><?php echo ECF_DEV; ?></span></h1>
         </li>
-        <li class="row_style_3 align_center"><span style="font-weight: bold; color: #F77448; font-size:14px;">15 Sites</span></li>
+        <li class="row_style_1 align_center"><span style="font-weight: bold; color: #F77448; font-size:14px;">15 Sites</span></li>
+        <li class="row_style_3 align_center"><span class="pricing_yes"></span></li>
         <li class="row_style_1 align_center"><span class="pricing_yes"></span></li>
-        <li class="row_style_3 align_center"><span class="pricing_yes"></span></li>
-        <li class="row_style_1 align_center"><span class="pricing_yes"></span></li>        
-        <li class="row_style_3 align_center"><span class="pricing_yes"></span></li>
+        <li class="row_style_3 align_center"><span class="pricing_yes"></span></li>        
+        <li class="row_style_1 align_center"><span class="pricing_yes"></span></li>
+        <li class="row_style_3 align_center"><span class="pricing_yes"></span></li> 
         <li class="row_style_1 align_center"><span class="pricing_yes"></span></li>        
         <li class="row_style_3 align_center"><span class="pricing_yes"></span></li> 
         <li class="row_style_1 align_center"><span class="pricing_yes"></span></li>
