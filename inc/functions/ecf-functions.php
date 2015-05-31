@@ -441,7 +441,7 @@ function easycform_share() {
 function ecf_update_notify() {
 	
     global $post;
-		if ( 'easycontactform' === $post->post_type && is_admin() ) {
+		if ( !empty( $post ) && 'easycontactform' === $post->post_type && is_admin() ) {
 	
     ?>
     <div class="error ecf-setupdate">

@@ -1,10 +1,10 @@
 === Contact Form Plugin ===
 Contributors: GhozyLab
 Donate link: http://ghozylab.com/
-Tags: contact form, images, image, advanced form, attachment, captcha, best contact form plugin, buddypress, category, ajax, ajax contact form, cnotact, conact, contact, contact button, contact form builder, contact form builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, contactform, custom form, email, email form, form, forms, forms plugin, insert the shortcode, multiple contact forms, admin, send messages, shortcode, web form, widget, wordpress contact form, kontak form, kontaktformular, formulaire de contact
+Tags: contact form, images, image, smtp, smtp contact form, smtp email, advanced form, attachment, captcha, best contact form plugin, buddypress, category, ajax, ajax contact form, cnotact, conact, contact, contact button, contact form builder, contact form builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, contactform, custom form, email, email form, form, forms, forms plugin, insert the shortcode, multiple contact forms, admin, send messages, shortcode, web form, widget, wordpress contact form, kontak form, kontaktformular, formulaire de contact
 Requires at least: 3.3
 Tested up to: 4.2.2
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,13 +12,13 @@ Contact Form Plugin - create best contact form in minutes. Yeah, it's really tha
 
 == Description ==
 = Contact Form Plugin for Wordpress =
-**[contact form](https://wordpress.org/plugins/contact-form-lite/ "contact form plugin")** allows you to create best **form** with quickly and easily drag and drop interface, you won't have to code anything and your **[contact form](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/contact-form-recaptcha/ "contact form")** will work right out of the box.
+**[contact form](https://wordpress.org/plugins/contact-form-lite/ "contact form")** allows you to create best **form** with quickly and easily drag and drop interface, you won't have to code anything and your **[contact form](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/contact-form-recaptcha/ "best form plugin")** will work right out of the box.
 
 Not only does the **contact form** take care of the functionality, it can very easily make your [form](https://wordpress.org/plugins/contact-form-lite/ "contact form") look great too. For the more advanced user, you will not be disappointed with the flexibility of the styling features of [contact form plugin](https://wordpress.org/plugins/contact-form-lite/ "contact form plugin").
 
-You can have total control of your **[form](https://wordpress.org/plugins/contact-form-lite/ "form plugin")** design and there are plenty layout options so you can take it as far as you like.
+You can have total control of your **contact form** design and there are plenty layout options so you can take it as far as you like.
 
-The best thing about **Ajax Contact Form** plugin is that you can use multiple forms, which can be inserted into your posts, pages, and widgets.
+The best thing about **ajax contact form** plugin is that you can use multiple forms, which can be inserted into your posts, pages, and widgets.
 
 > #### **Live Demos**
 > * [CONTACT FORM BASIC ( LITE VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-standart-form/ "contact form")
@@ -35,10 +35,12 @@ Take your form to the next level with [Contact Form Pro](http://demo.ghozylab.co
 * Super Easy to use for Beginners
 * Create unlimited number of form
 * AJAX-powered form interface. Send forms without re-loading the page
+* Auto-responder ( Fully customizable message and supports html format )
 * Form analytics in WordPress
 * Create forms that will match your website identity instantly
 * Custom colors : a color picker is available for every elements in your contact form
 * No coding, the plugin takes care of everything
+* Most Fields Supported ( It supports textbox, textarea, email, department, combobox, checkbox, radio button and file attachment upload )
 * Custom field labels
 * Custom input fields : color, border color and much more
 * Custom submit button : background color. text / label
@@ -49,13 +51,14 @@ Take your form to the next level with [Contact Form Pro](http://demo.ghozylab.co
 * You can customize the name that will appear in the From field of the user notification message
 * Customize email body for notification
 * Your visitors can upload files on your server, singe or multiple upload
+* Supports all types of extensions. You can limit file size and the allowed extensions
 * You can receive uploads as email attchments
-* Secure file size control and Secure file type control
 * A file download link is available in the notification message
 * You can set your own error messages when an error is found in the form
 * You can set your own validation message that will be displayed when the form is successfully submitted
-* Effortless mobile and tablet devices adaptation
+* Effortless mobile and tablet devices adaptation.
 * Increase mobile conversions on your website
+* Support SMTP email Authentication ( You may able to use 3rd Party Email Address like Gmail, Ymail, Hotmail and etc )
 * Prevent spam with 2 CAPTCHA options: image, New reCAPTCHA or reCAPTCHA v1 and more than 5 reCAPTCHA skin
 * 24/7 Technical Support
 
@@ -120,8 +123,16 @@ But seriously, I just want to drink coffee for free, so help a developer out. Yo
 4. Form Options ( Layout & Styles )
 5. Form Options ( Miscellaneous )
 6. Form Options ( Advanced )
+7. SMTP Options
 
 == Changelog ==
+
+= 1.0.10 =
+* Added : Form Pre-loader on load
+* Added : SMTP email Authentication on List
+* Bug Fixed on Settings Page ( jQuery loader )
+* Move Help link to the left position
+* Many other PHP and CSS clean and optimization
 
 = 1.0.9 =
 * Updated : Admin Notice Permission
@@ -153,5 +164,5 @@ There are no complicated instructions for using Contact Form plugin because this
 
 == Upgrade Notice ==
 
-= 1.0.9 =
-Bugs Fixed on Update Notice, please update now!
+= 1.0.10 =
+Bugs Fixed, please update now!

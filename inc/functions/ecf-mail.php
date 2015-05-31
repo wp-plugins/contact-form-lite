@@ -15,7 +15,7 @@ function ecf_deliver_mail() {
 	$aftersent = get_post_meta( $frmid, 'ecf_email_action_on_sent', true );
 	$singelmnt = ecf_form_element_parsing( $frmid, null, $_POST['allelmnt'], '' );
 		
-	if ( trim( $singelmnt['to'] ) ) {
+	if ( trim( isset ( $singelmnt['to'] ) ) ) {
 		$singelmnt['to'] = $singelmnt['to'];
 		} else {
 			$singelmnt['to'] = get_post_meta( $frmid, 'ecf_meta_admin_email', true );
@@ -68,6 +68,7 @@ add_action('wp_ajax_nopriv_ecf_deliver_mail', 'ecf_deliver_mail');
 /*-------------------------------------------------------------------------------*/	
 function ecf_form_element_parsing( $fid = null, $type = null, $jsnel, $atch = null ) {
 	
+	$emailplain = '';
 	$singelmnt = array();
 	$checkboxval = array();
 	$attname = array();

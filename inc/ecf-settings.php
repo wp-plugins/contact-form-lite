@@ -43,8 +43,11 @@ function ecf_stt_page() {
 
 <script type="text/javascript">
 /*<![CDATA[*/
-
+	var ecfloader;
 	function ecf_ajax_autoupdt(cmd) {
+		
+		window.clearTimeout(ecfloader);
+		
 		jQuery('.setpre').show().css('background-image','url(<?php echo plugins_url('images/89.gif' , __FILE__ ); ?>)');
 		var data = {
 			action: 'ecf_ajax_autoupdt',
@@ -55,7 +58,7 @@ function ecf_stt_page() {
 			jQuery.post(ajaxurl, data, function(response) {
 				if (response == 1) {
 					jQuery('.setpre').css('background-image','url(<?php echo plugins_url('images/valid.png' , __FILE__ ); ?>)');
-					setTimeout(function() {
+					ecfloader = window.setTimeout(function() {
 					jQuery('.setpre').fadeOut();
 					}, 3000);
 					}						

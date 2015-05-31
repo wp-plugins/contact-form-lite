@@ -42,6 +42,11 @@ function ecf_markup_generator( $fid, $rnd ) {
     <!-- START JS for Form ID: <?php echo $fid; ?> -->
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
+			
+		jQuery("#preloader-<?php echo $rnd; ?>").fadeOut(1500, function () {
+			jQuery("#ecf-form-<?php echo $rnd; ?>").fadeIn(300);
+			});
+			
 			$( '.ladda-button' ).ladda( 'bind' );
 
 			$(function() {
@@ -175,8 +180,9 @@ function ecf_markup_generator( $fid, $rnd ) {
 		</script>
     <!-- END JS for Form ID: <?php echo $fid; ?> -->
     
-<!-- START Form Markup for Form ID: <?php echo $fid; ?> -->   
-    <div id="ecf-form-<?php echo $rnd; ?>" class="ecf-body">					
+<!-- START Form Markup for Form ID: <?php echo $fid; ?> -->
+<div id="preloader-<?php echo $rnd; ?>" class="ecfpreloader"></div>   
+    <div id="ecf-form-<?php echo $rnd; ?>" class="ecf-body" style="display:none;">					
 		<form method="post" enctype="multipart/form-data" action="#" id="form-<?php echo $rnd; ?>" class="ecf-form form-<?php echo $rnd; ?>">
         	<?php echo $isheader; ?>
     		<fieldset>	

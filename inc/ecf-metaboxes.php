@@ -426,7 +426,7 @@ function ecf_create_meta_box( $post, $meta_box )
 								}
 							}							
 												
-				echo '<br><span style="margin-right: 10px !important;">Text</span><input style="margin-top:20px !important; margin-bottom:10px !important; width: 80% !important;" type="text" name="ecf_meta['. $field['id'] .'][]" id="'. $field['id'] .'_text" value="'. ($meta ? $meta[1] : $field['txt']) .'" size="30" /><br><span style="margin-right: 12px !important;">URL</span><input style="margin-bottom:10px !important; width: 80% !important;" type="text" name="ecf_meta['. $field['id'] .'][]" id="'. $field['id'] .'_url" value="'. ($meta ? $meta[2] : $field['url']) .'" size="30" /><br><input style="margin-left:37px !important; margin-right: 5px !important; display:none;" id="comtarget" type="checkbox" name="ecf_meta['. $field['id'] .'][]" value="'.$meta[3].'" '. ($meta[3] == '_blank' ? 'checked="checked"': '') .' /><span style="display:none;">Open in a new window or tab</span></td>';
+				echo '<br><span style="margin-right: 10px !important;">Text</span><input style="margin-top:20px !important; margin-bottom:10px !important; width: 80% !important;" type="text" name="ecf_meta['. $field['id'] .'][]" id="'. $field['id'] .'_text" value="'. ($meta ? $meta[1] : $field['txt']) .'" size="30" /><br><span style="margin-right: 12px !important;">URL</span><input style="margin-bottom:10px !important; width: 80% !important;" type="text" name="ecf_meta['. $field['id'] .'][]" id="'. $field['id'] .'_url" value="'. ($meta ? $meta[2] : $field['url']) .'" size="30" /></td>';
 				
 				break;
 				
@@ -564,8 +564,8 @@ function ecf_metabox_work(){
 
 	    $meta_box = array(
 		'id' => 'ecf_meta_formbuilder',
-		'title' =>  __( 'Form Builder<span class="ecf-introjs"><a href="javascript:void(0);" onclick="startIntro();"><span class="ecf-intro-help"></span>Click Here to learn How to create your first Form</a></span>', 'easycform' ),
-		'description' => __( 'You can add / remove, edit or order any elements with this form builder to fit to your needs.', 'easycform' ),
+		'title' =>  __( 'Form Builder', 'easycform' ),
+		'description' => __( '<span class="ecf-introjs"><a href="javascript:void(0);" onclick="startIntro();"><span class="ecf-intro-help"></span>Click Here to learn How to create your first Form</a></span><br /><br />You can add / remove, edit or order any elements with this form builder to fit to your needs.', 'easycform' ),
 		'page' => 'easycontactform',
 		'context' => 'normal',	
 		'istabbed' => '',
