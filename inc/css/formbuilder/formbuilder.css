@@ -128,3 +128,12 @@
 .response-field-name a.js-clear, .response-field-email a.js-clear, .response-field-message a.js-clear, #ecf-field-name, #ecf-field-email, #ecf-field-message {
 	display: none !important;
 	}
+	
+.rating-view {
+	width: 130px;
+	height: 24px;
+	text-align: left;
+	background:url(images/5-stars.png) no-repeat top left;
+	display: block;
+	}
+

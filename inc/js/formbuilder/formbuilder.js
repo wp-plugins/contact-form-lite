@@ -944,6 +944,7 @@ $.scrollWindowTo = function(pos, duration, cb) {
 		ICONS: 'icons',
 		ICONPOS: 'iconpos',
 		PLACEHOLDER: 'placeholder',
+		DATEFORMAT: 'dateformat',
         LABEL: 'label',
         FIELD_TYPE: 'field_type',
         REQUIRED: 'required',
@@ -1140,6 +1141,42 @@ $.scrollWindowTo = function(pos, duration, cb) {
 	  attrs.icons = 'fa-user';
 	  attrs.iconpos = 'prepend';
       attrs.label = 'Name';
+      return attrs;
+    }
+  });
+
+}).call(this);
+
+
+(function() {
+  Formbuilder.registerField('rating', {
+    order: 27,
+    view: "<span class='rating-view'></span><div style='padding-top: 12px; padding-bottom: 7px; font-size: 12px; color: #F40043;'><i>This feature only available in Pro Version</i></div>",
+    edit: "<%= Formbuilder.templates['edit/rating']() %>",
+    addButton: "<span class='symbol'><span class='fa fa-star'></span></span> Five Star Rating",
+    defaultAttributes: function(attrs) {
+	  attrs.label = 'Rating';
+	  attrs.icons = 'fa-star';
+      attrs.field_options.size = 'medium';	  
+      return attrs;
+    }
+  });
+
+}).call(this);
+
+
+(function() {
+  Formbuilder.registerField('date', {
+    order: 28,
+    view: "<input placeholder='<%= rf.get(Formbuilder.options.mappings.PLACEHOLDER) %>' type='text' class='rf-size-<%= rf.get(Formbuilder.options.mappings.SIZE) %>' data-frmt='<%= rf.get(Formbuilder.options.mappings.DATEFORMAT) %>' data-icon='<%= rf.get(Formbuilder.options.mappings.ICONS) %>' /><div style='padding-top: 12px; padding-bottom: 7px; font-size: 12px; color: #F40043;'><i>This feature only available in Pro Version</i></div>",
+    edit: "<%= Formbuilder.templates['edit/date']() %>",
+    addButton: "<span class='symbol'><span class='fa fa-calendar'></span></span> Date",
+    defaultAttributes: function(attrs) {
+      attrs.field_options.size = 'medium';
+	  attrs.icons = 'fa-calendar';
+	  attrs.iconpos = 'prepend';
+      attrs.label = 'Date';
+	  attrs.dateformat = 'd MM, y';
       return attrs;
     }
   });
@@ -1482,6 +1519,41 @@ __p += '\n\n<div class=\'fb-bottom-add\'>\n  <a class="js-add-option ' +
 }
 return __p
 };
+
+this["Formbuilder"]["templates"]["edit/rating"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class=\'fb-edit-section-header\'>Icon</div>\n<select data-rv-value="model.' +
+((__t = ( Formbuilder.options.mappings.ICONS )) == null ? '' : __t) + 
+'">\n  <option value="fa-star">Star A</option>\n <option value="fa-star-o">Star B</option>\n  <option value="fa-thumbs-up">Thumbs Up A</option>\n  <option value="fa-thumbs-o-up">Thumbs Up B</option>\n  <option value="fa-trophy">Trophy</option>\n  <option value="fa-asterisk">Asterisk</option>\n </select>\n  <div class=\'fb-edit-section-header-custom-icon\'></div>\n  <p style="margin-right:5px;font-size: 11px; color:#999; font-style: italic;">Custom Icon Class. Learn more <a style="text-decoration: none !important;" href="http://goo.gl/mjokMW" target="_blank">here</a></p>\n  <input type="text" data-rv-input="model.' +
+((__t = ( Formbuilder.options.mappings.ICONCSTM)) == null ? '' : __t) + 
+'" class=\'option-label-input\' />\n';
+
+}
+return __p
+};
+
+
+this["Formbuilder"]["templates"]["edit/date"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class=\'fb-edit-section-header\'>Placeholder</div>\n  <input placeholder="Placeholder" type="text" data-rv-input="model.' +
+((__t = ( Formbuilder.options.mappings.PLACEHOLDER)) == null ? '' : __t) + 
+'" class=\'option-label-input\' />\n <div class=\'fb-edit-section-header\'>Date Format</div>\n<select data-rv-value="model.' + ((__t = ( Formbuilder.options.mappings.DATEFORMAT )) == null ? '' : __t) + 
+'">\n  <option value="d MM, yy">Default - d MM, yy</option>\n  <option value="mm/dd/yy">Normal - mm/dd/yy</option>\n  <option value="yy-mm-dd">ISO 8601 - yy-mm-dd</option>\n  <option value="d M, y">Short - d M, y</option>\n  <option value="d MM, y">Medium - d MM, y</option>\n  <option value="DD, d MM, yy">Full - DD, d MM, yy</option>\n  </select>\n <div class=\'fb-edit-section-header\'>Icon</div>\n<select data-rv-value="model.' +
+((__t = ( Formbuilder.options.mappings.ICONS )) == null ? '' : __t) + 
+'">\n  <option value="none">None</option>\n  <option value="fa-user">Person</option>\n  <option value="fa-envelope-o">Envelope</option>\n  <option value="fa-asterisk">Asterisk</option>\n  <option value="fa-link">Link</option>\n  <option value="fa-star">Star</option>\n <option value="fa-users">Users</option>\n  <option value="fa-check">Check</option>\n  <option value="fa-comment">Message</option>\n <option value="fa-calendar">Calendar</option>\n  </select>\n  <div class=\'fb-edit-section-header-custom-icon\'></div>\n  <p style="margin-right:5px;font-size: 11px; color:#999; font-style: italic;">Custom Icon Class. Learn more <a style="text-decoration: none !important;" href="http://goo.gl/mjokMW" target="_blank">here</a></p>\n  <input type="text" data-rv-input="model.' +
+((__t = ( Formbuilder.options.mappings.ICONCSTM)) == null ? '' : __t) + 
+'" class=\'option-label-input\' />\n  <div class=\'fb-edit-section-header\'>Icon Position</div>\n<select data-rv-value="model.' +
+((__t = ( Formbuilder.options.mappings.ICONPOS )) == null ? '' : __t) + 
+'">\n  <option value="prepend">Left</option>\n  <option value="append">Right</option>\n</select>\n';
+
+}
+return __p
+};
+
 
 //------------------
 
