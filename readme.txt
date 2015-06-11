@@ -4,7 +4,7 @@ Donate link: http://ghozylab.com/
 Tags: contact form, images, image, smtp, smtp contact form, smtp email, advanced form, attachment, captcha, best contact form plugin, buddypress, category, ajax, ajax contact form, cnotact, conact, contact, contact button, contact form builder, contact form builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, contactform, custom form, email, email form, form, forms, forms plugin, insert the shortcode, multiple contact forms, admin, send messages, shortcode, web form, widget, wordpress contact form, kontak form, kontaktformular, formulaire de contact, sticky form
 Requires at least: 3.3
 Tested up to: 4.2.2
-Stable tag: 1.0.10
+Stable tag: 1.0.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -124,9 +124,18 @@ But seriously, I just want to drink coffee for free, so help a developer out. Yo
 4. Form Options ( Layout & Styles )
 5. Form Options ( Miscellaneous )
 6. Form Options ( Advanced )
-7. SMTP Options
+7. Sticky Form Option
+8. SMTP Option
+
 
 == Changelog ==
+
+= 1.0.11 =
+* Fixed : Missing Name field
+* Added : 2 new form fields ( Trial ) 
+* Added : Analytics page ( Trial )
+* Added : New Screenshot
+* Many other PHP and CSS clean and optimization
 
 = 1.0.10 =
 * Added : Form Pre-loader on load
@@ -165,5 +174,5 @@ There are no complicated instructions for using Contact Form plugin because this
 
 == Upgrade Notice ==
 
-= 1.0.10 =
+= 1.0.11 =
 Bugs Fixed, please update now!

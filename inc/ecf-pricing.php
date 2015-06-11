@@ -6,7 +6,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function easycform_pricing_init() {
     $easycform_featured_init = add_submenu_page('edit.php?post_type=easycontactform', 'Pricing & compare tables', __('UPGRADE to PRO', 'easycform'), 'edit_posts', 'easycform_comparison', 'easycform_pricing_table');
 }
-add_action( 'admin_menu', 'easycform_pricing_init' );
 
 function easycform_put_compare_style() {
 	if ( is_admin() && isset( $_GET['page'] ) && $_GET['page'] == 'easycform_comparison' ){

@@ -5,8 +5,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function easycform_featured_init() {
     $easycform_featured_init = add_submenu_page('edit.php?post_type=easycontactform', 'Premium Plugins', __('Premium Plugins', 'easycform'), 'edit_posts', 'easycform_featured_plugins', 'easycform_featured_page');
 }
-add_action( 'admin_menu', 'easycform_featured_init' );
-
 
 function easycform_featured_page() {
 	ob_start(); ?>

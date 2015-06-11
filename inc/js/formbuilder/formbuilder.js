@@ -944,6 +944,7 @@ $.scrollWindowTo = function(pos, duration, cb) {
 		ICONS: 'icons',
 		ICONPOS: 'iconpos',
 		PLACEHOLDER: 'placeholder',
+		PHONEMASK: 'phonemask',
 		DATEFORMAT: 'dateformat',
         LABEL: 'label',
         FIELD_TYPE: 'field_type',
@@ -1022,7 +1023,7 @@ $.scrollWindowTo = function(pos, duration, cb) {
 
 (function() {
   Formbuilder.registerField('department', {
-    order: 28,
+    order: 30,
     view: "<select>\n  <% if (rf.get(Formbuilder.options.mappings.INCLUDE_BLANK)) { %>\n    <option value=''></option>\n  <% } %>\n\n  <% for (i in (rf.get(Formbuilder.options.mappings.OPTIONS) || [])) { %>\n    <option <%= rf.get(Formbuilder.options.mappings.OPTIONS)[i].checked && 'selected' %>>\n      <%= rf.get(Formbuilder.options.mappings.OPTIONS)[i].label %>\n    </option>\n  <% } %>\n</select><div style='padding-top: 12px; padding-bottom: 7px; font-size: 12px; color: #F40043;'><i>This feature only available in Pro Version</i></div>",
     edit: "<%= Formbuilder.templates['edit/optionsdept']({ includeBlank: true }) %>",
     addButton: "<span class=\"symbol\"><span class=\"fa fa-users\"></span></span> Department",
@@ -1112,7 +1113,6 @@ $.scrollWindowTo = function(pos, duration, cb) {
 }).call(this);
 
 
-
 (function() {
   Formbuilder.registerField('text', {
     order: 4,
@@ -1123,6 +1123,24 @@ $.scrollWindowTo = function(pos, duration, cb) {
       attrs.field_options.size = 'medium';
 	  attrs.icons = 'none';
 	  attrs.iconpos = 'prepend';	  
+      return attrs;
+    }
+  });
+
+}).call(this);
+
+
+(function() {
+  Formbuilder.registerField('phone', {
+    order: 29,
+    view: "<input placeholder='<%= rf.get(Formbuilder.options.mappings.PHONEMASK) %>' type='text' class='rf-size-<%= rf.get(Formbuilder.options.mappings.SIZE) %>' data-icon='<%= rf.get(Formbuilder.options.mappings.ICONS) %>' /><div style='padding-top: 12px; padding-bottom: 7px; font-size: 12px; color: #F40043;'><i>This feature only available in Pro Version</i></div>",
+    edit: "<%= Formbuilder.templates['edit/phone']() %>",
+    addButton: "<span class='symbol'><span class='fa fa-phone'></span></span> Phone Number",
+    defaultAttributes: function(attrs) {
+      attrs.field_options.size = 'medium';
+	  attrs.icons = 'fa-phone';
+	  attrs.iconpos = 'prepend';	
+	  attrs.label = 'Phone Number';
       return attrs;
     }
   });
@@ -1450,6 +1468,25 @@ return __p
 
 
 // CUSTOM OPTION
+
+this["Formbuilder"]["templates"]["edit/phone"] = function(obj) { // @since 1.0.7.11
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class=\'fb-edit-section-header\'>Phone Format</div>\n  <input placeholder="Default - (xxx) xxx-xxx-xxx" type="text" data-rv-input="model.' +
+((__t = ( Formbuilder.options.mappings.PHONEMASK )) == null ? '' : __t) + 
+'" class=\'option-label-input\' />\n  <p style="margin-right:5px;font-size: 11px; color:#999; font-style: italic;">Custom Phone mask? Learn more <a style="text-decoration: none !important;" href="http://digitalbush.com/projects/masked-input-plugin/" target="_blank">here</a></p>\n <div class=\'fb-edit-section-header\'>Icon</div>\n<select data-rv-value="model.' +
+((__t = ( Formbuilder.options.mappings.ICONS )) == null ? '' : __t) + 
+'">\n  <option value="none">None</option>\n  <option value="fa-user">Person</option>\n  <option value="fa-envelope-o">Envelope</option>\n  <option value="fa-asterisk">Asterisk</option>\n  <option value="fa-link">Link</option>\n  <option value="fa-star">Star</option>\n <option value="fa-users">Users</option>\n  <option value="fa-check">Check</option>\n  <option value="fa-comment">Message</option>\n <option value="fa-phone">Phone</option>\n <option value="fa-calendar">Calendar</option>\n  </select>\n  <div class=\'fb-edit-section-header-custom-icon\'></div>\n  <p style="margin-right:5px;font-size: 11px; color:#999; font-style: italic;">Custom Icon Class. Learn more <a style="text-decoration: none !important;" href="http://goo.gl/mjokMW" target="_blank">here</a></p>\n  <input type="text" data-rv-input="model.' +
+((__t = ( Formbuilder.options.mappings.ICONCSTM)) == null ? '' : __t) + 
+'" class=\'option-label-input\' />\n  <div class=\'fb-edit-section-header\'>Icon Position</div>\n<select data-rv-value="model.' +
+((__t = ( Formbuilder.options.mappings.ICONPOS )) == null ? '' : __t) + 
+'">\n  <option value="prepend">Left</option>\n  <option value="append">Right</option>\n</select>\n';
+
+}
+return __p
+};
+
 
 this["Formbuilder"]["templates"]["edit/icon"] = function(obj) {
 obj || (obj = {});

@@ -503,3 +503,15 @@ function ecf_enable_auto_update() {
 	}
 }
 add_action( 'wp_ajax_ecf_enable_auto_update', 'ecf_enable_auto_update' );
+
+
+/*-------------------------------------------------------------------------------*/
+/*  Load all Custom Pages  // @since 1.0.11
+/*-------------------------------------------------------------------------------*/
+if ( is_admin() ){
+	add_action( 'admin_menu', 'easycform_form_analytics' );
+	add_action( 'admin_menu', 'easycform_rec_init' );
+	add_action( 'admin_menu', 'easycform_featured_init' );
+	add_action( 'admin_menu', 'easycform_pricing_init' );
+	add_action( 'admin_menu', 'ecf_opt_init' );
+	}
