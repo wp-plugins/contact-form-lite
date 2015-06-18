@@ -1,7 +1,7 @@
 === Contact Form Plugin ===
 Contributors: GhozyLab
 Donate link: http://ghozylab.com/
-Tags: contact form, images, image, smtp, smtp contact form, smtp email, advanced form, attachment, captcha, best contact form plugin, buddypress, category, ajax, ajax contact form, cnotact, conact, contact, contact button, contact form builder, contact form builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, contactform, custom form, email, email form, form, forms, forms plugin, insert the shortcode, multiple contact forms, admin, send messages, shortcode, web form, widget, wordpress contact form, kontak form, kontaktformular, formulaire de contact, sticky form
+Tags: contact form, images, image, smtp, smtp contact form, smtp email, datepicker form, address form, advanced form, form register, register form, registration form, form registration, attachment, captcha, best contact form plugin, buddypress, category, ajax, ajax contact form, cnotact, conact, contact, contact button, contact form builder, contact form builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, contactform, custom form, email, email form, form, forms, forms plugin, insert the shortcode, multiple contact forms, admin, send messages, shortcode, web form, widget, wordpress contact form, kontak form, kontaktformular, formulaire de contact, sticky form, popup form
 Requires at least: 3.3
 Tested up to: 4.2.2
 Stable tag: 1.0.11
@@ -22,6 +22,7 @@ The best thing about **ajax contact form** plugin is that you can use multiple f
 
 > #### **Live Demos**
 > * [CONTACT FORM BASIC ( LITE VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-standart-form/ "contact form")
+> * [CONTACT FORM STICKY POPUP ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/sticky-form/ "popup form")
 > * [CONTACT FORM with RECAPTCHA ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/contact-form-recaptcha/ "contact form recaptcha form")
 > * [CONTACT FORM with UPLOAD/ATTACHMENT FIELD ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-file-upload/ "form attachment contact form")
 > * [CONTACT FORM with All FIELDS ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-fields/ "contact form builder")
@@ -41,7 +42,7 @@ Take your form to the next level with [Contact Form Pro](http://demo.ghozylab.co
 * Create forms that will match your website identity instantly
 * Custom colors : a color picker is available for every elements in your contact form
 * No coding, the plugin takes care of everything
-* Most Fields Supported ( It supports textbox, textarea, email, department, combobox, date, checkbox, radio button, 5 stars Rating and file attachment upload )
+* Most Fields Supported ( It supports textbox, textarea, email, department, combobox, date, date range, phone number with custom format, checkbox, radio button, address, 5 stars Rating and file attachment upload )
 * Custom field labels
 * Custom input fields : color, border color and much more
 * Custom submit button : background color. text / label
