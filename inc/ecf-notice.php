@@ -12,7 +12,7 @@ if( get_option("ecf-settings-automatic_update") != 'active' ) {
 /*-------------------------------------------------------------------------------*/
 /*   Affiliate Notice @since 1.0.7
 /*-------------------------------------------------------------------------------*/
-add_action('admin_notices', 'ecf_aff_admin_notice');
+//add_action('admin_notices', 'ecf_aff_admin_notice');
 
 function ecf_aff_admin_notice() {
     global $current_user, $post;
@@ -44,7 +44,7 @@ function ecf_nag_ignore() {
 /*-------------------------------------------------------------------------------*/
 /*   Rating Notice @since 1.0.9
 /*-------------------------------------------------------------------------------*/
-add_action('admin_notices', 'ecf_rating_admin_notice');
+//add_action('admin_notices', 'ecf_rating_admin_notice');
 
 function ecf_rating_admin_notice() {
 		

@@ -506,12 +506,82 @@ add_action( 'wp_ajax_ecf_enable_auto_update', 'ecf_enable_auto_update' );
 
 
 /*-------------------------------------------------------------------------------*/
-/*  Load all Custom Pages  // @since 1.0.11
+/*  Addons Page WP Pointer
 /*-------------------------------------------------------------------------------*/
-if ( is_admin() ){
-	add_action( 'admin_menu', 'easycform_form_analytics' );
-	add_action( 'admin_menu', 'easycform_rec_init' );
-	add_action( 'admin_menu', 'easycform_featured_init' );
-	add_action( 'admin_menu', 'easycform_pricing_init' );
-	add_action( 'admin_menu', 'ecf_opt_init' );
+function ecf_addons_pointer() {
+    $enqueue = false;
+
+    $dismissed = explode( ',', (string) get_user_meta( get_current_user_id(), 'dismissed_wp_pointers', true ) );
+
+    if ( ! in_array( 'ecf_add_pointer', $dismissed ) ) {
+        $enqueue = true;
+        add_action( 'admin_print_footer_scripts', 'ecf_add_pointer_footer' );
+    }
+
+    if ( $enqueue ) {
+        // Enqueue pointers
+        wp_enqueue_script( 'wp-pointer' );
+        wp_enqueue_style( 'wp-pointer' );
+    }
+}
+
+function ecf_add_pointer_footer() {
+    $add_pointer_content = '<h3>Good News !</h3>';
+	  $add_pointer_content .= '<p>In this version you can easily integrate several <strong>Pro Version</strong> features using Addons.<br /><br />You can check available addons <a href="http://localhost/wp/wp-admin/edit.php?post_type=easycontactform&page=ecf-addons">here</a></p><br />';
+?>
+
+<script type="text/javascript">// <![CDATA[
+jQuery(document).ready(function($) {
+	
+if (typeof(jQuery().pointer) != 'undefined') {	
+    $('#ecf_meta_formbuilder').pointer({
+        content: '<?php echo $add_pointer_content; ?>',
+        position: {
+			edge: 'bottom',
+            align: 'center'
+        },
+        close: function() {
+            $.post( ajaxurl, {
+                pointer: 'ecf_add_pointer',
+               action: 'dismiss-wp-pointer'
+            });
+        }
+    }).pointer('open');
+	
+}
+
+});
+// ]]></script>
+<?php
+}
+
+
+/*-------------------------------------------------------------------------------*/
+/* Get latest info on What's New page
+/*-------------------------------------------------------------------------------*/
+function ecf_lite_get_news() {
+	
+	if ( false === ( $cache = get_transient( 'ecflite_whats_new' ) ) ) {
+		
+	$addlist = get_option( "ecf_active_addons_lite" );	
+		
+	$url = array(
+				'c' => 'news',
+				'p' => 'ecflite',
+				);	
+		
+		$feed = wp_remote_get( 'http://content.ghozylab.com/feed.php?'.http_build_query( $url ).'', array( 'sslverify' => false ) );
+		
+		if ( ! is_wp_error( $feed ) ) {
+			if ( isset( $feed['body'] ) && strlen( $feed['body'] ) > 0 ) {
+				$cache = wp_remote_retrieve_body( $feed );
+				set_transient( 'ecflite_whats_new', $cache, 60 );
+			}
+		} else {
+			$cache = '<div class="error"><p>' . __( 'There was an error retrieving the list from the server. Please try again later.', 'easycform' ) . '</div>';
+		}
 	}
+	echo $cache;
+}
+
+

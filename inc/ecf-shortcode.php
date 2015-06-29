@@ -35,6 +35,13 @@ if ( $ecf_query->have_posts() ):
 
 while ( $ecf_query->have_posts() ) : $ecf_query->the_post();
 
+
+	if( has_filter( 'ecf_addons_frontend_enqueue' ) ) {
+		
+		apply_filters( 'ecf_addons_frontend_enqueue', '' );
+		
+		}
+
 	wp_enqueue_script( 'ecf-validate' );
 	wp_enqueue_style( 'ecf-frontend-css' );
 	wp_enqueue_script( 'ecf-ladda-spin' );

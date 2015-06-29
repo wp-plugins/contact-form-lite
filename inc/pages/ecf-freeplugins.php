@@ -2,12 +2,8 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-function easycform_rec_init() {
-    $easycform_featured_page = add_submenu_page('edit.php?post_type=easycontactform', 'Free Install Plugins', __('Free Install Plugins', 'easycform'), 'edit_posts', 'easycform_free_plugins', 'easycform_free_plugin_page');
-}
 
 function easycform_free_plugin_page() {
-	
 
 	include( ABSPATH . "wp-admin/includes/plugin-install.php" );
 	global $tabs, $tab, $paged, $type, $term;
@@ -86,8 +82,7 @@ color: #FFF !important;
 }	
 
 		
-        </style>
-    <h2>GhozyLab Free Plugins</h2>    
+        </style> 
     
 <div style="margin-top:30px;" class="wp-list-table widefat plugin-install">
 	<div id="the-list">

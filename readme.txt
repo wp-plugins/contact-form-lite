@@ -1,10 +1,10 @@
 === Contact Form Plugin ===
 Contributors: GhozyLab
 Donate link: http://ghozylab.com/
-Tags: contact form, images, image, smtp, smtp contact form, smtp email, datepicker form, address form, advanced form, form register, register form, registration form, form registration, attachment, captcha, best contact form plugin, buddypress, category, ajax, ajax contact form, cnotact, conact, contact, contact button, contact form builder, contact form builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, contactform, custom form, email, email form, form, forms, forms plugin, insert the shortcode, multiple contact forms, admin, send messages, shortcode, web form, widget, wordpress contact form, kontak form, kontaktformular, formulaire de contact, sticky form, popup form
+Tags: contact form, images, image, smtp, smtp contact form, smtp email, datepicker form, contact form addon, form addons, address form, advanced form, form register, register form, registration form, form registration, attachment, captcha, best contact form plugin, buddypress, category, ajax, ajax contact form, cnotact, conact, contact, contact button, contact form builder, contact form builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, contactform, custom form, email, email form, form, forms, forms plugin, insert the shortcode, multiple contact forms, admin, send messages, shortcode, web form, widget, wordpress contact form, kontak form, kontaktformular, formulaire de contact, sticky form, popup form
 Requires at least: 3.3
 Tested up to: 4.2.2
-Stable tag: 1.0.11
+Stable tag: 1.0.13
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,11 @@ The best thing about **ajax contact form** plugin is that you can use multiple f
 > * [CONTACT FORM with RECAPTCHA ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/contact-form-recaptcha/ "contact form recaptcha form")
 > * [CONTACT FORM with UPLOAD/ATTACHMENT FIELD ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-file-upload/ "form attachment contact form")
 > * [CONTACT FORM with All FIELDS ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-fields/ "contact form builder")
+
+= Now Available Addons for Lite Version =
+
+Need some Pro version features to be applied in your Free version? What you have to do just go to What's New > Addons page and choose any Addons that you want to install. This way will help you to get several Pro Version form features without full upgrade!
+ 
 
 = LITE VERSION VIDEO =
 [youtube https://www.youtube.com/watch?v=_3lsRi9C77k]
@@ -131,6 +136,13 @@ But seriously, I just want to drink coffee for free, so help a developer out. Yo
 
 == Changelog ==
 
+= 1.0.13 =
+* Added : New Welcome Page
+* Added : New Feature to able to use Addons
+* Fixed : Formbuilder core
+* Fixed : Improved WP Mail Function
+* Many other PHP and CSS clean and optimization
+
 = 1.0.11 =
 * Fixed : Missing Name field
 * Added : 2 new form fields ( Trial ) 
@@ -175,5 +187,5 @@ There are no complicated instructions for using Contact Form plugin because this
 
 == Upgrade Notice ==
 
-= 1.0.11 =
-Bugs Fixed, please update now!
+= 1.0.13 =
+New Interface, please update now!

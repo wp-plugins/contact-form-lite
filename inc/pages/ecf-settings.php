@@ -2,10 +2,6 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-function ecf_opt_init() {
-    $ecf_featured_page = add_submenu_page('edit.php?post_type=easycontactform', 'Global Settings', __('Global Settings', 'easycform'), 'edit_posts', 'ecf_settings_page', 'ecf_stt_page');
-}
-
 function ecf_stt_page() {
 	
 	?>

@@ -94,45 +94,5 @@ function ecf_opt_generator( $id, $rand ) {
 	}
 	
 
-/*-------------------------------------------------------------------------------------------------------*/
-/*   Option Meta Generator
-/*-------------------------------------------------------------------------------------------------------*/
-function ecf_checkbox_helper( $fid ) {
-	
-	$frmvalArray = json_decode( trim ( get_post_meta( $fid, 'ecf_formbuilder_format', true ) ), true);
-	foreach( $frmvalArray as $key => $value ) {
-		foreach( $value as $k => $v ) {
-			
-			if ( $v['field_type'] == 'checkboxes' ) { 
-			$cid = $v['cid'];
-			
-			if ( $v['label'] != '' ) {
-				$thelable = $v['label'];
-				} else {
-					$thelable = 'Untitled';
-					}
-			
-			
-			?>
-            
-var cb<?php echo $cid; ?> = [];   
-cbitems<?php echo $cid; ?> = {};	
-        
-$('input[name="<?php echo $v['field_type'].$v['cid']; ?>"]:checked').each(function() {
-  
-   cb<?php echo $cid; ?>.push($(this).val());
-   
-});
-	cb<?php echo $cid; ?>.push('<?php echo $thelable; ?>');
-	cbitems<?php echo $cid; ?>['cbxgroup'] = cb<?php echo $cid; ?>;
-	eldat.push(cbitems<?php echo $cid; ?>);
- 
-				<?php }
-			
-			}
-		}
-	
-	}
-    
 
 ?>

@@ -327,6 +327,13 @@ label.css-label {
 	outline: medium none !important;
 	
 	}
+	
+.addons-promo {
+	padding-left: 0px !important;
+	color: #C30;
+	font-size:14px !important;
+	font-family: "Open Sans",sans-serif !important;
+	}
 
 @media (min-width:769px) and (max-width:1024px){
 	#pixopr, #cssep { display: none;}

@@ -33,6 +33,13 @@ function ecf_deliver_mail() {
  
         // If email has been process for sending, display a success message
         if ( wp_mail( $to, 'From '.$name.'', $message, $headers, $attachments ) ) {
+			
+
+			// @since 1.0.13 ( Addons )
+			if ( has_action( 'ecf_before_email_sent' ) ) {
+				do_action( 'ecf_before_email_sent', $frmid, $name, $email, $singelmnt );
+				}
+			
 
 			// Reset content-type to avoid conflicts -- http://core.trac.wordpress.org/ticket/23578
 			remove_filter( 'wp_mail_content_type', 'ecf_set_html_content_type' );
@@ -43,6 +50,18 @@ function ecf_deliver_mail() {
 
 			$result['Ok'] = true;
 			$result['msg'] = $aftersent[0];
+			
+			
+			// @since 1.0.13 ( Addons )
+			if ( has_action( 'ecf_after_email_sent' ) ) {
+				do_action( 'ecf_after_email_sent', $email, $name, $frmid );
+				}
+				
+
+			// @since 1.0.13 ( Addons )
+			if ( has_action( 'ecf_analytics_after_email_sent' ) ) {
+				do_action( 'ecf_analytics_after_email_sent', $frmid );
+				}
 			
         	} else {
 				
@@ -112,7 +131,6 @@ function ecf_form_element_parsing( $fid = null, $type = null, $jsnel, $atch = nu
 			if ( $val['type'] == 'email' ) {
 				$tmplateval['email'] = sanitize_email( $val['value'] );
 				$singelmnt['email'] = sanitize_email( $val['value'] );
-				//$tmplateval['email'] = $val['deptemail'];
 				}
 				
 			// Get Client Name
@@ -120,6 +138,29 @@ function ecf_form_element_parsing( $fid = null, $type = null, $jsnel, $atch = nu
 				$singelmnt['name'] = sanitize_text_field( $val['value'] );
 				$tmplateval['name'] = sanitize_text_field( $val['value'] );
 				}
+				
+				
+			if ( isset ( $val['type'] ) ) {	
+				if ( $val['type'] == 'date' ) {
+					$val['value'] = sanitize_text_field( $val['value'] );
+					}
+				}
+		
+		
+			if ( isset ( $val['cbxgroup'] ) ) {
+		
+				$checkboxval = null;
+		
+				foreach ( $val['cbxgroup'] as $dor ) {
+					$checkboxval[] = $dor;
+					}
+			
+					$val['label'] = end($checkboxval);
+					unset ($checkboxval[count($checkboxval)-1]);
+					$val['value'] = $checkboxval;
+					
+				}
+
 		
 		// EMAIL FORMAT
 			$emailplain .= $val['label'].''."\n".(is_array( $val['value']) ? implode("\n", $val['value']) : $val['value'] )."\n\n";		

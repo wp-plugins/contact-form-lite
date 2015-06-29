@@ -946,6 +946,12 @@ $.scrollWindowTo = function(pos, duration, cb) {
 		PLACEHOLDER: 'placeholder',
 		PHONEMASK: 'phonemask',
 		DATEFORMAT: 'dateformat',
+		DATESTART: 'datestart',		
+		DATEFINISH: 'datefinish',
+		SLIDEMIN: 'slidemin',
+		SLIDEMAX: 'slidemax',		
+		SLIDESTEP: 'slidestep',
+		SLIDETYPE: 'slidetype',
         LABEL: 'label',
         FIELD_TYPE: 'field_type',
         REQUIRED: 'required',
@@ -1023,7 +1029,7 @@ $.scrollWindowTo = function(pos, duration, cb) {
 
 (function() {
   Formbuilder.registerField('department', {
-    order: 30,
+    order: 31,
     view: "<select>\n  <% if (rf.get(Formbuilder.options.mappings.INCLUDE_BLANK)) { %>\n    <option value=''></option>\n  <% } %>\n\n  <% for (i in (rf.get(Formbuilder.options.mappings.OPTIONS) || [])) { %>\n    <option <%= rf.get(Formbuilder.options.mappings.OPTIONS)[i].checked && 'selected' %>>\n      <%= rf.get(Formbuilder.options.mappings.OPTIONS)[i].label %>\n    </option>\n  <% } %>\n</select><div style='padding-top: 12px; padding-bottom: 7px; font-size: 12px; color: #F40043;'><i>This feature only available in Pro Version</i></div>",
     edit: "<%= Formbuilder.templates['edit/optionsdept']({ includeBlank: true }) %>",
     addButton: "<span class=\"symbol\"><span class=\"fa fa-users\"></span></span> Department",
@@ -1132,7 +1138,7 @@ $.scrollWindowTo = function(pos, duration, cb) {
 
 (function() {
   Formbuilder.registerField('phone', {
-    order: 29,
+    order: 30,
     view: "<input placeholder='<%= rf.get(Formbuilder.options.mappings.PHONEMASK) %>' type='text' class='rf-size-<%= rf.get(Formbuilder.options.mappings.SIZE) %>' data-icon='<%= rf.get(Formbuilder.options.mappings.ICONS) %>' /><div style='padding-top: 12px; padding-bottom: 7px; font-size: 12px; color: #F40043;'><i>This feature only available in Pro Version</i></div>",
     edit: "<%= Formbuilder.templates['edit/phone']() %>",
     addButton: "<span class='symbol'><span class='fa fa-phone'></span></span> Phone Number",
@@ -1195,6 +1201,47 @@ $.scrollWindowTo = function(pos, duration, cb) {
 	  attrs.iconpos = 'prepend';
       attrs.label = 'Date';
 	  attrs.dateformat = 'd MM, y';
+      return attrs;
+    }
+  });
+
+}).call(this);
+
+
+(function() {
+  Formbuilder.registerField('daterange', {
+    order: 29,
+    view: "<input placeholder='<%= rf.get(Formbuilder.options.mappings.DATESTART) %>' type='text' class='rf-size-<%= rf.get(Formbuilder.options.mappings.SIZE) %>' data-frmt='<%= rf.get(Formbuilder.options.mappings.DATEFORMAT) %>' data-icon='<%= rf.get(Formbuilder.options.mappings.ICONS) %>' /><input placeholder='<%= rf.get(Formbuilder.options.mappings.DATEFINISH) %>' type='text' class='rf-size-<%= rf.get(Formbuilder.options.mappings.SIZE) %>' data-frmt='<%= rf.get(Formbuilder.options.mappings.DATEFORMAT) %>' data-icon='<%= rf.get(Formbuilder.options.mappings.ICONS) %>' /><div style='padding-top: 12px; padding-bottom: 7px; font-size: 12px; color: #F40043;'><i>This feature only available in Pro Version</i></div>",
+    edit: "<%= Formbuilder.templates['edit/daterange']() %>",
+    addButton: "<span class='symbol'><span class='fa fa-calendar'></span></span> Date Range",
+    defaultAttributes: function(attrs) {
+      attrs.field_options.size = 'medium';
+	  attrs.icons = 'fa-calendar';
+	  attrs.iconpos = 'prepend';
+      attrs.label = 'Select Date Range';
+	  attrs.datestart = 'Start Date';	
+	  attrs.datefinish = 'Expected Finish Date';
+	  attrs.dateformat = 'd MM, yy';
+      return attrs;
+    }
+  });
+
+}).call(this);
+
+
+(function() {
+  Formbuilder.registerField('slider', {
+    order: 36,
+    view: "<input class='ecf-slide' /><br /><div style='padding-top: 12px; padding-bottom: 7px; font-size: 12px; color: #F40043;'><i>This feature only available in Pro Version</i></div>",
+    edit: "<%= Formbuilder.templates['edit/slider']() %>",
+    addButton: "<span class='symbol'><span class='fa fa-exchange'></span></span> Slider",
+    defaultAttributes: function(attrs) {
+      attrs.field_options.size = 'medium';
+      attrs.label = 'Slider';
+	  attrs.slidemin = '0';	
+	  attrs.slidemax = '100';
+	  attrs.slidestep = '10';
+	  attrs.slidetype = '%';
       return attrs;
     }
   });
@@ -1475,7 +1522,7 @@ var __t, __p = '', __e = _.escape;
 with (obj) {
 __p += '<div class=\'fb-edit-section-header\'>Phone Format</div>\n  <input placeholder="Default - (xxx) xxx-xxx-xxx" type="text" data-rv-input="model.' +
 ((__t = ( Formbuilder.options.mappings.PHONEMASK )) == null ? '' : __t) + 
-'" class=\'option-label-input\' />\n  <p style="margin-right:5px;font-size: 11px; color:#999; font-style: italic;">Custom Phone mask? Learn more <a style="text-decoration: none !important;" href="http://digitalbush.com/projects/masked-input-plugin/" target="_blank">here</a></p>\n <div class=\'fb-edit-section-header\'>Icon</div>\n<select data-rv-value="model.' +
+'" class=\'option-label-input\' />\n  <p style="margin-right:5px;font-size: 11px; color:#999; font-style: italic;">Custom Phone mask? Learn more <a style="text-decoration: none !important;" href="http://digitalbush.com/projects/masked-input-plugin/" target="_blank">here</a></p>\n <div class=\'fb-edit-section-header\'>Icon<span style="font-style: italic; font-size:12px; color: #F40043;">&nbsp;&nbsp; ( Pro Version )</span></div>\n<select data-rv-value="model.' +
 ((__t = ( Formbuilder.options.mappings.ICONS )) == null ? '' : __t) + 
 '">\n  <option value="none">None</option>\n  <option value="fa-user">Person</option>\n  <option value="fa-envelope-o">Envelope</option>\n  <option value="fa-asterisk">Asterisk</option>\n  <option value="fa-link">Link</option>\n  <option value="fa-star">Star</option>\n <option value="fa-users">Users</option>\n  <option value="fa-check">Check</option>\n  <option value="fa-comment">Message</option>\n <option value="fa-phone">Phone</option>\n <option value="fa-calendar">Calendar</option>\n  </select>\n  <div class=\'fb-edit-section-header-custom-icon\'></div>\n  <p style="margin-right:5px;font-size: 11px; color:#999; font-style: italic;">Custom Icon Class. Learn more <a style="text-decoration: none !important;" href="http://goo.gl/mjokMW" target="_blank">here</a></p>\n  <input type="text" data-rv-input="model.' +
 ((__t = ( Formbuilder.options.mappings.ICONCSTM)) == null ? '' : __t) + 
@@ -1522,6 +1569,28 @@ __p += '<div class=\'fb-edit-section-header\'>Options</div>\n<span style="margin
 return __p
 };
 
+
+this["Formbuilder"]["templates"]["edit/slider"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class=\'fb-edit-section-header\'>Slider Options</div>\n <p style="margin-right:5px;font-size: 11px; color:#999; font-style: italic;">Slider Min</p><input style="margin-bottom:7px;" placeholder="0" type="text" data-rv-input="model.' +
+((__t = ( Formbuilder.options.mappings.SLIDEMIN)) == null ? '' : __t) + 
+'" class=\'option-label-input\' />\n';
+__p += '<p style="margin-right:5px;font-size: 11px; color:#999; font-style: italic;">Slider Max</p><input style="margin-bottom:7px;" placeholder="100" type="text" data-rv-input="model.' +
+((__t = ( Formbuilder.options.mappings.SLIDEMAX)) == null ? '' : __t) + 
+'" class=\'option-label-input\' />\n';
+__p += '<p style="margin-right:5px;font-size: 11px; color:#999; font-style: italic;">Slider Step</p><input style="margin-bottom:7px;" placeholder="0" type="text" data-rv-input="model.' +
+((__t = ( Formbuilder.options.mappings.SLIDESTEP)) == null ? '' : __t) + 
+'" class=\'option-label-input\' />\n';
+__p += '<p style="margin-right:5px;font-size: 11px; color:#999; font-style: italic;">Slider Type</p><input style="margin-bottom:13px;" placeholder="%" type="text" data-rv-input="model.' +
+((__t = ( Formbuilder.options.mappings.SLIDETYPE)) == null ? '' : __t) + 
+'" class=\'option-label-input\' />\n <p style="border-top: 1px solid #DDD; margin-right:5px;font-size: 11px; color:#999; font-style: italic;padding-top:5px;">NOTE : You can change the slide step from 10 ( default ) to another value if you want to determines the size or amount of each interval or step the slider takes between the min and max. Set to 0 if you want to disable step mode ( regular slider ).</p>';
+}
+return __p
+};
+
+
 //------------------
 
 
@@ -1561,7 +1630,7 @@ this["Formbuilder"]["templates"]["edit/rating"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div class=\'fb-edit-section-header\'>Icon</div>\n<select data-rv-value="model.' +
+__p += '<div class=\'fb-edit-section-header\'>Icon<span style="font-style: italic; font-size:12px; color: #F40043;">&nbsp;&nbsp; ( Pro Version )</span></div>\n<select data-rv-value="model.' +
 ((__t = ( Formbuilder.options.mappings.ICONS )) == null ? '' : __t) + 
 '">\n  <option value="fa-star">Star A</option>\n <option value="fa-star-o">Star B</option>\n  <option value="fa-thumbs-up">Thumbs Up A</option>\n  <option value="fa-thumbs-o-up">Thumbs Up B</option>\n  <option value="fa-trophy">Trophy</option>\n  <option value="fa-asterisk">Asterisk</option>\n </select>\n  <div class=\'fb-edit-section-header-custom-icon\'></div>\n  <p style="margin-right:5px;font-size: 11px; color:#999; font-style: italic;">Custom Icon Class. Learn more <a style="text-decoration: none !important;" href="http://goo.gl/mjokMW" target="_blank">here</a></p>\n  <input type="text" data-rv-input="model.' +
 ((__t = ( Formbuilder.options.mappings.ICONCSTM)) == null ? '' : __t) + 
@@ -1579,7 +1648,7 @@ with (obj) {
 __p += '<div class=\'fb-edit-section-header\'>Placeholder</div>\n  <input placeholder="Placeholder" type="text" data-rv-input="model.' +
 ((__t = ( Formbuilder.options.mappings.PLACEHOLDER)) == null ? '' : __t) + 
 '" class=\'option-label-input\' />\n <div class=\'fb-edit-section-header\'>Date Format</div>\n<select data-rv-value="model.' + ((__t = ( Formbuilder.options.mappings.DATEFORMAT )) == null ? '' : __t) + 
-'">\n  <option value="d MM, yy">Default - d MM, yy</option>\n  <option value="mm/dd/yy">Normal - mm/dd/yy</option>\n  <option value="yy-mm-dd">ISO 8601 - yy-mm-dd</option>\n  <option value="d M, y">Short - d M, y</option>\n  <option value="d MM, y">Medium - d MM, y</option>\n  <option value="DD, d MM, yy">Full - DD, d MM, yy</option>\n  </select>\n <div class=\'fb-edit-section-header\'>Icon</div>\n<select data-rv-value="model.' +
+'">\n  <option value="d MM, yy">Default - d MM, yy</option>\n  <option value="mm/dd/yy">Normal - mm/dd/yy</option>\n  <option value="yy-mm-dd">ISO 8601 - yy-mm-dd</option>\n  <option value="d M, y">Short - d M, y</option>\n  <option value="d MM, y">Medium - d MM, y</option>\n  <option value="DD, d MM, yy">Full - DD, d MM, yy</option>\n  </select>\n <div class=\'fb-edit-section-header\'>Icon<span style="font-style: italic; font-size:12px; color: #F40043;">&nbsp;&nbsp; ( Pro Version )</span></div>\n<select data-rv-value="model.' +
 ((__t = ( Formbuilder.options.mappings.ICONS )) == null ? '' : __t) + 
 '">\n  <option value="none">None</option>\n  <option value="fa-user">Person</option>\n  <option value="fa-envelope-o">Envelope</option>\n  <option value="fa-asterisk">Asterisk</option>\n  <option value="fa-link">Link</option>\n  <option value="fa-star">Star</option>\n <option value="fa-users">Users</option>\n  <option value="fa-check">Check</option>\n  <option value="fa-comment">Message</option>\n <option value="fa-calendar">Calendar</option>\n  </select>\n  <div class=\'fb-edit-section-header-custom-icon\'></div>\n  <p style="margin-right:5px;font-size: 11px; color:#999; font-style: italic;">Custom Icon Class. Learn more <a style="text-decoration: none !important;" href="http://goo.gl/mjokMW" target="_blank">here</a></p>\n  <input type="text" data-rv-input="model.' +
 ((__t = ( Formbuilder.options.mappings.ICONCSTM)) == null ? '' : __t) + 
@@ -1590,6 +1659,29 @@ __p += '<div class=\'fb-edit-section-header\'>Placeholder</div>\n  <input placeh
 }
 return __p
 };
+
+
+this["Formbuilder"]["templates"]["edit/daterange"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class=\'fb-edit-section-header\'>Date Labels</div>\n  <input style="margin-bottom:7px;" placeholder="Start Date" type="text" data-rv-input="model.' +
+((__t = ( Formbuilder.options.mappings.DATESTART)) == null ? '' : __t) + 
+'" class=\'option-label-input\' />\n <input placeholder="Expected Finish Date" type="text" data-rv-input="model.' +
+((__t = ( Formbuilder.options.mappings.DATEFINISH)) == null ? '' : __t) + 
+'" class=\'option-label-input\' />\n <div class=\'fb-edit-section-header\'>Date Format</div>\n<select data-rv-value="model.' + ((__t = ( Formbuilder.options.mappings.DATEFORMAT )) == null ? '' : __t) + 
+'">\n  <option value="d MM, yy">Default - d MM, yy</option>\n  <option value="mm/dd/yy">Normal - mm/dd/yy</option>\n  <option value="yy-mm-dd">ISO 8601 - yy-mm-dd</option>\n  <option value="d M, y">Short - d M, y</option>\n  <option value="d MM, y">Medium - d MM, y</option>\n  <option value="DD, d MM, yy">Full - DD, d MM, yy</option>\n  </select>\n <div class=\'fb-edit-section-header\'>Icon<span style="font-style: italic; font-size:12px; color: #F40043;">&nbsp;&nbsp; ( Pro Version )</span></div>\n<select data-rv-value="model.' +
+((__t = ( Formbuilder.options.mappings.ICONS )) == null ? '' : __t) +
+'">\n  <option value="none">None</option>\n  <option value="fa-user">Person</option>\n  <option value="fa-envelope-o">Envelope</option>\n  <option value="fa-asterisk">Asterisk</option>\n  <option value="fa-link">Link</option>\n  <option value="fa-star">Star</option>\n <option value="fa-users">Users</option>\n  <option value="fa-check">Check</option>\n  <option value="fa-comment">Message</option>\n <option value="fa-phone">Phone</option>\n <option value="fa-calendar">Calendar</option>\n  </select>\n  <div class=\'fb-edit-section-header-custom-icon\'></div>\n  <p style="margin-right:5px;font-size: 11px; color:#999; font-style: italic;">Custom Icon Class. Learn more <a style="text-decoration: none !important;" href="http://goo.gl/mjokMW" target="_blank">here</a></p>\n  <input type="text" data-rv-input="model.' +
+((__t = ( Formbuilder.options.mappings.ICONCSTM)) == null ? '' : __t) + 
+'" class=\'option-label-input\' />\n  <div class=\'fb-edit-section-header\'>Icon Position</div>\n<select data-rv-value="model.' +
+((__t = ( Formbuilder.options.mappings.ICONPOS )) == null ? '' : __t) + 
+'">\n  <option value="prepend">Left</option>\n  <option value="append">Right</option>\n</select>\n';
+
+}
+return __p
+};
+
 
 
 //------------------

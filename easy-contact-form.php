@@ -4,7 +4,7 @@ Plugin Name: Easy Contact Form Lite
 Plugin URI: http://www.ghozylab.com/plugins/
 Description: Easy Contact Form (Lite) - Displaying your contact form in anywhere you like with very easy. Allows you to customize it to looking exactly what you want. <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/pricing-compare-tables/" target="_blank"><strong> Upgrade to Pro Version Now</strong></a> and get a tons of awesome features.
 Author: GhozyLab, Inc.
-Version: 1.0.11
+Version: 1.0.13
 Author URI: http://www.ghozylab.com/plugins/
 */
 
@@ -46,7 +46,7 @@ define( 'ECF_ITEM_NAME', 'Easy Contact Form Lite' );
 
 // Plugin Version
 if ( !defined( 'ECF_VERSION' ) ) {
-	define( 'ECF_VERSION', '1.0.11' );
+	define( 'ECF_VERSION', '1.0.13' );
 }
 
 // Pro Price
@@ -243,7 +243,7 @@ add_filter( 'manage_posts_custom_column',  'easycontactform_columns_edit_columns
 /*-------------------------------------------------------------------------------*/
 function ecf_rename_submenu() {  
     global $submenu;     
-	$submenu['edit.php?post_type=easycontactform'][5][0] = __( 'Overview', 'easycform' );  
+	$submenu['edit.php?post_type=easycontactform'][5][0] = __( 'Forms', 'easycform' );  
 }  
 add_action( 'admin_menu', 'ecf_rename_submenu' ); 
 
@@ -300,34 +300,28 @@ include_once( 'inc/ecf-entries.php' ); // @since 1.0.3 > 5 ( BETA )
 /*   Featured Plugins Page
 /*-------------------------------------------------------------------------------*/
 if ( is_admin() ){
-	require_once( 'inc/ecf-freeplugins.php' );
-	require_once( 'inc/ecf-featured.php' );
-	include_once( 'inc/ecf-pricing.php' ); 
-	require_once( 'inc/ecf-settings.php' );
+	require_once( 'inc/pages/ecf-freeplugins.php' );
+	require_once( 'inc/pages/ecf-featured.php' );
+	include_once( 'inc/pages/ecf-pricing.php' ); 
+	require_once( 'inc/pages/ecf-settings.php' );
 	require_once( 'inc/ecf-notice.php' );
-	include_once( 'inc/ecf-analytics.php' ); // @since 1.0.11
+	include_once( 'inc/pages/ecf-analytics.php' ); // @since 1.0.11
+	include_once( 'inc/pages/ecf-addons.php' ); // @since 1.0.11
+	include_once( 'inc/pages/ecf-welcome.php' ); // @since 1.0.11
+
 	}
 	
 	
 /*-------------------------------------------------------------------------------*/
 /*   Redirect to Pricing Table on Activate
 /*-------------------------------------------------------------------------------*/	
+
 function ecf_plugin_activate() {
 
   add_option( 'activatedecf', 'ecf-activate' );
 
 }
 register_activation_hook( __FILE__, 'ecf_plugin_activate' );
-
-function ecf_load_plugin() {
-
-    if ( is_admin() && get_option( 'activatedecf' ) == 'ecf-activate' && !is_network_admin() ) {
-		delete_option( 'activatedecf' );
-		wp_redirect("edit.php?post_type=easycontactform&page=easycform_free_plugins");
-		
-    	}
-}
-add_action( 'admin_init', 'ecf_load_plugin' );
 
 
 /*-------------------------------------------------------------------------------*/

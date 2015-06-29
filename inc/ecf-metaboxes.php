@@ -18,6 +18,7 @@ function ecf_custom_metabox() {
 add_action( 'do_meta_boxes', 'ecf_custom_metabox' );
 add_action( "admin_head", 'ecf_admin_head_script' );
 add_action( 'admin_enqueue_scripts', 'ecf_load_script', 10, 1 );
+//add_action( 'admin_enqueue_scripts', 'ecf_addons_pointer' );
 
 function ecf_load_script() {
 	if ( strstr( $_SERVER['REQUEST_URI'], 'wp-admin/post-new.php' ) || strstr( $_SERVER['REQUEST_URI'], 'wp-admin/post.php' ) ) {
@@ -50,9 +51,16 @@ function ecf_load_script() {
 			wp_enqueue_script( 'jquery-ui-slider' );
 			wp_enqueue_script( 'jquery-effects-highlight' );	
 
+
 			//add_action('admin_footer', 'ecf_scroll' );	
 			add_action('admin_footer', 'ecf_upgrade_popup' );
 			easycform_pointer_header();
+			
+			// @since 1.0.13
+			if( has_filter( 'ecf_addons_enqueue' ) ) {
+				apply_filters( 'ecf_addons_enqueue', '' );
+				}
+			
 			}
 		}
 }
@@ -63,6 +71,7 @@ function ecf_admin_head_script () {
 
 			?>
 			<style type="text/css" media="screen">
+			#minor-publishing { display: none !important; }
 			#ecf_email_auto_response_ifr { height: 270px !important;}
 			@media only screen and (min-width: 1150px) {	
 		    	#side-sortables.fixed { position: fixed; top: 55px; right: 20px; width: 280px; }
@@ -253,9 +262,21 @@ function ecf_create_meta_box( $post, $meta_box )
     }
 	
     if ( isset( $meta_box['istabbed'] ) && $meta_box['istabbed'] != '' ){
-    	echo '<div id="ecftabs"><ul class="ecftabcon"><li><a class="tabulous_active ecfdefaulttab" id="email" href="#tabs-1" title="">Email</a></li><li><a id="layout" href="#tabs-2" title="">Layout & Styles</a></li><li><a id="misc" href="#tabs-3" title="">Miscellaneous</a></li><li><a id="adv" href="#tabs-4" title="">Advanced</a></li></ul><div class="tabloader"><div id="tabs_container">';
-    }
-    
+		
+		// @since 1.0.13
+		$paneltab = '<li><a class="tabulous_active ecfdefaulttab" id="email" href="#tabs-1" title="">Email</a></li><li><a id="layout" href="#tabs-2" title="">Layout & Styles</a></li><li><a id="misc" href="#tabs-3" title="">Miscellaneous</a></li><li><a id="adv" href="#tabs-4" title="">Advanced</a></li>';
+		
+		echo '<div id="ecftabs"><ul class="ecftabcon">';
+		
+		if( has_filter( 'ecf_panel_tab' ) ) {
+			echo apply_filters( 'ecf_panel_tab', $paneltab );
+			} else {
+				echo $paneltab;
+				}
+        echo '</ul><div class="tabloader"><div id="tabs_container">';
+
+	}
+	
 	wp_nonce_field( basename( __FILE__ ), 'ecf_meta_box_nonce' );
 	echo '<table class="form-table ecf-metabox-table">';
  
@@ -267,7 +288,7 @@ function ecf_create_meta_box( $post, $meta_box )
 		} else {
 			$isfull = '<th><label for="'. $field['id'] .'"><strong>'. $field['name'] .'<br></strong><span>'. $field['desc'] .'</span></label>'.( isset( $field['needmargin'] ) && $field['needmargin'] ? $field['needmargin'] : '' ) .'</th>';	
 		}
-		echo '<tr class="'. $field['id'] .' '. ( isset( $field['group'] ) && $field['group'] ? $field['group'] : '' ) .'">'.$isfull.'';
+		echo '<tr class="'. $field['id'] .' '. ( isset( $field['group'] ) && $field['group'] ? $field['group'] : '' ) .' '. ( isset( $field['isselector'] ) && $field['isselector'] ? $field['isselector'] : '' ) .' '. ( isset( $field['extragrp'] ) && $field['extragrp'] ? $field['extragrp'].'-fields' : '' ) .'">'.$isfull.''; // @since 1.0.13
 		
 		switch( $field['type'] ){
 			
@@ -445,15 +466,7 @@ function ecf_create_meta_box( $post, $meta_box )
 			    echo '</td>';
 			    break;	
 				
-				
-			case 'separator':
-			    echo '<td class="menuseparator">';
-			    echo '</td>';
-			    break;					
-				
 
-				
-				
 			case 'color':
 
 			
@@ -538,6 +551,11 @@ function ecf_create_meta_box( $post, $meta_box )
 /*-----------------------------------------------------------------------------------*/	
 		}
 		
+		// @since 1.0.13
+		if ( has_filter( 'ecf_addons_fields_control' ) ) {
+			echo apply_filters( 'ecf_addons_fields_control', $meta, $field, $post->ID );
+			}
+		
 		echo '</tr>';
 	}
  
@@ -565,7 +583,7 @@ function ecf_metabox_work(){
 	    $meta_box = array(
 		'id' => 'ecf_meta_formbuilder',
 		'title' =>  __( 'Form Builder', 'easycform' ),
-		'description' => __( '<span class="ecf-introjs"><a href="javascript:void(0);" onclick="startIntro();"><span class="ecf-intro-help"></span>Click Here to learn How to create your first Form</a></span><br /><br />You can add / remove, edit or order any elements with this form builder to fit to your needs.', 'easycform' ),
+		'description' => __( '<span class="ecf-introjs"><a href="javascript:void(0);" onclick="startIntro();"><span class="ecf-intro-help"></span>Click Here to learn How to create your first Form</a></span><br /><br />You can add / remove, edit or order any elements with this form builder to fit to your needs.<br /><h3 class="addons-promo">Need Pro Version Features without <i>Full Upgrade</i>? <a href="'.admin_url( 'edit.php?post_type=easycontactform&page=ecf-addons' ).'">Check Available Addons here</a></h3>', 'easycform' ),
 		'page' => 'easycontactform',
 		'context' => 'normal',	
 		'istabbed' => '',
@@ -1108,6 +1126,14 @@ sce:application/sb-scenario',
 		
 			)
 	);
+	
+	// @since 1.0.13
+	if( has_filter( 'ecf_addons_metabox' ) ) {
+		$meta_box = apply_filters( 'ecf_addons_metabox', $meta_box );
+		} else {
+			$meta_box = $meta_box;
+			}
+	
     ecf_add_meta_box( $meta_box );
 	
 }

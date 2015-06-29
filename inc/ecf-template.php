@@ -98,11 +98,23 @@ function ecf_markup_generator( $fid, $rnd ) {
 					data['formid'] = '<?php echo $fid; ?>';
 					data['security'] = '<?php echo wp_create_nonce( trim($fid) ); ?>';
 		
+		
+						<?php 
+						if( has_filter( 'ecf_addons_form_element_parsing' ) ) {
+
+							echo apply_filters( 'ecf_addons_form_element_parsing', '' );
+								
+							} else {
+							?>
+
 					jQuery('input, textarea', form).each(function(key){
 						
 						items = {};
 						
 						if (typeof $(this).data('type') === 'undefined') { return true; }
+						
+
+						<?php } ?>
 
 						items['type'] = $(this).data('type');
 						items['label'] = $(this).data('label');
@@ -112,6 +124,19 @@ function ecf_markup_generator( $fid, $rnd ) {
 						eldat.push(items);
 							
 						}); // END  form).each(function(key){
+							
+
+						<?php // @since 1.0.13
+						
+						if( has_filter( 'ecf_addons_element_helper' ) ) {
+							if ( $frm ) {
+								echo apply_filters( 'ecf_addons_element_helper', $fid, $opt['frmformat'] );
+								} else {
+									echo apply_filters( 'ecf_addons_element_helper', $fid, null );
+									}
+							}
+							?>
+							
 
 						data['allelmnt'] = JSON.stringify(eldat);
 
@@ -180,6 +205,15 @@ function ecf_markup_generator( $fid, $rnd ) {
 		</script>
     <!-- END JS for Form ID: <?php echo $fid; ?> -->
     
+    
+    	<?php 
+			if( has_filter( 'ecf_addons_add_inline_styles' ) ) {
+				
+				 echo apply_filters( 'ecf_addons_add_inline_styles', null );
+				 
+			} ?>
+
+    
 <!-- START Form Markup for Form ID: <?php echo $fid; ?> -->
 <div id="preloader-<?php echo $rnd; ?>" class="ecfpreloader"></div>   
     <div id="ecf-form-<?php echo $rnd; ?>" class="ecf-body" style="display:none;">					
@@ -198,15 +232,52 @@ function ecf_markup_generator( $fid, $rnd ) {
 					$isplchldr = null;
 					}
 			
-			if ( $v['field_type'] == 'paragraph' || $v['field_type'] == 'message' ) {
-				$lblclass = 'textarea';
-				}
-				else {
-					$lblclass = 'input';
-					}
 			
-					echo '<section>';
-					if ( $v['field_type'] == 'paragraph' || $v['field_type'] == 'message' || $v['field_type'] == 'name' || $v['field_type'] == 'text' || $v['field_type'] == 'email' || $v['field_type'] == 'website' ) {
+			// @since 1.0.13
+			if( has_filter( 'ecf_addons_form_element_logic' ) ) {
+				
+				 
+				 if ( is_array( apply_filters( 'ecf_addons_form_element_logic', $v ) ) ) {
+					 
+					 $frmdata = apply_filters( 'ecf_addons_form_element_logic', $v );
+					 
+					 $isphonemask = $frmdata[0];
+					 $isphoneplchldr = $frmdata[1];
+					 $lblclass = $frmdata[2];
+					 
+				 	}
+				 
+			}
+				else {
+					
+					if ( $v['field_type'] == 'paragraph' || $v['field_type'] == 'message' ) {
+						$lblclass = 'textarea';
+						}
+						else {
+							$lblclass = 'input';
+							}
+					
+				}
+			
+					echo '<section>';		
+						
+					// @since 1.0.13
+					if( has_filter( 'ecf_addons_fields_rules' ) ) {
+						
+						if ( in_array( $v['field_type'], apply_filters( 'ecf_addons_fields_rules', '' ) ) ) {
+						
+							$addflds = $v['field_type'];
+						
+							}
+						
+						} else {
+							
+							$addflds = 'noadd';
+							
+							}
+					
+					
+					if ( $v['field_type'] == 'paragraph' || $v['field_type'] == 'message' || $v['field_type'] == 'name' || $v['field_type'] == 'text' || $v['field_type'] == 'email' || $v['field_type'] == 'website' || $v['field_type'] == $addflds ) {
 						echo '<label class="label">'.$v['label'].'</label>';
 						}
 					echo '<label class="'.$lblclass.'">';
@@ -258,6 +329,15 @@ function ecf_markup_generator( $fid, $rnd ) {
 				break;
 				
 				}
+				
+				
+			// @since 1.0.13
+			if( has_filter( 'ecf_addons_add_form_element' ) ) {
+				
+				 apply_filters( 'ecf_addons_add_form_element', $v, $k, $rnd, $isplchldr, $isphonemask, $isphoneplchldr );
+				 
+			}
+				
 				
 						echo '</label>';
 						echo '</section>';

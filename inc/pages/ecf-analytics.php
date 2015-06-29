@@ -8,13 +8,8 @@ Form analytics DEMO
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-
-function easycform_form_analytics() {
-    $easycform_featured_init = add_submenu_page('edit.php?post_type=easycontactform', 'Form Analytics', __('Analytics', 'easycform'), 'edit_posts', 'easycform_form_analytics', 'easycform_analytics');
-}
-
 function easycform_put_load_google_cart() {
-	if ( is_admin() && isset( $_GET['page'] ) && $_GET['page'] == 'easycform_form_analytics' ){
+	if ( is_admin() && isset( $_GET['page'] ) && $_GET['page'] == 'easycform-form-analytics' ){
 	wp_register_style('ecf_googleFonts', 'http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700');
     wp_enqueue_style( 'ecf_googleFonts');
 	wp_enqueue_script( 'ecf_jsapi', 'https://www.google.com/jsapi');	
