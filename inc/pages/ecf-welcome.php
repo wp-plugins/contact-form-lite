@@ -45,7 +45,7 @@ class ECF_Welcome {
 	public function ecf_admin_menus() {
 
 			// What's New / Overview
-    		add_submenu_page('edit.php?post_type=easycontactform', 'What\'s New', 'What\'s New', $this->minimum_capability, 'ecf-whats-new', array( $this, 'ecf_about_screen') );
+    		add_submenu_page('edit.php?post_type=easycontactform', 'What\'s New', 'What\'s New<span style="font-weight: bold;font-size:8px;letter-spacing: 1px;color:#fff; border: solid 1px #fff; padding: 0 5px 0 5px; border-radius: 15px; -moz-border-radius: 15px;-webkit-border-radius: 15px; background: red; margin-left: 7px;">NEW</span>', $this->minimum_capability, 'ecf-whats-new', array( $this, 'ecf_about_screen') );
 			
 			// Changelog Page
     		add_submenu_page('edit.php?post_type=easycontactform', ECF_ITEM_NAME.' Changelog', ECF_ITEM_NAME.' Changelog', $this->minimum_capability, 'ecf-changelog', array( $this, 'ecf_changelog_screen') );
