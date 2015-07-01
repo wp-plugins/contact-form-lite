@@ -36,6 +36,14 @@ function ecf_markup_generator( $fid, $rnd ) {
 	 	} else {
 		 	$isheader = '';
 	 		}
+			
+		
+		// @since 1.0.15	
+		if( has_filter( 'ecf_addons_before_form_render' ) ) {
+			
+			echo apply_filters( 'ecf_addons_before_form_render', $opt, $fid );
+			
+			}	
 
 	?>
 
@@ -51,6 +59,13 @@ function ecf_markup_generator( $fid, $rnd ) {
 
 			$(function() {
 				
+		<?php // @since 1.0.15	
+		if( has_filter( 'ecf_addons_before_form_validate' ) ) {
+			
+			echo apply_filters( 'ecf_addons_before_form_validate',  $opt, $fid );
+			
+			} ?>
+				
 				// Validation
 				$("#form-<?php echo $rnd; ?>").validate(
 				{					
@@ -58,7 +73,14 @@ function ecf_markup_generator( $fid, $rnd ) {
 					rules:
 					{
 					<?php echo $opt['frmelval']; ?>,
-				
+							
+				<?php // @since 1.0.15	
+				if( has_filter( 'ecf_addons_when_form_validate' ) ) {
+			
+					echo apply_filters( 'ecf_addons_when_form_validate',  $opt );
+			
+					} ?>
+					
 					},
 										
 					// Messages for form validation
@@ -72,7 +94,16 @@ function ecf_markup_generator( $fid, $rnd ) {
 						},
 						
 					submitHandler: function (form) {
+				<?php // @since 1.0.15	
+				if( has_filter( 'ecf_addons_form_onsubmit' ) ) {
+			
+					echo apply_filters( 'ecf_addons_form_onsubmit',  $opt, $rnd );
+			
+					} else { ?>
 						 ecf_onsubmit(jQuery('.form-<?php echo $rnd; ?>'));
+						 
+						 <?php } ?>
+						 
 						 },
 						 
 					invalidHandler: function (form) {	
@@ -178,6 +209,13 @@ function ecf_markup_generator( $fid, $rnd ) {
 									
 							}
 						});
+						
+				<?php // @since 1.0.15	
+				if( has_filter( 'ecf_addons_after_form_submit' ) ) {
+			
+					echo apply_filters( 'ecf_addons_after_form_submit',  $opt );
+			
+					} ?>
 						
 					} // End submitForm
 	
@@ -345,7 +383,16 @@ function ecf_markup_generator( $fid, $rnd ) {
 			}
 		}
 		
-		?>       
+		?>      
+        
+				<?php // @since 1.0.15	
+				if( has_filter( 'ecf_addons_after_form_render' ) ) {
+			
+					echo apply_filters( 'ecf_addons_after_form_render',  $opt );
+			
+					} ?>
+        
+         
        		 </fieldset>
         		<footer>
                     <button data-style="slide-down" id="cf-submitted<?php echo $rnd; ?>" class="ecfbutton ladda-button" type="submit" name="cf-submitted<?php echo $rnd; ?>"><span class="ladda-label">SEND</span></button> 

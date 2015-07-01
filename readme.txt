@@ -4,7 +4,7 @@ Donate link: http://ghozylab.com/
 Tags: contact form, images, image, smtp, smtp contact form, smtp email, datepicker form, contact form addon, form addons, address form, advanced form, form register, register form, registration form, form registration, attachment, captcha, best contact form plugin, buddypress, category, ajax, ajax contact form, cnotact, conact, contact, contact button, contact form builder, contact form builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, contactform, custom form, email, email form, form, forms, forms plugin, insert the shortcode, multiple contact forms, admin, send messages, shortcode, web form, widget, wordpress contact form, kontak form, kontaktformular, formulaire de contact, sticky form, popup form
 Requires at least: 3.3
 Tested up to: 4.2.2
-Stable tag: 1.0.13
+Stable tag: 1.0.15
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -136,6 +136,9 @@ But seriously, I just want to drink coffee for free, so help a developer out. Yo
 
 == Changelog ==
 
+= 1.0.15 =
+* New : Ready to use Form Captcha Addon
+
 = 1.0.13 =
 * Added : New Welcome Page
 * Added : New Feature to able to use Addons
@@ -187,5 +190,5 @@ There are no complicated instructions for using Contact Form plugin because this
 
 == Upgrade Notice ==
 
-= 1.0.13 =
-New Interface, please update now!
+= 1.0.15 =
+New Addons Support, please update now!
