@@ -315,7 +315,7 @@ class ECF_Welcome {
 
 			<div class="ecf-container-cnt">
 				<div class="feature-section">
-                <iframe width="853" height="480" src="https://www.youtube.com/embed/_3lsRi9C77k" frameborder="0" allowfullscreen></iframe>
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/_3lsRi9C77k?rel=0" frameborder="0" allowfullscreen></iframe>
 			</div>
             </div>
 
