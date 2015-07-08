@@ -1,10 +1,10 @@
 === Contact Form Plugin ===
 Contributors: GhozyLab
 Donate link: http://ghozylab.com/
-Tags: contact form, images, image, smtp, smtp contact form, smtp email, datepicker form, contact form addon, form addons, address form, advanced form, form register, register form, registration form, form registration, attachment, captcha, best contact form plugin, buddypress, category, ajax, ajax contact form, cnotact, conact, contact, contact button, contact form builder, contact form builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, contactform, custom form, email, email form, form, forms, forms plugin, insert the shortcode, multiple contact forms, admin, send messages, shortcode, web form, widget, wordpress contact form, kontak form, kontaktformular, formulaire de contact, sticky form, popup form
+Tags: admin, advanced form, Attachment, best contact form plugin, buddypress, category, cnotact, conact, contact, contact button, contact form, contact form builder, contact form builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, copy, custom form, email, email form, feedback, feedback form, feedback forms, form, forms, forms plugin, insert the shortcode, multiple contact forms, post feedback, request, send, send copy, send messages, shortcode, text, web form, web-page feedback, wordpress contact form
 Requires at least: 3.3
 Tested up to: 4.2.2
-Stable tag: 1.0.15
+Stable tag: 1.0.17
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -136,6 +136,11 @@ But seriously, I just want to drink coffee for free, so help a developer out. Yo
 
 == Changelog ==
 
+= 1.0.17 =
+* New : Extra Page ( Tab ) on What's New page
+* Added : New Hook for form Header and Footer
+* Many other PHP and CSS clean and optimization
+
 = 1.0.15 =
 * New : Ready to use Form Captcha Addon
 
@@ -190,5 +195,5 @@ There are no complicated instructions for using Contact Form plugin because this
 
 == Upgrade Notice ==
 
-= 1.0.15 =
-New Addons Support, please update now!
+= 1.0.17 =
+New Extra Dollar Page, please update now!

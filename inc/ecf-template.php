@@ -398,6 +398,12 @@ function ecf_markup_generator( $fid, $rnd ) {
                     <button data-style="slide-down" id="cf-submitted<?php echo $rnd; ?>" class="ecfbutton ladda-button" type="submit" name="cf-submitted<?php echo $rnd; ?>"><span class="ladda-label">SEND</span></button> 
 				</footer>
 			</form>
+            
+            <?php  if ( ecf_get_aff_option( 'ecf_affiliate_info', 'ecf_aff_id', '' ) ) { ?>
+            <span class="ecf-aff-link">Powered by <a href="https://secure.ghozylab.com/demo/?ref=<?php echo ecf_get_aff_option( 'ecf_affiliate_info', 'ecf_aff_id', '' ); ?>&goto=ecf" target="_blank">Easy Contact Form Plugin</a></span>
+            
+            <?php } ?>
+            
             </div>  
 <!-- END Form Markup for Form ID: <?php echo $fid; ?> -->
 			

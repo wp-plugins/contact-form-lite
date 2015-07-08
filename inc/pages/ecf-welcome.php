@@ -62,6 +62,8 @@ class ECF_Welcome {
 			// Addons Page
     		add_submenu_page('edit.php?post_type=easycontactform', 'Addons', 'Addons', $this->minimum_capability, 'ecf-addons', array( $this, 'addons_plugins_screen') );
 			
+			// Earn EXTRA MONEY Page
+    		add_submenu_page('edit.php?post_type=easycontactform', 'Earn EXTRA MONEY', 'Earn EXTRA MONEY', $this->minimum_capability, 'ecf-earn-xtra-money', array( $this, 'earn_plugins_screen') );
 		
 			// Analytics Page
 			add_submenu_page('edit.php?post_type=easycontactform', 'Form Analytics', __('Form Analytics', 'easycform'), $this->minimum_capability, 'easycform-form-analytics', 'easycform_analytics');	
@@ -88,7 +90,7 @@ class ECF_Welcome {
 		remove_submenu_page( 'edit.php?post_type=easycontactform', 'ecf-free-plugins' );
 		remove_submenu_page( 'edit.php?post_type=easycontactform', 'ecf-premium-plugins' );
 		remove_submenu_page( 'edit.php?post_type=easycontactform', 'ecf-addons' );
-		
+		remove_submenu_page( 'edit.php?post_type=easycontactform', 'ecf-earn-xtra-money' );
 
 		// Badge for welcome page
 		$badge_url = ECF_URL . '/css/images/assets/mailman-logo.png';
@@ -151,6 +153,40 @@ class ECF_Welcome {
 		}
 		
 		
+		.ecf-dollar {
+		
+		background: url('<?php echo ECF_URL . '/css/images/assets/dollar.png'; ?>') no-repeat;
+		color: #2984E0;
+			
+		}
+		
+		.ecf-affiliate-screenshots {
+			-webkit-box-shadow: -3px 1px 15px -4px rgba(0,0,0,0.75);
+			-moz-box-shadow: -3px 1px 15px -4px rgba(0,0,0,0.75);
+			box-shadow: -3px 1px 15px -4px rgba(0,0,0,0.75);
+			float: right;
+			margin: 20px 0 30px 30px !important;
+		}
+		
+		
+		.button_loading {
+    		background: url('<?php echo ECF_URL . '/css/images/assets/gen-loader.gif'; ?>') no-repeat 50% 50%;
+    		/* apply other styles to "loading" buttons */
+			display:inline-block;
+			position:relative;
+			width: 16px;
+			height: 16px;
+			top: 17px;
+			margin-left: 10px;
+			}
+			
+		.ecf-aff-note {
+			color:#F00;
+			font-size:12px;
+			font-style:italic;
+		}
+		
+		
 
 		/*]]>*/
 		</style>
@@ -185,6 +221,11 @@ class ECF_Welcome {
 			<a class="nav-tab <?php echo $selected == 'ecf-premium-plugins' ? 'nav-tab-active' : ''; ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'ecf-premium-plugins' ), 'edit.php?post_type=easycontactform' ) ) ); ?>">
 				<?php _e( 'Premium Plugins', 'easycform' ); ?>
 			</a>
+            
+			<a class="nav-tab <?php echo $selected == 'ecf-earn-xtra-money' ? 'nav-tab-active' : ''; ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'ecf-earn-xtra-money' ), 'edit.php?post_type=easycontactform' ) ) ); ?>">
+				<?php _e( '<span class="ecf-dollar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extra</span>', 'easycform' ); ?>
+			</a>
+          
             
             
 		</h2>
@@ -438,6 +479,36 @@ class ECF_Welcome {
 		</div>
 		<?php
 	}
+	
+	
+	
+	/**
+	 * Render Addons Page
+	 *
+	 * @access public
+	 * @since 1.0.11
+	 * @return void
+	 */
+	public function earn_plugins_screen() {
+		list( $display_version ) = explode( '-', ECF_VERSION );
+		?>
+		<div class="wrap about-wrap" id="ghozy-addons">
+			<h1><?php printf( __( 'Welcome to '.ECF_ITEM_NAME.' %s', 'easycform' ), $display_version ); ?></h1>
+			<div class="about-text"><?php printf( __( 'Thank you for installing '.ECF_ITEM_NAME.'. This plugin is ready to make your form more fancy, safer, and better!', 'easycform' ), $display_version ); ?></div>
+			<div class="ecf-badge"><?php printf( __( 'Version %s', 'easycform' ), $display_version ); ?></div>
+
+			<?php $this->ecf_tabs(); ?>
+
+			<div class="ecf-container-cnt">
+				<div class="feature-section">
+					<?php ecf_earn_xtra_money(); ?>
+				</div>
+			</div>
+
+		</div>
+		<?php
+	}
+	
 	
 
 	/**

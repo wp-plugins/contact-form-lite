@@ -23,7 +23,8 @@ function ecf_reg_script() {
 	wp_register_script( 'ecf-formbuilder-core', plugins_url( 'js/formbuilder/formbuilder-core.js' , dirname(__FILE__) ), false, ECF_VERSION );
 	wp_register_script( 'ecf-formbuilder-js', plugins_url( 'js/formbuilder/formbuilder.js' , dirname(__FILE__) ), false, ECF_VERSION );
 	wp_register_style( 'ecf-bootstrap-css', plugins_url( 'css/bootstrap/css/bootstrap.min.css' , dirname(__FILE__) ), false, ECF_VERSION );
-	wp_register_script( 'ecf-bootstrap-js', plugins_url( 'js/bootstrap/bootstrap.min.js' , dirname(__FILE__) ) );	
+	wp_register_script( 'ecf-bootstrap-js', plugins_url( 'js/bootstrap/bootstrap.min.js' , dirname(__FILE__) ) );
+	wp_register_script( 'ecf-wnew', plugins_url( 'js/wnew/ecf-wnew.js' , dirname(__FILE__) ), false, ECF_VERSION );
 	
 }
 add_action( 'admin_init', 'ecf_reg_script' );
@@ -584,4 +585,217 @@ function ecf_lite_get_news() {
 	echo $cache;
 }
 
+
+/*-------------------------------------------------------------------------------*/
+/* Generate EXTRA Page
+/*-------------------------------------------------------------------------------*/
+function ecf_earn_xtra_money() {
+	
+	wp_enqueue_script( 'ecf-wnew' );
+	
+	$aff_id 	= ecf_get_aff_option( 'ecf_affiliate_info', 'ecf_aff_id', '' );
+	$aff_name 	= ecf_get_aff_option( 'ecf_affiliate_info', 'ecf_aff_name', '' );
+	$aff_email 	= ecf_get_aff_option( 'ecf_affiliate_info', 'ecf_aff_email', '' );
+	
+		if( $aff_id != '' ) {
+			
+			$iscon = 'style="display:none;"'; $isdis = ''; $ists = 'Connected'; $intext = 'Disconnect'; $dnonce = 'data-nonce="'.wp_create_nonce( 'ecfaffiliate' ).'"'; $dcmd = 'data-cmd="ecf_affiliate_dis"';
+		
+		} else {
+			
+			$iscon = ''; $isdis = 'display:none;'; $ists = ''; $intext = 'Connect'; $dnonce = 'data-nonce="'.wp_create_nonce( 'ecfaffiliate' ).'"'; $dcmd = 'data-cmd="ecf_affiliate_con"';
+			
+			}
+	
+	
+	ob_start(); ?>
+
+		<div id="ecf-not-yet" <?php echo $iscon; ?>>
+		<h3>If you don't have a GhozyLab Affiliate account yet, you can sign up today for free <a href="https://secure.ghozylab.com/affiliate-area/" target="_blank">here</a></h3>
+		<p class="ecf-iscon" style="font-style:italic; color:#666; border-bottom: 1px dotted #CCC; margin-top: 35px; padding-bottom: 5px;"><?php _e('Fill your Affiliate Account Email or Payment Email and press Connect button to start earn extra Money with us!'); ?></p>
+        </div>
+        
+		<div id="ecf-aff-registered" style="width: auto;<?php echo $isdis; ?>">
+		<h3 id="ecf-aff-holder">Hi, <?php echo $aff_name.' ('.$aff_email. ' )'; ?></h3>
+        <hr />
+        </div>
+        
+		<form method="post">
+
+			<?php settings_fields('ecf_aff_section'); ?>
+
+			<table class="form-table">
+				<tbody>
+					<tr valign="top">
+						<th style="width:155px !important;" scope="row" valign="top">
+							<?php _e('Account Email or Payment Email'); ?>
+						</th>
+						<td>
+							<input id="ecf_aff_email" name="ecf_aff_email" type="text" class="regular-text" value="<?php esc_attr_e( $aff_email ); ?>" />
+							<label id="is-status" style="color:green; font-style:italic;" class="description" for="ecf_aff_section_email"><?php echo $ists; ?></label>
+
+					<?php if( false !== $aff_id ) { ?>
+									<?php wp_nonce_field( 'ecf_aff_section_nonce', 'ecf_aff_section_nonce' ); ?>
+									<br /><input style="margin-top: 10px;" <?php echo $dnonce; ?> <?php echo $dcmd; ?> type="submit" class="button-secondary" id="ecf-aff" name="ecf-aff" value="<?php echo $intext; ?>"/><span id="loader"></span><br /><br />
+                                    <span class="ecf-aff-note">NOTE: To respect <a href="https://wordpress.org/plugins/about/guidelines/" target="_blank">Plugin Guidelines</a> ( point 10 ) so by pressing the connect button that means you are agree to displaying <strong>Powered by</strong> link in your form footer</span>
+					<?php } ?>
+                    
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</form>	
+        
+         <hr style="margin-bottom:20px;">   
+            
+				<div class="feature-section">
+
+					<img src="<?php echo ECF_URL . '/css/images/assets/aff-sc.png'; ?>" class="ecf-affiliate-screenshots"/>
+
+					<h4><?php _e( 'How does it work?', 'easycform' );?></h4>
+					<p><?php _e( 'After successfully registered with our Affiliate program what you have to do just :<ul style="margin-left: 30px;list-style-type: circle;"><li>Fill your Affiliate Account Email or Payment Email in field above and Hit Connect button</li><li>After connected you will see green connected status</li><li>Check your form and you will find your affiliate link in the bottom of your form like in the right side screenshot</li><li>Now when individuals follow that link and subsequently make a purchase, you will be credited for the transaction and you will receive a payout</li><li>Congratulations! You are ready to start to earn extra money :)</li></ul>', 'easycform' );?></p>
+                    </div>
+    
+<?php        
+echo ob_get_clean();
+	
+}
+
+
+/*-------------------------------------------------------------------------------*/
+/* Get Affiliate data
+/*-------------------------------------------------------------------------------*/
+function ecf_get_aff_option( $option_name, $key, $default = false ) {
+	
+	$options = get_option( $option_name );
+
+	if ( $options ) {
+		return (array_key_exists( $key, $options )) ? $options[$key] : $default;
+	}
+
+	return $default;
+}
+
+
+/*-------------------------------------------------------------------------------*/
+/* Update Affiliate data
+/*-------------------------------------------------------------------------------*/
+function ecf_update_aff_info( $aff_data, $email ) {
+	$aff = array(
+	"ecf_aff_id" => trim( $aff_data->aff_id ),
+	"ecf_aff_name" => trim( $aff_data->aff_name ),
+	"ecf_aff_email" => trim( $email ),
+	
+		);
+		
+		update_option('ecf_affiliate_info', $aff);	
+			
+}
+
+
+/*-------------------------------------------------------------------------------*/
+/* Get Affiliate data ( API )
+/*-------------------------------------------------------------------------------*/
+function ecf_get_aff_data() {
+	
+	// run a quick security check
+	 if( ! check_ajax_referer( 'ecfaffiliate', 'security' ) )
+		return;
+
+	switch( $_POST['command'] ){
+		
+		case 'ecf_affiliate_con':
+		
+			// listen for aff button to be clicked
+			if( isset( $_POST['eml'] ) ) {
+				
+				$affemail = $_POST['eml'];
+				
+				$api_params = array(
+					'ghozy_action' => 'get_aff_data',
+					'email' 	=> $affemail
+					);
+
+				// Call the custom API.
+				$response = _affiliateFetchmode( $api_params );
+
+				if ( $response->status == true ) {
+		
+					ecf_update_aff_info( $response, $affemail );
+					echo json_encode( $response );
+		
+				} else {
+					
+					$response = array(
+						"status" => false,
+						"aff_id" => false,
+						"aff_name" => false,
+						);
+					
+					echo json_encode( $response );
+					
+					}
+		
+			}
+		
+		break; 
+		
+		case 'ecf_affiliate_dis':
+		
+		delete_option( 'ecf_affiliate_info' );
+		
+					$response = array(
+						"status" => 'disconnected',
+						"aff_id" => false,
+						"aff_name" => false,
+						);
+					
+					echo json_encode( $response );
+					  
+		break;
+		
+		default:
+		break;	
+		
+	}
+	
+	wp_die();
+
+}
+
+add_action('wp_ajax_ecf_get_aff_data', 'ecf_get_aff_data');
+
+
+/*-------------------------------------------------------------------------------*/
+/* Defined for using CURL or Not
+/*-------------------------------------------------------------------------------*/
+function _affiliateFetchmode( $api_params ) {
+	
+    if(function_exists('curl_version')){
+		
+		$response = wp_remote_get( add_query_arg( $api_params, ECF_API_URLCURL ), array( 'timeout' => 15, 'sslverify' => false ) );
+		
+		if ( is_wp_error( $response ) )
+			return false;
+
+			$dat = json_decode( wp_remote_retrieve_body( $response ) );
+			
+			}
+  		
+		else {
+			
+			$json_url = add_query_arg( $api_params, ECF_API_URL );
+			$json = file_get_contents( $json_url );
+			
+			if ( is_wp_error( $json_url ) )
+			return false;
+
+			$dat = json_decode( $json );		
+					
+			}							
+						
+		return $dat;
+			
+}
 
