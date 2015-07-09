@@ -334,6 +334,28 @@ label.css-label {
 	font-size:14px !important;
 	font-family: "Open Sans",sans-serif !important;
 	}
+	
+.ecfinfobox {
+	-moz-border-radius-bottomleft:4px;
+	-moz-border-radius-bottomright:4px;
+	padding: 16px;
+	margin: 0px 0px 15px 0px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-khtml-border-radius: 10px;
+	border-radius: 7px;
+	padding-left: 55px;
+	background: #eee;
+	font-style: italic;
+	font-weight:bold;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	background: #fffadb url(../images/info.png) no-repeat scroll 10px 11px;
+	border: 1px solid #f5d145;
+	color: #9e660d;
+	width: auto;
+	line-height:1.5em;
+}
 
 @media (min-width:769px) and (max-width:1024px){
 	#pixopr, #cssep { display: none;}

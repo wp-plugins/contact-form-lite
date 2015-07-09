@@ -42,7 +42,7 @@ function ecf_stt_page() {
 		
 		window.clearTimeout(ecfloader);
 		
-		jQuery('.setpre').show().css('background-image','url(<?php echo plugins_url('images/89.gif' , __FILE__ ); ?>)');
+		jQuery('.setpre').show().css('background-image','url(<?php echo ECF_URL . '/inc/images/89.gif'; ?>)');
 		var data = {
 			action: 'ecf_ajax_autoupdt',
 			security: '<?php echo wp_create_nonce( "ecf-lite-nonce"); ?>',				
@@ -51,7 +51,7 @@ function ecf_stt_page() {
 			
 			jQuery.post(ajaxurl, data, function(response) {
 				if (response == 1) {
-					jQuery('.setpre').css('background-image','url(<?php echo plugins_url('images/valid.png' , __FILE__ ); ?>)');
+					jQuery('.setpre').css('background-image','url(<?php echo ECF_URL . '/inc/images/valid.png'; ?>)');
 					ecfloader = window.setTimeout(function() {
 					jQuery('.setpre').fadeOut();
 					}, 3000);

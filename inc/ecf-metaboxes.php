@@ -583,7 +583,7 @@ function ecf_metabox_work(){
 	    $meta_box = array(
 		'id' => 'ecf_meta_formbuilder',
 		'title' =>  __( 'Form Builder', 'easycform' ),
-		'description' => __( '<span class="ecf-introjs"><a href="javascript:void(0);" onclick="startIntro();"><span class="ecf-intro-help"></span>Click Here to learn How to create your first Form</a></span><br /><br />You can add / remove, edit or order any elements with this form builder to fit to your needs.<br /><h3 class="addons-promo">Need Pro Version Features without <i>Full Upgrade</i>? <a href="'.admin_url( 'edit.php?post_type=easycontactform&page=ecf-addons' ).'">Check Available Addons here</a></h3>', 'easycform' ),
+		'description' => __( '<span class="ecf-introjs"><a href="javascript:void(0);" onclick="startIntro();"><span class="ecf-intro-help"></span>Click Here to learn How to create your first Form</a></span><br /><br />You can add / remove, edit or order any elements with this form builder to fit to your needs.<br /><div class="ecfinfobox">Need Pro Version Features without <i>Full Upgrade</i>? <a href="'.admin_url( 'edit.php?post_type=easycontactform&page=ecf-addons' ).'">Check Available Addons here</a></div>', 'easycform' ),
 		'page' => 'easycontactform',
 		'context' => 'normal',	
 		'istabbed' => '',

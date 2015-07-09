@@ -19,6 +19,14 @@ function ecf_markup_generator( $fid, $rnd ) {
 
 	$frmArray = json_decode( trim ( $opt['frmformat'] ), true);
 	
+	
+	// @since 1.0.17 ( Addons )	
+	if( has_filter( 'ecf_form_header' ) ) {
+		
+		$isheader = apply_filters( 'ecf_form_header', $opt, null, $fid, $rnd );
+			
+		} else {
+	
 	if ( $opt['fo_is_head_ttl'] == 'on') {
 		
 		if ( $opt['fo_head_txt'] && $opt['fo_head_txt'] != 'none' ) {
@@ -36,6 +44,8 @@ function ecf_markup_generator( $fid, $rnd ) {
 	 	} else {
 		 	$isheader = '';
 	 		}
+			
+	}
 			
 		
 		// @since 1.0.15	
