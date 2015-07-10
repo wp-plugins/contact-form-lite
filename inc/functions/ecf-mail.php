@@ -98,11 +98,12 @@ function ecf_form_element_parsing( $fid = null, $type = null, $jsnel, $atch = nu
 	foreach ($elready as $key => $val) {
 		
 			// sanitize if values =  Array
-			if ( is_array( $val['value'] ) ) {
+			if ( isset ( $val['value'] ) && is_array( $val['value'] ) ) {
 				array_walk_recursive( $val['value'], "ecf_sanitize_array");
 				}
 		
 			// sanitize textarea/message values
+			if ( isset ( $val['type'] ) ) {	
 			if ( $val['type'] == 'paragraph' || $val['type'] == 'message' ) {
 				
 				$val['value'] = esc_textarea( $val['value'] );
@@ -120,24 +121,32 @@ function ecf_form_element_parsing( $fid = null, $type = null, $jsnel, $atch = nu
 					$val['value'] = esc_js( $val['value'] );
 					$val['value'] = htmlspecialchars( stripslashes( $val['value'] ), ENT_QUOTES, 'UTF-8' );	
 					}
+					
+			}
 
 				
 			//  Sanitize Text Fields
+			if ( isset ( $val['type'] ) ) {	
 			if ( $val['type'] == 'text' || $val['type'] == 'website' ) {
 				$val['value'] = sanitize_text_field( $val['value'] );
 				}
+			}
 			
 			// Get Client Email
+			if ( isset ( $val['type'] ) ) {	
 			if ( $val['type'] == 'email' ) {
 				$tmplateval['email'] = sanitize_email( $val['value'] );
 				$singelmnt['email'] = sanitize_email( $val['value'] );
 				}
+			}
 				
 			// Get Client Name
+			if ( isset ( $val['type'] ) ) {	
 			if ( $val['type'] == 'name' ) {
 				$singelmnt['name'] = sanitize_text_field( $val['value'] );
 				$tmplateval['name'] = sanitize_text_field( $val['value'] );
 				}
+			}
 				
 				
 			if ( isset ( $val['type'] ) ) {	
@@ -160,6 +169,8 @@ function ecf_form_element_parsing( $fid = null, $type = null, $jsnel, $atch = nu
 					$val['value'] = $checkboxval;
 					
 				}
+				
+		
 
 		
 		// EMAIL FORMAT

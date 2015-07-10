@@ -170,6 +170,7 @@ function ecf_markup_generator( $fid, $rnd ) {
 						<?php // @since 1.0.13
 						
 						if( has_filter( 'ecf_addons_element_helper' ) ) {
+							$frm = null;
 							if ( $frm ) {
 								echo apply_filters( 'ecf_addons_element_helper', $fid, $opt['frmformat'] );
 								} else {
