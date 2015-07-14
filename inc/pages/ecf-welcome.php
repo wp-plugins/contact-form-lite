@@ -87,8 +87,8 @@ class ECF_Welcome {
 	public function ecf_admin_head() {
 		remove_submenu_page( 'edit.php?post_type=easycontactform', 'ecf-changelog' );
 		remove_submenu_page( 'edit.php?post_type=easycontactform', 'ecf-getting-started' );
-		remove_submenu_page( 'edit.php?post_type=easycontactform', 'ecf-free-plugins' );
-		remove_submenu_page( 'edit.php?post_type=easycontactform', 'ecf-premium-plugins' );
+		//remove_submenu_page( 'edit.php?post_type=easycontactform', 'ecf-free-plugins' );
+		//remove_submenu_page( 'edit.php?post_type=easycontactform', 'ecf-premium-plugins' );
 		remove_submenu_page( 'edit.php?post_type=easycontactform', 'ecf-addons' );
 		remove_submenu_page( 'edit.php?post_type=easycontactform', 'ecf-earn-xtra-money' );
 
