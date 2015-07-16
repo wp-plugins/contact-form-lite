@@ -54,7 +54,7 @@ class ECF_Welcome {
     		add_submenu_page('edit.php?post_type=easycontactform', 'Getting started with '.ECF_ITEM_NAME.'', 'Getting started with '.ECF_ITEM_NAME.'', $this->minimum_capability, 'ecf-getting-started', array( $this, 'ecf_getting_started_screen') );
 			
 			// Free Plugins Page
-    		add_submenu_page('edit.php?post_type=easycontactform', 'GhozyLab Free Plugin', 'GhozyLab Free Plugin', $this->minimum_capability, 'ecf-free-plugins', array( $this, 'free_plugins_screen') );
+    		add_submenu_page('edit.php?post_type=easycontactform', 'Free Install Plugins', 'Free Install Plugins', $this->minimum_capability, 'ecf-free-plugins', array( $this, 'free_plugins_screen') );
 			
 			// Premium Plugins Page
     		add_submenu_page('edit.php?post_type=easycontactform', 'Premium Plugins', 'Premium Plugins', $this->minimum_capability, 'ecf-premium-plugins', array( $this, 'premium_plugins_screen') );
