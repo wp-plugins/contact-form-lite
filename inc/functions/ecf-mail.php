@@ -66,7 +66,18 @@ function ecf_deliver_mail() {
         	} else {
 				
             	$result['Ok'] = false;
-				$result['msg'] = 'Error!';
+				
+				global $phpmailer;
+				
+				if ( isset( $phpmailer ) ) {
+					
+					$result['msg'] = $phpmailer->ErrorInfo;
+					
+					} else {
+						
+						$result['msg'] = 'Error!';	
+					
+					}
 				
         		}
 			
