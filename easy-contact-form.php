@@ -4,7 +4,7 @@ Plugin Name: Easy Contact Form Lite
 Plugin URI: http://www.ghozylab.com/plugins/
 Description: Easy Contact Form (Lite) - Displaying your contact form in anywhere you like with very easy. Allows you to customize it to looking exactly what you want. <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/pricing-compare-tables/" target="_blank"><strong> Upgrade to Pro Version Now</strong></a> and get a tons of awesome features.
 Author: GhozyLab, Inc.
-Version: 1.0.21
+Version: 1.0.23
 Author URI: http://www.ghozylab.com/plugins/
 */
 
@@ -25,7 +25,10 @@ if( (float)substr(get_bloginfo('version'), 0, 3) >= 3.5) {
 	}
 	
 
-function ecf_wordpress_version() {
+/*-------------------------------------------------------------------------------*/
+/*   Check Wordpress Version & WP_DEBUG @since 1.0.23
+/*-------------------------------------------------------------------------------*/
+function ecf_admin_init_action() {
 	
 	$plugin = plugin_basename( __FILE__ );
 
@@ -35,8 +38,27 @@ function ecf_wordpress_version() {
 			wp_die( "This plugin requires WordPress 3.5 or higher, and has been deactivated! Please upgrade WordPress and try again.<br /><br />Back to <a href='".admin_url()."'>WordPress admin</a>" );
 		}
 	}
+	
+	if ( defined('WP_DEBUG') ) {
+		
+		if ( WP_DEBUG == true ) {
+			
+			add_action( 'admin_notices', 'ecf_admin_wp_debug_notice' ); 
+			
+		}
+		
+	}
+	
+	
 }
-add_action( 'admin_init', 'ecf_wordpress_version' );
+add_action( 'admin_init', 'ecf_admin_init_action' );
+
+
+function ecf_admin_wp_debug_notice() {
+	
+	echo '<div class="error"> <p>NOTE: You have to set <strong>WP_DEBUG</strong> to false in order to make '.ECF_ITEM_NAME.' works</p></div>';
+	
+}
 
 
 /*-------------------------------------------------------------------------------*/
@@ -48,7 +70,7 @@ define( 'ECF_API_URL', 'http://secure.ghozylab.com/' );
 
 // Plugin Version
 if ( !defined( 'ECF_VERSION' ) ) {
-	define( 'ECF_VERSION', '1.0.21' );
+	define( 'ECF_VERSION', '1.0.23' );
 }
 
 // Pro Price
