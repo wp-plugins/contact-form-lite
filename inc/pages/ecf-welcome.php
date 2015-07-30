@@ -346,7 +346,7 @@ class ECF_Welcome {
 		list( $display_version ) = explode( '-', ECF_VERSION );
 		?>
 		<div class="wrap about-wrap">
-			<h1><?php printf( __( 'Welcome to '.ECF_ITEM_NAME.' %s', 'easycform' ), $display_version ); ?></h1>
+			<h1><?php printf( __( 'Welcome to '.ECF_ITEM_NAME.'', 'easycform' ), $display_version ); ?></h1>
 			<div class="about-text"><?php printf( __( 'Thank you for installing '.ECF_ITEM_NAME.'. This plugin is ready to make your form more fancy, safer, and better!', 'easycform' ), $display_version ); ?></div>
 			<div class="ecf-badge"><?php printf( __( 'Version %s', 'easycform' ), $display_version ); ?></div>
 
@@ -402,7 +402,7 @@ class ECF_Welcome {
 		list( $display_version ) = explode( '-', ECF_VERSION );
 		?>
 		<div class="wrap about-wrap">
-			<h1><?php printf( __( 'Welcome to '.ECF_ITEM_NAME.' %s', 'easycform' ), $display_version ); ?></h1>
+			<h1><?php printf( __( 'Welcome to '.ECF_ITEM_NAME.'', 'easycform' ), $display_version ); ?></h1>
 			<div class="about-text"><?php printf( __( 'Thank you for installing '.ECF_ITEM_NAME.'. This plugin is ready to make your form more fancy, safer, and better!', 'easycform' ), $display_version ); ?></div>
 			<div class="ecf-badge"><?php printf( __( 'Version %s', 'easycform' ), $display_version ); ?></div>
 
@@ -431,7 +431,7 @@ class ECF_Welcome {
 		list( $display_version ) = explode( '-', ECF_VERSION );
 		?>
 		<div class="wrap about-wrap" id="ghozy-featured">
-			<h1><?php printf( __( 'Welcome to '.ECF_ITEM_NAME.' %s', 'easycform' ), $display_version ); ?></h1>
+			<h1><?php printf( __( 'Welcome to '.ECF_ITEM_NAME.'', 'easycform' ), $display_version ); ?></h1>
 			<div class="about-text"><?php printf( __( 'Thank you for installing '.ECF_ITEM_NAME.'. This plugin is ready to make your form more fancy, safer, and better!', 'easycform' ), $display_version ); ?></div>
 			<div class="ecf-badge"><?php printf( __( 'Version %s', 'easycform' ), $display_version ); ?></div>
 
@@ -462,7 +462,7 @@ class ECF_Welcome {
 		list( $display_version ) = explode( '-', ECF_VERSION );
 		?>
 		<div class="wrap about-wrap" id="ghozy-addons">
-			<h1><?php printf( __( 'Welcome to '.ECF_ITEM_NAME.' %s', 'easycform' ), $display_version ); ?></h1>
+			<h1><?php printf( __( 'Welcome to '.ECF_ITEM_NAME.'', 'easycform' ), $display_version ); ?></h1>
 			<div class="about-text"><?php printf( __( 'Thank you for installing '.ECF_ITEM_NAME.'. This plugin is ready to make your form more fancy, safer, and better!', 'easycform' ), $display_version ); ?></div>
 			<div class="ecf-badge"><?php printf( __( 'Version %s', 'easycform' ), $display_version ); ?></div>
 
@@ -493,7 +493,7 @@ class ECF_Welcome {
 		list( $display_version ) = explode( '-', ECF_VERSION );
 		?>
 		<div class="wrap about-wrap" id="ghozy-addons">
-			<h1><?php printf( __( 'Welcome to '.ECF_ITEM_NAME.' %s', 'easycform' ), $display_version ); ?></h1>
+			<h1><?php printf( __( 'Welcome to '.ECF_ITEM_NAME.'', 'easycform' ), $display_version ); ?></h1>
 			<div class="about-text"><?php printf( __( 'Thank you for installing '.ECF_ITEM_NAME.'. This plugin is ready to make your form more fancy, safer, and better!', 'easycform' ), $display_version ); ?></div>
 			<div class="ecf-badge"><?php printf( __( 'Version %s', 'easycform' ), $display_version ); ?></div>
 
