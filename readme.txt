@@ -1,7 +1,7 @@
 === Contact Form Plugin ===
 Contributors: GhozyLab
 Donate link: http://ghozylab.com/
-Tags: contact form, images, image, smtp, smtp contact form, smtp email, datepicker form, contact form addon, form addons, address form, advanced form, form register, register form, registration form, form registration, attachment, captcha, best contact form plugin, buddypress, category, ajax, ajax contact form, cnotact, conact, contact, contact button, contact form builder, contact form builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, contactform, custom form, email, email form, form, forms, forms plugin, insert the shortcode, multiple contact forms, admin, send messages, shortcode, web form, widget, wordpress contact form, ninja form, contact form 7, kontak form, kontaktformular, formulaire de contact, sticky form, popup form
+Tags: contact form, images, image, smtp, smtp contact form, smtp email, newsletter, datepicker form, contact form addon, form addons, address form, advanced form, form register, register form, registration form, form registration, attachment, captcha, best contact form plugin, buddypress, category, ajax, ajax contact form, cnotact, conact, contact, contact button, contact form builder, contact form builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, contactform, custom form, email, email form, form, forms, forms plugin, insert the shortcode, multiple contact forms, admin, send messages, shortcode, web form, widget, wordpress contact form, ninja form, contact form 7, kontak form, kontaktformular, formulaire de contact, sticky form, popup form
 Requires at least: 3.3
 Tested up to: 4.2.3
 Stable tag: 1.0.23
@@ -23,6 +23,9 @@ The best thing about **ajax contact form** plugin is that you can use multiple f
 > #### **Live Demos**
 > * [CONTACT FORM BASIC ( LITE VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-standart-form/ "contact form")
 > * [CONTACT FORM STICKY POPUP ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/sticky-form/ "popup form")
+> * [DEMO FORM JOB APPLICATION ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-form-job-application/ "form application")
+> * [DEMO with IMAGE IN HEADER ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-form-with-image-in-header/ "form with image")
+> * [DEMO NEWSLETTER SIGNUP ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-newsletter-signup/ "form newsletter")
 > * [CONTACT FORM with RECAPTCHA ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/contact-form-recaptcha/ "contact form recaptcha form")
 > * [CONTACT FORM with UPLOAD/ATTACHMENT FIELD ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-file-upload/ "form attachment contact form")
 > * [CONTACT FORM with All FIELDS ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-fields/ "contact form builder")
