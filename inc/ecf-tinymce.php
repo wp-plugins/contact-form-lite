@@ -21,7 +21,7 @@ if ( strstr( $_SERVER['REQUEST_URI'], 'wp-admin/post-new.php' ) || strstr( $_SER
 // ADD MEDIA BUTOON	
 	add_action( 'media_buttons_context', 'ecf_shortcode_button', 1 );
 		function ecf_shortcode_button($context) {
-			$img = plugins_url( 'images/ecf-cp-icon.png' , __FILE__ );
+			$img = plugins_url( 'images/tmce-icon.png' , __FILE__ );
 			$container_id = 'ecfmodal';
 			$title = 'Shortcode Generator';
 			$context .= '
