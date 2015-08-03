@@ -127,14 +127,15 @@ But seriously, I just want to drink coffee for free, so help a developer out. Yo
 
 == Screenshots ==
 
-1. Form on Frontend
-2. Form Builder
-3. Form Options ( Email )
-4. Form Options ( Layout & Styles )
-5. Form Options ( Miscellaneous )
-6. Form Options ( Advanced )
-7. Sticky Form Option
-8. SMTP Option
+1. Form on Frontend ( lite )
+2. Form on Frontend ( Pro )
+3. Form Builder
+4. Form Options ( Email )
+5. Form Options ( Layout & Styles )
+6. Form Options ( Miscellaneous )
+7. Form Options ( Advanced )
+8. Sticky Form Option
+9. SMTP Option
 
 
 == Changelog ==
