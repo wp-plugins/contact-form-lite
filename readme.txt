@@ -21,14 +21,15 @@ You can have total control of your **contact form** design and there are plenty 
 The best thing about **ajax contact form** plugin is that you can use multiple forms, which can be inserted into your posts, pages, and widgets.
 
 > #### **Live Demos**
-> * [CONTACT FORM BASIC ( LITE VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-standart-form/ "contact form")
-> * [CONTACT FORM STICKY POPUP ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/sticky-form/ "popup form")
+> * [DEMO FORM BASIC ( LITE VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-standart-form/ "contact form")
+> * [DEMO FORM REGISTRATION ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-form-registration/ "form registration")
+> * [DEMO FORM with STICKY POPUP ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/sticky-form/ "popup form")
 > * [DEMO FORM JOB APPLICATION ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-form-job-application/ "form application")
-> * [DEMO with IMAGE IN HEADER ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-form-with-image-in-header/ "form with image")
-> * [DEMO NEWSLETTER SIGNUP ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-newsletter-signup/ "form newsletter")
-> * [CONTACT FORM with RECAPTCHA ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/contact-form-recaptcha/ "contact form recaptcha form")
-> * [CONTACT FORM with UPLOAD/ATTACHMENT FIELD ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-file-upload/ "form attachment contact form")
-> * [CONTACT FORM with All FIELDS ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-fields/ "contact form builder")
+> * [DEMO FORM with IMAGE IN HEADER ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-form-with-image-in-header/ "form with image")
+> * [DEMO FORM for NEWSLETTER SIGNUP ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-newsletter-signup/ "form newsletter")
+> * [DEMO FORM with RECAPTCHA ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/contact-form-recaptcha/ "contact form recaptcha form")
+> * [DEMO FORM with UPLOAD/ATTACHMENT FIELD ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-file-upload/ "form attachment contact form")
+> * [DEMO FORM with All FIELDS ( PRO VERSION )](http://demo.ghozylab.com/plugins/easy-contact-form-plugin/demo-fields/ "contact form builder")
 
 = Now Available Addons for Lite Version =
 
