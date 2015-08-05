@@ -141,8 +141,8 @@ add_action( 'init', 'ecf_lang_init' );
 /*-------------------------------------------------------------------------------*/
 function ecf_post_type() {
 	$labels = array(
-		'name' 				=> _x( 'Easy Contact', 'post type general name' ),
-		'singular_name'		=> _x( 'Easy Contact', 'post type singular name' ),
+		'name' 				=> _x( 'Easy Form', 'post type general name' ),
+		'singular_name'		=> _x( 'Easy Form', 'post type singular name' ),
 		'add_new' 			=> __( 'Add New Form', 'easycform' ),
 		'add_new_item' 		=> __( 'Easy Contact Item', 'easycform' ),
 		'edit_item' 		=> __( 'Edit Form', 'easycform' ),
@@ -152,7 +152,7 @@ function ecf_post_type() {
 		'not_found' 		=> __( 'No Form Found', 'easycform' ),
 		'not_found_in_trash'=> __( 'No Form Found In Trash', 'easycform' ),
 		'parent_item_colon' => __( 'Parent Form', 'easycform' ),
-		'menu_name'			=> __( 'Easy Contact', 'easycform' )
+		'menu_name'			=> __( 'Easy Form', 'easycform' )
 	);
 
 	$taxonomies = array();
