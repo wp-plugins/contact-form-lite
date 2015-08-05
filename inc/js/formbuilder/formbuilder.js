@@ -673,6 +673,10 @@ $.scrollWindowTo = function(pos, duration, cb) {
           parentView: this
         }).render();
       }
+	  
+	  jQuery("#fbloader").css("display", "none").removeClass("tbloader");
+	  jQuery(".fb-main").fadeIn(1000); // @since 1.0.25
+	 
       return this;
     };
 

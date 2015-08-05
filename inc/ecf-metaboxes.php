@@ -49,8 +49,9 @@ function ecf_load_script() {
 			wp_enqueue_script( 'ecf-bootstrap-js' );
 			wp_enqueue_script( 'ecf-colorpickerjs' );
 			wp_enqueue_script( 'jquery-ui-slider' );
-			wp_enqueue_script( 'jquery-effects-highlight' );	
-
+			wp_enqueue_script( 'jquery-effects-highlight' );
+			wp_enqueue_script( 'ecf-no-toggle', plugins_url( 'js/metabox/no-toggle.js' , __FILE__ ), array('jquery'), 1, true ); // @since 1.0.25
+        	wp_enqueue_script('ecf-no-toggle');
 
 			//add_action('admin_footer', 'ecf_scroll' );	
 			add_action('admin_footer', 'ecf_upgrade_popup' );
@@ -527,7 +528,8 @@ function ecf_create_meta_box( $post, $meta_box )
 			
 			echo '<td>';
 			
- 	echo '<div class="fb-main"></div>';
+	echo '<div style="height:130px;" id="fbloader" class="tbloader"></div>'; // @since 1.0.25	
+ 	echo '<div style="display:none;" class="fb-main"></div>';
 	echo '<textarea style="width: 100% !important; vertical-align:top !important; display: none;" name="ecf_meta['. $field['id'] .']" id="'. $field['id'] .'" type="'. $field['type'] .'" cols="45" rows="7">'.( $meta != '' ? esc_textarea( $meta ) : $field['std'] ).'</textarea>';
     
     echo '</div></td>';
