@@ -72,6 +72,7 @@ function ecf_admin_head_script () {
 
 			?>
 			<style type="text/css" media="screen">
+			a:focus {box-shadow: none !important; }
 			#minor-publishing { display: none !important; }
 			#ecf_email_auto_response_ifr { height: 270px !important;}
 			@media only screen and (min-width: 1150px) {	
