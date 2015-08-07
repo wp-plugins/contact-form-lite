@@ -290,7 +290,7 @@ function ecf_create_meta_box( $post, $meta_box )
 		} else {
 			$isfull = '<th><label for="'. $field['id'] .'"><strong>'. $field['name'] .'<br></strong><span>'. $field['desc'] .'</span></label>'.( isset( $field['needmargin'] ) && $field['needmargin'] ? $field['needmargin'] : '' ) .'</th>';	
 		}
-		echo '<tr class="'. $field['id'] .' '. ( isset( $field['group'] ) && $field['group'] ? $field['group'] : '' ) .' '. ( isset( $field['isselector'] ) && $field['isselector'] ? $field['isselector'] : '' ) .' '. ( isset( $field['extragrp'] ) && $field['extragrp'] ? $field['extragrp'].'-fields' : '' ) .'">'.$isfull.''; // @since 1.0.13
+		echo '<tr '. ( $field['type'] != 'formbuilder' ? 'style="display: block;"' : '' ) .' class="'. $field['id'] .' '. ( isset( $field['group'] ) && $field['group'] ? $field['group'] : '' ) .' '. ( isset( $field['isselector'] ) && $field['isselector'] ? $field['isselector'] : '' ) .' '. ( isset( $field['extragrp'] ) && $field['extragrp'] ? $field['extragrp'].'-fields' : '' ) .'">'.$isfull.''; // @since 1.0.13
 		
 		switch( $field['type'] ){
 			
