@@ -33,21 +33,20 @@
 }
 
 .ecf_metaslider .ui-state-default {
-	border:none;
+	border:none !important;
 }
 
 .ecf_metaslider .ui-slider-handle {
-	position: absolute;
-	width: 25px;
-	height: 25px;
-	cursor: pointer;
-	background: url('../images/handle.png') no-repeat 50% 50%;
-	font-weight: bold;
-	color: #1C94C4;
-	outline: none !important;
-	-moz-outline-style: none;	
-	top: -7px;
-	margin-left: -12px;
+	position: absolute !important;
+	width: 25px !important;
+	height: 25px !important;
+	cursor: pointer !important;
+	background: transparent url("../images/handle.png") no-repeat scroll 50% 50% !important;
+	font-weight: bold !important;
+	color: #1C94C4 !important;
+	outline: medium none !important;
+	top: -7px !important;
+	margin-left: -12px !important;
 }
 
 .ecf_metaslider .ui-slider-range {

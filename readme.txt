@@ -4,11 +4,11 @@ Donate link: http://ghozylab.com/
 Tags: contact form, images, image, smtp, smtp contact form, smtp email, newsletter, datepicker form, contact form addon, widgets, form addons, address form, advanced form, form register, register form, registration form, form registration, attachment, captcha, best contact form plugin, buddypress, category, ajax, ajax contact form, cnotact, conact, contact, contact button, contact form builder, contact form builder with recaptcha, contact form manager, contact form plugin, contact form with google map, contact forms, contact forms plugin, contact manager, contact me, contact us, contact us form, contacts, contacts form plugin, contatc, contactform, custom form, email, email form, form, forms, forms plugin, insert the shortcode, multiple contact forms, admin, send messages, shortcode, web form, widget, wordpress contact form, ninja form, contact form 7, kontak form, kontaktformular, formulaire de contact, sticky form, popup form
 Requires at least: 3.3
 Tested up to: 4.2.4
-Stable tag: 1.0.25
+Stable tag: 1.0.27
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Contact Form Plugin - create best contact form in minutes. Yeah, it's really that easy.
+Contact Form Plugin - create best responsive contact form in minutes. Yeah, it's really that easy.
 
 == Description ==
 = Contact Form Plugin for Wordpress =
@@ -51,12 +51,14 @@ Take your form to the next level with [Contact Form Pro](http://demo.ghozylab.co
 * Create forms that will match your website identity instantly
 * Custom colors : a color picker is available for every elements in your contact form
 * No coding, the plugin takes care of everything
-* Most Fields Supported ( It supports textbox, textarea, email, department, combobox, date, date range, phone number with custom format, checkbox, radio button, address, 5 stars Rating and file attachment upload )
+* Most Fields Supported ( It supports textbox, textarea, email, department, combobox, date, date range, phone number with custom format, checkbox, radio button, address, 5 stars Rating, slider and file attachment upload )
 * Custom field labels
 * Custom input fields : color, border color and much more
 * Custom submit button : background color. text / label
+* Advanced Typography
 * Custom CSS and JS field
 * +350 icons for each fields
+* +700 Fonts from Google Fonts
 * Custom loading icon
 * The email address of your visitor will automatically appear in the From field of the admin notification message
 * You can customize the name that will appear in the From field of the user notification message
@@ -141,6 +143,10 @@ But seriously, I just want to drink coffee for free, so help a developer out. Yo
 
 == Changelog ==
 
+= 1.0.27 =
+* Added : Widget Support
+* Many other PHP and CSS clean and optimization
+
 = 1.0.25 =
 * Fixed : Disable Metabox Toggle to avoid Form Builder and Settings Page disappear
 * Added : Form Builder preloader
@@ -217,5 +223,5 @@ There are no complicated instructions for using Contact Form plugin because this
 
 == Upgrade Notice ==
 
-= 1.0.25 =
+= 1.0.27 =
 IMPORTANT! SECURITY BUGS FIX, PLEASE UPDATE NOW!

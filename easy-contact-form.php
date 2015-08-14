@@ -4,13 +4,60 @@ Plugin Name: Easy Contact Form Lite
 Plugin URI: http://www.ghozylab.com/plugins/
 Description: Easy Contact Form (Lite) - Displaying your contact form in anywhere you like with very easy. Allows you to customize it to looking exactly what you want. <a href="http://demo.ghozylab.com/plugins/easy-contact-form-plugin/pricing-compare-tables/" target="_blank"><strong> Upgrade to Pro Version Now</strong></a> and get a tons of awesome features.
 Author: GhozyLab, Inc.
-Version: 1.0.25
+Version: 1.0.27
 Author URI: http://www.ghozylab.com/plugins/
 */
 
 if ( ! defined('ABSPATH') ) {
 	die('Please do not load this file directly!');
 }
+
+
+/*-------------------------------------------------------------------------------*/
+/*   All DEFINES
+/*-------------------------------------------------------------------------------*/
+define( 'ECF_ITEM_NAME', 'Easy Contact Form Lite' );
+define( 'ECF_API_URLCURL', 'https://secure.ghozylab.com/' );
+define( 'ECF_API_URL', 'http://secure.ghozylab.com/' );
+
+// Plugin Version
+if ( !defined( 'ECF_VERSION' ) ) {
+	define( 'ECF_VERSION', '1.0.27' );
+}
+
+// Pro Price
+if ( !defined( 'ECF_PRO' ) ) {
+	define( 'ECF_PRO', '16' );
+}
+
+// Pro+
+if ( !defined( 'ECF_PROPLUS' ) ) {
+	define( 'ECF_PROPLUS', '29' );
+}
+
+// Pro++ Price
+if ( !defined( 'ECF_PROPLUSPLUS' ) ) {
+	define( 'ECF_PROPLUSPLUS', '35' );
+}
+
+// Dev Price
+if ( !defined( 'ECF_DEV' ) ) {
+	define( 'ECF_DEV', '99' );
+}
+
+// Plugin Folder Path
+if ( ! defined( 'ECF_PLUGIN_DIR' ) ) {
+	define( 'ECF_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+	}
+	
+// plugin url
+if ( ! defined( 'ECF_URL' ) ) {
+	$ecf_plugin_url = substr(plugin_dir_url(__FILE__), 0, -1);
+	define( 'ECF_URL', $ecf_plugin_url );
+	}
+	
+// Filters
+add_filter('widget_text', 'do_shortcode', 11);
 
 
 /*-------------------------------------------------------------------------------*/
@@ -61,56 +108,6 @@ function ecf_admin_wp_debug_notice() {
 }
 
 
-/*-------------------------------------------------------------------------------*/
-/*   All DEFINES
-/*-------------------------------------------------------------------------------*/
-define( 'ECF_ITEM_NAME', 'Easy Contact Form Lite' );
-define( 'ECF_API_URLCURL', 'https://secure.ghozylab.com/' );
-define( 'ECF_API_URL', 'http://secure.ghozylab.com/' );
-
-// Plugin Version
-if ( !defined( 'ECF_VERSION' ) ) {
-	define( 'ECF_VERSION', '1.0.25' );
-}
-
-// Pro Price
-if ( !defined( 'ECF_PRO' ) ) {
-	define( 'ECF_PRO', '16' );
-}
-
-// Pro+
-if ( !defined( 'ECF_PROPLUS' ) ) {
-	define( 'ECF_PROPLUS', '29' );
-}
-
-// Pro++ Price
-if ( !defined( 'ECF_PROPLUSPLUS' ) ) {
-	define( 'ECF_PROPLUSPLUS', '35' );
-}
-
-// Dev Price
-if ( !defined( 'ECF_DEV' ) ) {
-	define( 'ECF_DEV', '99' );
-}
-
-
-// plugin path
-if ( !defined( 'ECF_PLUGIN_BASENAME' ) )
-    define( 'ECF_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
-
-if ( !defined( 'ECF_PLUGIN_NAME' ) )
-    define( 'ECF_PLUGIN_NAME', trim( dirname( ECF_PLUGIN_BASENAME ), '/') );
-
-if ( !defined( 'ECF_PLUGIN_DIR' ) )
-    define( 'ECF_PLUGIN_DIR', WP_PLUGIN_DIR . '/' . ECF_PLUGIN_NAME . '/' );
-	
-// plugin url
-if ( ! defined( 'ECF_URL' ) ) {
-	$ecf_plugin_url = substr(plugin_dir_url(__FILE__), 0, -1);
-	define( 'ECF_URL', $ecf_plugin_url );
-	}
-	
-	
 /*-------------------------------------------------------------------------------*/
 /*   Load WP jQuery library
 /*-------------------------------------------------------------------------------*/
@@ -312,26 +309,28 @@ if ( get_transient( 'ecf_captcha_transient' ) ) {
 /*-------------------------------------------------------------------------------*/
 /*   Load Plugin Functions
 /*-------------------------------------------------------------------------------*/
-include_once( 'inc/functions/ecf-functions.php' );
-include_once( 'inc/ecf-tinymce.php' );
-include_once( 'inc/ecf-metaboxes.php' );
-include_once( 'inc/ecf-shortcode.php' );
-include_once( 'inc/ecf-opt-loader.php' );
-include_once( 'inc/functions/ecf-mail.php' );
-include_once( 'inc/ecf-entries.php' ); // @since 1.0.3 > 5 ( BETA )
+include_once( ECF_PLUGIN_DIR . 'inc/functions/ecf-functions.php' );
+include_once( ECF_PLUGIN_DIR . 'inc/ecf-tinymce.php' );
+include_once( ECF_PLUGIN_DIR . 'inc/ecf-metaboxes.php' );
+include_once( ECF_PLUGIN_DIR . 'inc/ecf-shortcode.php' );
+include_once( ECF_PLUGIN_DIR . 'inc/ecf-opt-loader.php' );
+include_once( ECF_PLUGIN_DIR . 'inc/functions/ecf-mail.php' );
+include_once( ECF_PLUGIN_DIR . 'inc/ecf-entries.php' ); // @since 1.0.3 > 5 ( BETA )
+include_once( ECF_PLUGIN_DIR . 'inc/ecf-widget.php' );
 
 /*-------------------------------------------------------------------------------*/
 /*   Featured Plugins Page
 /*-------------------------------------------------------------------------------*/
 if ( is_admin() ){
-	require_once( 'inc/pages/ecf-freeplugins.php' );
-	require_once( 'inc/pages/ecf-featured.php' );
-	include_once( 'inc/pages/ecf-pricing.php' ); 
-	require_once( 'inc/pages/ecf-settings.php' );
-	require_once( 'inc/ecf-notice.php' );
-	include_once( 'inc/pages/ecf-analytics.php' ); // @since 1.0.11
-	include_once( 'inc/pages/ecf-addons.php' ); // @since 1.0.11
-	include_once( 'inc/pages/ecf-welcome.php' ); // @since 1.0.11
+	
+	include_once( ECF_PLUGIN_DIR . 'inc/pages/ecf-freeplugins.php' );
+	include_once( ECF_PLUGIN_DIR . 'inc/pages/ecf-featured.php' );
+	include_once( ECF_PLUGIN_DIR . 'inc/pages/ecf-pricing.php' ); 
+	include_once( ECF_PLUGIN_DIR . 'inc/pages/ecf-settings.php' );
+	include_once( ECF_PLUGIN_DIR . 'inc/ecf-notice.php' );
+	include_once( ECF_PLUGIN_DIR . 'inc/pages/ecf-analytics.php' ); // @since 1.0.11
+	include_once( ECF_PLUGIN_DIR . 'inc/pages/ecf-addons.php' ); // @since 1.0.11
+	include_once( ECF_PLUGIN_DIR . 'inc/pages/ecf-welcome.php' ); // @since 1.0.11
 
 	}
 	
