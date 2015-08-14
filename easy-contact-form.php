@@ -56,8 +56,10 @@ if ( ! defined( 'ECF_URL' ) ) {
 	define( 'ECF_URL', $ecf_plugin_url );
 	}
 	
-// Filters
+// All Filters
 add_filter('widget_text', 'do_shortcode', 11);
+add_filter( 'the_excerpt', 'shortcode_unautop');
+add_filter( 'the_excerpt', 'do_shortcode');  
 
 
 /*-------------------------------------------------------------------------------*/
@@ -208,14 +210,6 @@ function ecf_post_type() {
 	 
 }
 add_action( 'init', 'ecf_post_type' );
-
-
-/*-------------------------------------------------------------------------------*/
-/*   Executing shortcode inside the_excerpt() and sidebar/widget
-/*-------------------------------------------------------------------------------*/
-add_filter('widget_text', 'do_shortcode', 11);
-add_filter( 'the_excerpt', 'shortcode_unautop');
-add_filter( 'the_excerpt', 'do_shortcode');  
 
 
 /*--------------------------------------------------------------------------------*/
